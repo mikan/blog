@@ -15,10 +15,10 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-* 2017.08-present: クラウド開発エンジニア @ 日系ITベンチャー
-* 2017.01-2017.08: デリバリーエンジニア @ 外資系ITサービスベンダー
-* 2016.08-2016.12: アプリケーションエンジニア @ 日系クラウドベンダー
-* 2013.04-2016.07: ソフトウェアエンジニア @ 日系事務機メーカー
+* 2017-present: クラウド開発エンジニア @ 日系ITベンチャー
+* 2017: デリバリーエンジニア @ 外資系ITサービスベンダー
+* 2016: アプリケーションエンジニア @ 日系クラウドベンダー
+* 2013-2016: ソフトウェアエンジニア @ 日系事務機メーカー
 
 ### お仕事内容
 
@@ -97,6 +97,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
   * スライド資料: [go-talks.appspot.com/github.com/mikan/talks/intro-to-present.slide](https://go-talks.appspot.com/github.com/mikan/talks/intro-to-present.slide)
 
 [![AOSN](/img/logo/aosn.png)](https://aosn.github.io/)
+
 * 2017/09/16 [「プログラマーの日」合宿 2017 LT](http://aosn.github.io/event/6-0916camp/)「Slack の過去ログ倉庫を建てよう」
   * スライド資料: [go-talks.appspot.com/github.com/mikan/talks/aosn-lt-2017.slide](https://go-talks.appspot.com/github.com/mikan/talks/aosn-lt-2017.slide)
 * 2016/09/17 [「プログラマーの日」合宿 2016 LT](http://aosn.github.io/event/3-0917camp/)「データで見るAOSN読書会」
@@ -159,8 +160,8 @@ Go 関連書籍限定の技術書読書会。横浜市内で毎月開催。
 
 作品 "John Metro" は次の URL でサービス中: [jm.tasktoys.com](https://jm.tasktoys.com)
 
-![TMODC](/img/ss/tmod.png)
-[![John Metro](/img/ss/johnmetro.png)](https://jm.tasktoys.com)
+{{<figure src="/img/ss/tmod.png" class="inline" alt="TMODC">}}
+{{<figure src="/img/ss/johnmetro.png" class="inline" link="https://jm.tasktoys.com" alt="TMODC">}}
 
 ### Microsoft Innovation Award 2011
 
@@ -168,8 +169,8 @@ Go 関連書籍限定の技術書読書会。横浜市内で毎月開催。
 
 :trophy: **Outstanding Performance Award** (2位) 受賞
 
-[![MSIA 2011](/img/ss/msia11.png)](http://www.microsoft.com/ja-jp/mic/award/mia11/default.aspx)
-[![MSIA 2011 JAIST](/img/ss/msia11-jaist.png)](http://www.jaist.ac.jp/news/award/2012/microsoft-innovation-award-2011.html)
+{{<figure src="/img/ss/msia11.png" class="inline" link="http://www.microsoft.com/ja-jp/mic/award/mia11/default.aspx" alt="MSIA 2011">}}
+{{<figure src="/img/ss/msia11-jaist.png" class="inline" link="http://www.jaist.ac.jp/news/award/2012/microsoft-innovation-award-2011.html" alt="MSIA 2011 JAIST">}}
 
 ### RICOH & Java Developer Challenge 2011
 
@@ -177,8 +178,8 @@ Go 関連書籍限定の技術書読書会。横浜市内で毎月開催。
 
 :trophy: **Grand Prix** (1位) 受賞
 
-[![RJDC 2011](/img/ss/rjdc11.png)](http://jp.ricoh.com/release/2012/0113_2.html)
-[![RJDC 2011 JAIST](/img/ss/rjdc11-jaist.png)](http://www.jaist.ac.jp/news/award/2012/ricohjava-developer-challenge-2011.html)
+{{<figure src="/img/ss/rjdc11.png" class="inline" link="http://jp.ricoh.com/release/2012/0113_2.html" alt="RJDC 2011">}}
+{{<figure src="/img/ss/rjdc11-jaist.png" class="inline" link="http://www.jaist.ac.jp/news/award/2012/ricohjava-developer-challenge-2011.html" alt="RJDC 2011 JAIST">}}
 
 メディア記事:
 
@@ -192,5 +193,5 @@ Go 関連書籍限定の技術書読書会。横浜市内で毎月開催。
 
 :trophy: **Associate Grand Prix** (2位) 受賞
 
-[![RSDC 2009](/img/ss/rjdc09.png)](http://jp.ricoh.com/release/2010/0118_1.html)
-[![RSDC 2009 KAIT](/img/ss/rjdc09-kait.png)](http://www.kait.jp/news/46.html)
+{{<figure src="/img/ss/rjdc09.png" class="inline" link="http://jp.ricoh.com/release/2010/0118_1.html" alt="RSDC 2009">}}
+{{<figure src="/img/ss/rjdc09-kait.png" class="inline" link="http://www.kait.jp/news/46.html" alt="RSDC 2009 KAIT">}}
