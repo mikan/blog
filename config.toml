@@ -1,0 +1,63 @@
+baseURL = "/"
+languageCode = "ja-jp"
+weight = 1
+title = "Yutaka 🍊 Kato"
+publishDir = "public"
+theme= "hugo-bootstrap-premium"
+hasCJKLanguage = true
+enableemoji = true
+paginate = 10
+paginatePath = "page"
+
+[permalinks]
+	post = "/:year/:month/:day/:filename/"
+	code = "/:filename/"
+	
+[author]
+	name = "Yutaka Kato"
+	email = "mikan@aosn.ws"
+	
+[params.theme]
+	name = "sandstone"
+  
+[params]
+	BrandImage = "/logo.png"
+	brand = "Yutaka 🍊 Kato"
+	topline = "Yutaka Kato の技術ブログです。"
+	footline = "Copyright&copy; <a href='/about/'>Yutaka Kato</a>"
+	showRightSidebar = true
+	googleAnalytics = "UA-68709286-1"
+	sumomeid = "7376c112ca70badebd8ee83050033a40afd51c35656127efca6d0e2f5b1f09c2"
+	highlight = "default"
+	twitter  = "kagaorange"
+	linkedin = "yutakakato"
+	github   = "mikan"
+	customCSS = ["/css/mikan.css"]
+	
+[[menu.main]]
+	name = "Home"
+	identifier = "home"
+	url = "/"
+	weight = -200
+	pre = "<i class='fa fa-home'></i>"
+
+[[menu.main]]
+	name = "Archives"
+	identifier = "archives"
+	url = "/post/"
+	weight = -180
+	pre = "<i class='fa fa-archive'></i>"
+
+[[menu.main]]
+	name = "Seminars"
+	identifier = "seminars"
+	url = "/seminars/"
+	weight = -160
+	pre = "<i class='fa fa-users'></i>"
+	
+[[menu.main]]
+	name = "About"
+	identifier = ""
+	url = "/about/"
+	weight = -100
+	pre = "<i class='fa fa-info-circle'></i>"
