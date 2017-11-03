@@ -1,9 +1,8 @@
-[submodule "hugo-bootstrap-premium"]
-	path = themes/hugo-bootstrap-premium
-	url = https://github.com/appernetic/hugo-bootstrap-premium
-	branch = master
-
 [submodule "public"]
 	path = public
 	url = git@github.com:mikan/mikan.github.io.git
+	branch = master
+[submodule "themes/hugo-bootstrap-premium"]
+	path = themes/hugo-bootstrap-premium
+	url = https://github.com/appernetic/hugo-bootstrap-premium.git
 	branch = master
