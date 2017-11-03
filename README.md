@@ -21,9 +21,5 @@ hugo server -D
 ドラフトを `false` にして公開する:
 
 ```
-hugo
-git add .
-git commit -m "post hello-world"
-git push
-open https://mikan.aosn.ws/
+./deploy.sh
 ```
