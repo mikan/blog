@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2017/11/05 | [Go Conference 2017 Authumn](https://gocon.connpass.com/event/66615/) | メルカリ (六本木) | 140 |
 | 2017/10/28 | [Rakuten Technology Conference 2017](https://rakutentechnologyconference2017.sched.com/) | 楽天 (二子玉川) | ? |
 | 2017/10/21 | [伊那市LoRaWANハッカソン #3](https://uhuru.connpass.com/event/65550/)🍺 | 伊那市創造館 (伊那市) | 37 |
 | 2017/10/14 | [横浜Go読書会 #10](https://yokohama-go-reading.connpass.com/event/66694/)🍺 | 富士ゼロックス (新高島) | 15 |
