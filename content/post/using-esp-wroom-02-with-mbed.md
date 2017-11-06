@@ -19,7 +19,7 @@ tags: [
 
 開発の部で私が主に担当したのはデータの中継 (と加工) を行う [Enebular](https://enebular.com/) (Node-RED プロバイダー) のフローで、一通り組んだあとはこんな感じになっていました。
 
-{{< figure src="/img/ss/inahack-enebular1.png" title="InaHack チーム1 Enebular フロー" class="center" width="80%" >}}
+{{< figure src="/img/ss/inahack-enebular.png" title="InaHack チーム1 Enebular フロー" class="center" width="80%" >}}
 
 ハードのほうも少しお手伝いして、こんな感じの見た目になりました。徘徊老人がこれ持って歩いてたらめっちゃロックだよね！:metal:
 
