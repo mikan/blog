@@ -8,6 +8,7 @@ hasCJKLanguage = true
 enableemoji = true
 paginate = 10
 paginatePath = "page"
+disqusShortname = "kagaorange"
 
 [permalinks]
 	post = "/:year/:month/:day/:filename/"
