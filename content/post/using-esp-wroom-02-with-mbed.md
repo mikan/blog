@@ -56,7 +56,7 @@ Switch Science でたったの \909 で売っています！([ssci.to/2347](http
 
 {{< figure src="/img/photo/20171106-2240.jpg" title="配線完了 (余計なの写ってるけどそれはあとで別記事にする)" class="center" width="80%" >}}
 
-そういえばこのチップ、そうとうな大飯ぐらいみたいで、mbed が再起動を繰り返す場合は、電流不足です (私の mbed コレクションの中でもいける個体といけない個体あり ← 改造のせい)。そういうときはこんな感じで 3.3V を他の mbed から救援してみましょう (別に mbed じゃなくても良いのだけど、自己責任で)。
+手元の検証では、いくつかの mbed で再起動が繰り返される減少に陥りました (私の mbed コレクションの中でもいける個体といけない個体あり ← 改造のせい)。電力不足のようなので、そんなときはこんな感じで 3.3V を他の mbed から救援してみましょう (別に mbed じゃなくても良いのだけど、自己責任で)。
 
 {{< figure src="/img/photo/20171106-2236.jpg" title="3.3V 給電を別の mbed から救援中の図" class="center" width="80%" >}}
 
@@ -85,7 +85,7 @@ mbed に電源を入れ、Flash Download Tool (ESPFlashDownloadTool_v3.6.1.0.exe
 
 以下が書き込み中の画面 (下戴中)。START 押したとき FLASH SIZE の選択値が 16Mbit-C1 から 16Mbit に勝手に変わったけどバグかな？ :innocent:
 
-{{< figure src="/img/ss/esp-download.png" title="ESP8266 DOWNLOAD TOOL V3.6.1.0" class="center" width="40%" >}}
+{{< figure src="/img/ss/esp-download.png" title="ESP8266 DOWNLOAD TOOL V3.6.1.0" class="center" >}}
 
 書き込みが終わったら動作チェックです。素晴らしいツールが転がっていたので紹介します。
 
@@ -121,7 +121,7 @@ GPIO0 が High か High かで通常モードかファーム書き込みモー�
 
 では適当なターミナルエミュレータ (Tera Term とか) で結果を見てみましょう！Baudrate はソースコードに合わせて 115200 に設定します。
 
-{{< figure src="/img/ss/coolterm1.png" title="CoolTerm" class="center" width="80%" >}}
+{{< figure src="/img/ss/coolterm1.png" title="CoolTerm" class="center" >}}
 
 (TONKOTSU と SHOYU が我が家の AP です)
 
