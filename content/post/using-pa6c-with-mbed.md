@@ -1,7 +1,13 @@
 ---
 title: "みちびき対応 GPS モジュール PA6C を Mbed で使う"
 date: 2017-11-07T20:34:00+09:00
-draft: true
+draft: false
+categories: ["iot"]
+tags: [
+  "mbed",
+  "node-red",
+  "c++",
+  ]
 ---
 
 [前回の記事](/2017/11/06/using-esp-wroom-02-with-mbed/)に引き続き Mbed ネタです。今回ご紹介するのはコチラ！
