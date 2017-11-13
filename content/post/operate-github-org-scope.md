@@ -75,7 +75,7 @@ Organization ごとに表示されている :heavy_check_mark: や :x: は一体
 
 {{<figure src="/img/ss/github-org3.png" class="center" width="80%" title="Organization -> Settings -> Third-party access (Access restricted)">}}
 
-No restrictions 状態の Organization には大きなリスクがあります。なぜならメンバーの **誰か1人が** 悪意ある OAuth アプリを認可したり、あるいは認可情報が流出して悪用されてしまえば、Organization の内部情報が丸裸となってしまい、さらに `write` や `admin` まで認可してしまった場合は、改ざんや消失のおそれまであるからです。Access Restricted な Organization ならば、OAuth アプリを認可しても、そのときに Grant ボタンさえ押さなければ被害を食い止められます (特に、何も考えずに先に進もうとする初心者は端っこにある小さな Grant ボタンより先に緑の Authorize ボタンを押すはずです)。従って、 **特段の理由がない限り全ての GitHub Organization はまっさきに Access Restricted にすべき** といえます。
+No restrictions 状態の Organization には大きなリスクがあります。なぜならメンバーの **誰か1人が** 悪意ある OAuth アプリを認可したり、あるいは認可情報が流出して悪用されてしまえば、No restrictions の Organization は無条件でアクセス許可されるため内部情報が丸裸となってしまい、さらに `write` や `admin` まで認可してしまった場合は、改ざんや消失のおそれまであるからです。Access Restricted な Organization ならば、OAuth アプリを認可しても、そのときに Grant ボタンさえ押さなければ設定した Organization への被害を食い止められます (特に、何も考えずに先に進もうとする初心者は端っこにある小さな Grant ボタンより先に緑の Authorize ボタンを押すはずです)。従って、 **特段の理由がない限り全ての GitHub Organization はまっさきに Access Restricted にすべき** といえます。
 
 `read:org` や `admin:org` のアプリなんてめったにない？いえいえ、`org` スコープはあくまで一つの例で、CI/CD サービスなどに多い `repo` 系を要求してくるアプリも同様です。認可時に :x: になっている Organization や、手動で Grant した Organization は、対象 OAuth アプリにそれらに属する全てのリポジトリの認可を与えることになります (public / private 別の scope 分類はあり)。これらの認可を下す際は、しっかりレビューをしてください。そしてもしあなたの Organization が No restrictions のままだったら、すぐさま管理者に Third-party access restriction の有効化を依頼してください。
 
