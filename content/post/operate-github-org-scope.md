@@ -2,6 +2,15 @@
 title: "GitHub OAuth の org スコープの適用と運用"
 date: 2017-11-13T20:34:21+09:00
 draft: false
+categories: ["web"]
+tags: [
+  "github",
+  "oauth",
+  "java",
+  "spring-boot",
+  "spring-security",
+  "vaadin-framework",
+  ]
 ---
 
 GitHub の OAuth をするとき、様々な追加権限の要求を突きつけられた経験はありますか？ありますよね？例えばこんな画面。
