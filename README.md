@@ -18,7 +18,7 @@ vi content/post/hello-world.md
 hugo server -D
 ```
 
-ドラフトを `false` にして公開する:
+ドラフトを `false` にしたら、以下のスクリプトで公開する:
 
 ```
 ./deploy.sh
