@@ -90,7 +90,7 @@ No restrictions 状態の Organization には大きなリスクがあります�
 
 {{<figure src="/img/ss/github-org4.png" class="center" width="80%" title="Organization -> Settings -> Third-party access (Approved apps)">}}
 
-有効化した後は、上記のページのように手動で Grant した OAuth Apps 達を定期的にレビュー・棚卸しをしたほうが良いでしょう。不要になったサービスは疑わしいものも含めて積極的に Deny (承認から外) し、常に本当に必要な OAuth アプリにのみ権限を与えておく運用が理想です。あるいは、必要になったらまた認可すればいいわけですから、定期的に全部 Deny してしまう、というアプローチもありですね。
+有効化した後は、上記のページのように手動で Grant した OAuth Apps 達を定期的にレビュー・棚卸しをしたほうが良いでしょう。なお、"Approved" とあるように member ロールからの Grant 要請は即時認可とならず、owner ロールからこの画面で "承認" されないと認可されない仕組みです (owner 達に通知が飛びます)。不要になったサービスは疑わしいものも含めて積極的に Deny (承認から外) し、常に本当に必要な OAuth アプリにのみ権限を与えておく運用が理想です。あるいは、必要になったらまた認可 (と承認) すればいいわけですから、定期的に全部 Deny してしまう、というアプローチもありですね。
 
 おまけ: どの Organization にも属していないユーザーが Organization や Repository 系の OAuth アプリを認可しようとすると、Organization に関する追加権限は表示されません。
 
