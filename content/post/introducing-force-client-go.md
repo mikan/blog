@@ -96,8 +96,7 @@ func main() {
 	defer res.Body.Close()
 	decoder = json.NewDecoder(res.Body)
 	var out interface{}
-	err = decoder.Decode(&out)
-	if err != nil {
+	if err = decoder.Decode(&out); err != nil {
 		log.Fatal(err)
 	}
 	log.Printf("%v\n", out)
