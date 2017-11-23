@@ -84,7 +84,7 @@ func main() {
 		log.Fatal(err)
 	}
 	req.Header.Add("Authorization", session["token_type"]+" "+session["access_token"])
-	req.Header.Add("Content-Type", "application/json")
+	req.Header.Add("Accept", "application/json")
 	values = url.Values{}
 	values.Add("q", "SELECT Name FROM Contact LIMIT 3")
 	log.Printf("POST %s\n", req.URL)
