@@ -60,7 +60,7 @@ test-project:
 
 {{< figure src="/img/ss/gitlab-ci1.png" title="CI / CD -> Jobs" class="center" >}}
 
-・・・そんだけです。グラフとかはない模様。設定が超絶シンプルかつスーパー汎用的な反面、さっと結果のみを確認する以外のこと (分析とか) はなにもできないのはトレードオフといったところか。なお、ログに複数出現すると最後のもの**だけ**がここに出るため、複数パッケージ (まさに `./...` でやっている) の場合はマージされません。そりゃそうだよね。ここは割り切るか、めっちゃ頑張るかのどちらかです。私は前者です😄
+・・・そんだけです。グラフとかはない模様。設定が超絶シンプルかつスーパー汎用的な反面、さっと結果のみを確認する以外のこと (分析とか) はなにもできないのはトレードオフといったところか。なお、ログに複数出現すると最後のもの**だけ**がここに出るため、複数パッケージ (まさに `./...` でやっている) の場合はマージされません。そりゃそうだよね。ここは割り切るか、StackOverflow にあるスクリプト<sup>[参考文献3]</sup>を使うかなどの選択を迫られます。私は今回前者です😄
 
 ### dep
 
@@ -142,3 +142,4 @@ govendor コマンドが持つ go コマンドへのパススルーもちゃっ�
 
 1. [How to create a CI/CD pipeline with Auto Deploy to Kubernetes using GitLab and Helm | GitLab](https://about.gitlab.com/2017/09/21/how-to-create-ci-cd-pipeline-with-autodeploy-to-kubernetes-using-gitlab-and-helm/)
 2. [Heroku Go Support | Heroku Dev Center](https://devcenter.heroku.com/articles/go-support)
+3. [go - Is it possible to post coverage for multiple packages to Coveralls? - Stack Overflow](http://stackoverflow.com/a/21142256/2055281)
