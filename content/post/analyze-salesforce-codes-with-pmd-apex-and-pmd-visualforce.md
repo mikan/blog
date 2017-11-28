@@ -36,7 +36,7 @@ PMD が Apex/Visualforce に対応しているのを同僚から教えてもら�
 wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F5.8.1/pmd-bin-5.8.1.zip
 unzip pmd-bin-5.8.1.zip
 alias pmd="$HOME/pmd-bin-5.8.1/bin/run.sh pmd"
- pmd -d /path/to/src -f html -R apex-apexunit,apex-braces,apex-complexity,apex-performance,apex-security,apex-style,vf-security
+pmd -d /path/to/src -f html -R apex-apexunit,apex-braces,apex-complexity,apex-performance,apex-security,apex-style,vf-security
 ```
 
 備考:
@@ -52,7 +52,7 @@ alias pmd="$HOME/pmd-bin-5.8.1/bin/run.sh pmd"
 
 `-f vbhtml` で HTML レポートを出力すると、こんな感じの HTML が標準出力されます。ファイルごとにまとまった感じで出力されていいですね。ちなみに vb とは Vladimir Bossicard (開発者の名前) のようです。
 
-{{< figure src="/img/ss/pmd-report2.png" class="center" title="PMD HTML Report">}}
+{{< figure src="/img/ss/pmd-report2.png" class="center" title="PMD HTML Report (VB)">}}
 
 `-f yahtml` は Yet Another HTML というモードで、ディレクトリに複数の HTML 群を吐いてくれるモードですが、残念ながら Apex/Visualforce ではいい感じの HTML が生成されませんでした。なお、出力ディレクトリは `-P outputDir=xxx` で場所を教える必要があります。さらに、指定したディレクトリは既に存在する必要があります (通常は直前に `mkdir` する)。
 
