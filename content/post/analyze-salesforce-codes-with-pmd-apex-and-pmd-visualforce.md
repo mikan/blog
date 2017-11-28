@@ -1,7 +1,7 @@
 ---
 title: "PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する"
 date: 2017-11-28T21:42:48+09:00
-draft: true
+draft: false
 categories: ["salesforce", "tools"]
 tags: [
   "force.com",
