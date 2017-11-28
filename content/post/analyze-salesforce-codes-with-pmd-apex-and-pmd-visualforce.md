@@ -15,7 +15,7 @@ Salesforce のカスタマイズで用いる独自言語、Apex と Visualforce 
 
 {{< figure src="/img/logo/pmd.png" class="center" width="40%" link="https://pmd.github.io/" title="PMD">}}
 
-PMD といえば、Java 界隈では言わずと知れた静的解析ツール。同じく Java 界隈でよく使われる [FindBugs](http://findbugs.sourceforge.net/) はソースコード (`*.java`) ではなくコンパイルされたクラスファイル (`*.class`) を解析対象とするため他の言語に移植が困難ですが、対して PMD はソースコードを AST (抽象構文木) 化して解析するため様々な言語に適用できるツールキットになるという特徴があります。
+PMD といえば、Java 界隈では言わずと知れた静的解析ツール。同じく Java 界隈でよく使われる [FindBugs](http://findbugs.sourceforge.net/) はソースコード (`*.java`) ではなくコンパイルされたクラスファイル (`*.class`) を解析対象とするため他の言語へ拡張が困難ですが、対して PMD はソースコードを AST (抽象構文木) 化して解析するため様々な言語に適用できるツールキットになるという特徴があります。
 PMD が Apex/Visualforce に対応しているのを同僚から教えてもらったときは「え、対応してたんだ！」とびっくりしたものですが、思えば Apex はコンパイル＆リンクを Force.com サーバーで行うため、クライアントサイドで解析するには PMD は大変良いアプローチなわけですね。
 
 蛇足ですが、PMD ロゴに添えられている「**Don't shoot the messenger**」とは英語圏のことわざで「悪い知らせを伝えてくる人に怒ってはいけない」といった意味のようです。何が言いたいかは・・・わかりますよね:smile:
