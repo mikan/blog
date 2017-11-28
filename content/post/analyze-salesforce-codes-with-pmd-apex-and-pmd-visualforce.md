@@ -24,7 +24,7 @@ PMD が Apex/Visualforce に対応しているのを同僚から教えてもら�
 >
 > https://dictionary.cambridge.org/dictionary/english/don-t-shoot-the-messenger
 
-さて、本記事は事前条件として Apex/Visualforce ソースコードが手元にある場面を想定しています。Salesforce DX はとってもエンジニアフレンドリーですし積極採用していきたいところですね:sparkles:
+さて、本記事は事前条件として Apex/Visualforce ソースコードが手元にある場面を想定しています。以下のようなツールが役立つでしょう。Salesforce DX はとってもエンジニアフレンドリーですし積極採用していきたいところですね:sparkles:
 
 - [Salesforce DX](https://developer.salesforce.com/docs/atlas.ja-jp.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Force.com Migration Tool](https://developer.salesforce.com/docs/atlas.ja-jp.daas.meta/daas/meta_development.htm)
