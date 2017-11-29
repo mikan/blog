@@ -33,6 +33,7 @@ PMD が Apex/Visualforce に対応しているのを同僚から教えてもら�
 それでは PMD をセットアップしてみたいと思います。素晴らしいことに PMD のディストリビューションには最初から Apex も Visualforce も備わっています。従って、あなたがすべきことは PMD をダウンロードし、ソースコードの在り処、期待する出力フォーマット、そして適用したいルールセットを添えて実行するだけです。
 
 ```bash
+cd $HOME
 wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F5.8.1/pmd-bin-5.8.1.zip
 unzip pmd-bin-5.8.1.zip
 alias pmd="$HOME/pmd-bin-5.8.1/bin/run.sh pmd"
