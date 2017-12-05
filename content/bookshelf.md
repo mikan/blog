@@ -40,7 +40,7 @@ mikan の本棚。技術書や自己啓発本に限る。サブタイトルは�
 | [エリック・エヴァンスのドメイン駆動設計](http://amzn.to/2ioBnNg)        | Printed | :jp:  | 2016 | :first_quarter_moon: |           |
 | [新装版 達人プログラマー](http://amzn.to/2B05OEv)                 | Printed | :jp:  | 2016 | :waxing_crescent_moon: |         |
 | [ブロックチェーン 仕組みと理論](http://amzn.to/2A7VY3I):zap:A       | Printed | :jp:  | 2016 | :full_moon: | :star:             |
-| [「きんいろモザイク」と英語レッスン](http://amzn.to/2A6Shey)           | Printed | :jp::gb: | 2016 | :waxing_gibbous_moon: |       |
+| [「きんいろモザイク」と英語レッスン](http://amzn.to/2A6Shey)           | Printed | :jp:/:gb: | 2016 | :waxing_gibbous_moon: |       |
 | [大規模サービス技術入門](http://amzn.to/2A7Wz5s)                 | Printed | :jp:  | 2016 | :new_moon: |                     |
 | [みんなのGo言語](http://amzn.to/2nvj7ae)                       | Printed | :jp:  | 2016 | :waxing_gibbous_moon: |          |
 | [Release It!](http://amzn.to/2A9eU1G)                        | Printed | :jp:  | 2016 | :waxing_crescent_moon: |         |
