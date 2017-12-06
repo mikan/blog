@@ -67,7 +67,7 @@ Salesforce の事前条件は以下の通りです:
 | 証明書の署名要求             | (デフォルト値) | |
 | 署名要求メソッド             | RSA-SHA256 | |
 | アサーション復号化証明書      | アサーション暗号化なし | |
-| SAML ID 種別                | アサーションには、ユーザの Salesforce ユーザ名が含まれます | |
+| SAML ID 種別                | (デフォルト値) | |
 | SAML ID の場所              | ID は、Subject ステートメントの NameIdentifier 要素にあります | |
 | サービスプロバイダの起動要求バインド | [リダイレクト] を選択      | |
 | ID プロバイダのログイン URL  | 手順 1-4 の [SSO の URL] 値      | `https://accounts.google.com/o/saml2/idp?idpid=xxx` |
