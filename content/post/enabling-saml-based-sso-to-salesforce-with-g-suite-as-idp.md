@@ -2,6 +2,12 @@
 title: "G Suite を IdP にした Salesforce への SAML SSO の有効化"
 date: 2017-12-07T00:19:59+09:00
 draft: false
+categories: ["web"]
+tags: [
+  "gsuite",
+  "salesforce",
+  "saml",
+  ]
 ---
 
 唐突に G Suite と Salesforce を SAML で連携する方法をご紹介。
