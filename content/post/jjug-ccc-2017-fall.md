@@ -10,7 +10,7 @@ tags: [
   ]
 ---
 
-日本最大の Java コミュニティカンファレンス、[JJUG CCC](http://www.java-users.jp/ccc2017fall/) (Japan Java User Group - Cross Community Conference) が今季もベルサール新宿グランドで開催されました。年 2 回開催の、秋バージョン (~~冬じゃんと突っ込んではいけない~~) です。
+日本最大の Java コミュニティカンファレンス、[JJUG CCC](http://www.java-users.jp/ccc2017fall/) (Japan Java User Group - Cross Community Conference) が今季もベルサール新宿グランドで開催されました。年 2 回開催の、秋バージョンです。
 
 {{< figure src="/img/photo/20171118-1303.jpg" title="JJUG CCC 2017 Fall" class="center" width="80%" >}}
 
