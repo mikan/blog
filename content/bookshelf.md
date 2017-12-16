@@ -13,6 +13,7 @@ mikan の本棚。技術書や自己啓発本に限る。サブタイトルは�
 
 | Title | Format | Lang. | Prog. | Favorite |
 | ----- | ------ | ----- | ----- | -------- |
+| [ベタープログラマー](http://amzn.to/2jbD553) | Printed | :jp: | :new_moon: | |
 | [ジョイ・インク](http://amzn.to/2AHoZ3d) | Kindle | :jp: | :new_moon: | |
 | [エクストリームプログラミング](http://amzn.to/2jmMcDA) | Printed | :jp: | :new_moon:  |  |
 | [テスト駆動開発](http://amzn.to/2B03u0o) | Printed | :jp: | :new_moon: | |

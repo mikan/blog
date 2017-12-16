@@ -145,6 +145,17 @@ Go 関連書籍限定の技術書読書会。横浜市内で毎月開催。
 
 ----------
 
+### Mashup Awards 2017
+
+:busts_in_silhouette: T.Matsuo, S.Yamazaki, T.Hashimoto, H.Adachi, H.Satake & me
+
+:trophy: **ウイングアーク賞** 受賞
+
+作品 "山林ロガー" は次の URL で紹介中: [hacklog.jp/works/51423](https://hacklog.jp/works/51423)
+
+{{<figure src="/img/ss/ma2017.png" class="inline" link="http://mashupaward.jp/" alt="Mashup Awards 2017">}}
+{{<figure src="/img/ss/johnmetro.png" class="inline" link="https://hacklog.jp/works/51423" alt="山林ロガー">}}
+
 ### 伊那市 LoRaWAN ハッカソン
 
 :busts_in_silhouette: T.Matsuo, S.Yamazaki, T.Hashimoto, H.Adachi, H.Satake & me

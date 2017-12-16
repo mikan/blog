@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2017/10/14 | [FESTA 2017 by Mashup Awards](https://mashupawards.connpass.com/event/72237/)🍺 | TABLOID (日の出) | 256 |
 | 2017/10/14 | [横浜Go読書会 #12](https://yokohama-go-reading.connpass.com/event/72071/)🍺 | かながわ県民センター (横浜) | 15 |
 | 2017/12/08 | [JAWS-UG IoT専門支部 re:Invent アップデート](https://jawsug-iot.connpass.com/event/71205/) | アマゾンウェブサービスジャパン (目黒) | 120 |
 | 2017/12/05 | [技術書の歩き方勉強会「テスト駆動開発」編](https://connpass.com/event/69821/) | Speee (六本木一丁目) | 100 |
@@ -26,7 +27,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 | 2017/11/18 | [JJUG CCC 2017 Fall](http://www.java-users.jp/ccc2017fall/)👔 | ベルサール新宿グランド (西新宿) | 1600 |
 | 2017/11/05 | [Go Conference 2017 Authumn](https://gocon.connpass.com/event/66615/) | メルカリ (六本木) | 140 |
 | 2017/10/28 | [Rakuten Technology Conference 2017](https://rakutentechnologyconference2017.sched.com/) | 楽天 (二子玉川) | ? |
-| 2017/10/21 | [伊那市LoRaWANハッカソン #3](https://uhuru.connpass.com/event/65550/)🍺 | 伊那市創造館 (伊那市) | 37 |
+| 2017/10/21 | [伊那市LoRaWANハッカソン #3](https://uhuru.connpass.com/event/65550/)🎤🍺 | 伊那市創造館 (伊那市) | 37 |
 | 2017/10/14 | [横浜Go読書会 #10](https://yokohama-go-reading.connpass.com/event/66694/)🍺 | 富士ゼロックス (新高島) | 15 |
 | 2017/10/09 | [GDG DevFest Tokyo 2017](https://gdg-tokyo.connpass.com/event/66236/) | 国際交流館 プラザ平成 (船の科学館) | 1400 |
 | 2017/09/28 | [Heroku Partner Summit 2017](https://www.salesforce.com/jp/) | セールスフォース・ドットコム (東京) | 60 |
