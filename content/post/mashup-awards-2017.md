@@ -116,7 +116,7 @@ NAIST の学生が開発した生駒市向け給食アレルギー情報提供�
 
 ##### 10作品目「[Eyebrojector](https://hacklog.jp/works/52743)」
 
-{{<figure src="/img/photo/20171216-1903.jpg" class="center" width="80%" title="Eyebrojector">}}
+{{<figure src="/img/photo/20171216-1914.jpg" class="center" width="80%" title="Eyebrojector">}}
 
 紙製プロジェクションキットとスマホのセットでまゆげを描くための補助をしてくれるという実用？ツール。スマホのフラッシュライトの見事な応用で、さらにキットは紙ベースでコストにも気を配っており、よく考えられています。なのに「おばかアプリ部門賞」でした。う～ん？
 
