@@ -19,7 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
-| 2017/10/14 | [AWS re:Invent 2017 Technology re:CAP for APN Partner](https://aws.amazon.com/jp/) | AP東京 八重洲通り (東京) | 250 |
+| 2017/10/19 | [AWS re:Invent 2017 Technology re:CAP for APN Partner](https://aws.amazon.com/jp/) | AP東京 八重洲通り (東京) | 250 |
 | 2017/10/14 | [FESTA 2017 by Mashup Awards](https://mashupawards.connpass.com/event/72237/)🍺 | TABLOID (日の出) | 256 |
 | 2017/10/14 | [横浜Go読書会 #12](https://yokohama-go-reading.connpass.com/event/72071/)🍺 | かながわ県民センター (横浜) | 15 |
 | 2017/12/08 | [JAWS-UG IoT専門支部 re:Invent アップデート](https://jawsug-iot.connpass.com/event/71205/) | アマゾンウェブサービスジャパン (目黒) | 120 |
