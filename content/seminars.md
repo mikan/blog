@@ -19,9 +19,9 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
-| 2017/10/19 | [AWS re:Invent 2017 Technology re:CAP for APN Partner](https://aws.amazon.com/jp/) | AP東京 八重洲通り (東京) | 250 |
-| 2017/10/14 | [FESTA 2017 by Mashup Awards](https://mashupawards.connpass.com/event/72237/)🍺 | TABLOID (日の出) | 256 |
-| 2017/10/14 | [横浜Go読書会 #12](https://yokohama-go-reading.connpass.com/event/72071/)🍺 | かながわ県民センター (横浜) | 15 |
+| 2017/12/19 | [AWS re:Invent 2017 Technology re:CAP for APN Partner](https://aws.amazon.com/jp/) | AP東京 八重洲通り (東京) | 250 |
+| 2017/12/16 | [FESTA 2017 by Mashup Awards](https://mashupawards.connpass.com/event/72237/)🍺 | TABLOID (日の出) | 256 |
+| 2017/12/09 | [横浜Go読書会 #12](https://yokohama-go-reading.connpass.com/event/72071/)🍺 | かながわ県民センター (横浜) | 15 |
 | 2017/12/08 | [JAWS-UG IoT専門支部 re:Invent アップデート](https://jawsug-iot.connpass.com/event/71205/) | アマゾンウェブサービスジャパン (目黒) | 120 |
 | 2017/12/05 | [技術書の歩き方勉強会「テスト駆動開発」編](https://connpass.com/event/69821/) | Speee (六本木一丁目) | 100 |
 | 2017/12/05 | [Salesforce IoT セミナー](https://www.salesforce.com/jp/) | セールスフォース・ドットコム (東京) | 30 |
