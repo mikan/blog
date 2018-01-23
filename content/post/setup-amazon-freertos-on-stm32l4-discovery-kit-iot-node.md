@@ -4,7 +4,7 @@ date: 2017-12-13T23:31:44+09:00
 draft: false
 categories: ["iot"]
 tags: [
-  "aws-iot",
+  "aws",
   "cloudwatch",
   "freertos",
   "c++",
