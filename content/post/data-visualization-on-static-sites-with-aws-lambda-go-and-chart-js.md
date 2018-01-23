@@ -73,7 +73,7 @@ GOOS=linux go build -o main main.go
 zip main.zip main
 ```
 
-Windows で上記のような zip を生成するために `build-lambda-zip` というツールが提供されています `go get github.com/aws/aws-lambda-go/cmd/build-lambda-zip`。私はこんなバッチファイルを作りました。
+上記は macOS を想定したものですが、Windows で上記同様の zip を生成するために `build-lambda-zip` というツールが提供されています (`go get github.com/aws/aws-lambda-go/cmd/build-lambda-zip`)。私はこんなバッチファイルを作りました。
 
 ```
 set GOOS=linux
