@@ -44,6 +44,25 @@ AWS Lambda は言わずと知れたサーバーレスアーキテクチャのプ
 }
 ```
 
+対応する (パース結果を流し込む) Go の構造体はこんな感じです。
+
+```go
+type DataSet struct {
+	ByTimes     IntLabeledData    `json:"times"`
+	ByAttendees StringLabeledData `json:"attendees"`
+}
+
+type IntLabeledData struct {
+	Labels []int `json:"labels"`
+	Data   []int `json:"data"`
+}
+
+type StringLabeledData struct {
+	Labels []string `json:"labels"`
+	Data   []int    `json:"data"`
+}
+```
+
 それでは本題の AWS Lambda Go の構築手順を説明したいと思います (**前置きが長い**)。
 
 ### Handler Implementation
