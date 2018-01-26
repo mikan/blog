@@ -88,7 +88,7 @@ func main() {
 デプロイ可能な zip ファイルを作るには、`GOOS=linux` でコンパイルした結果を `zip` します。Linux 持ってない？心配ありません。Go ならクロスコンパイルは鼻血がでるほど簡単です。
 
 ```
-GOOS=linux go build -o main main.go
+GOOS=linux go build -o main
 zip main.zip main
 ```
 
@@ -96,7 +96,7 @@ zip main.zip main
 
 ```
 set GOOS=linux
-go build -o main .
+go build -o main
 build-lambda-zip -o main.zip main
 del main
 set GOOS=windows
