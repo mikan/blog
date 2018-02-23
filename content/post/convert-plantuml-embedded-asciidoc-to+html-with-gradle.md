@@ -7,7 +7,6 @@ tags: [
   "gradle",
   "asciidoc",
   "plantuml",
-  "asciidoctor",
   "jruby",
   ]
 ---
