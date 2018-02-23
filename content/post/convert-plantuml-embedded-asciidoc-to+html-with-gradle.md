@@ -12,7 +12,7 @@ tags: [
 ---
 
 最近仕事で機能仕様書や設定手順書などの開発ドキュメントの AsciiDoc 化を推し進めています。
-今までは Markdown や reStructuredText (reST) を用いた設計文書の記述をよくやっていたのですが、たまたま最近 ([JJUG CCC 2017 Fall](/2017/11/19/jjug-ccc-2017-fall/) や社内のディスカッションなどで) AsciiDoc を推す声を多く聞いたこともありこっちもやってやるかと思うようになりました。
+私個人は今まで Markdown や reStructuredText (reST) を用いた設計文書の記述をよくやっていたのですが、たまたま最近 ([JJUG CCC 2017 Fall](/2017/11/19/jjug-ccc-2017-fall/) や社内のディスカッションなどで) AsciiDoc を推す声を多く聞いたこともありこっちもやってやるかと思うようになりました。
 
 {{< figure src="/img/logo/asciidoc.png" title="AsciiDoc" class="center" link="http://asciidoc.org/">}}
 
