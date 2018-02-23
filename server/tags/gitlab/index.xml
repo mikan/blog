@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlab on Yutaka 🍊 Kato</title>
+    <link>https://mikan.github.io/tags/gitlab/</link>
+    <description>Recent content in Gitlab on Yutaka 🍊 Kato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <managingEditor>mikan@aosn.ws (Yutaka Kato)</managingEditor>
+    <webMaster>mikan@aosn.ws (Yutaka Kato)</webMaster>
+    <lastBuildDate>Tue, 28 Nov 2017 21:42:48 +0900</lastBuildDate>
+    
+	<atom:link href="https://mikan.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する</title>
+      <link>https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/</link>
+      <pubDate>Tue, 28 Nov 2017 21:42:48 +0900</pubDate>
+      <author>mikan@aosn.ws (Yutaka Kato)</author>
+      <guid>https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/</guid>
+      <description>Salesforce のカスタマイズで用いる独自言語、Apex と Visualforce のコードを静的解析できるツール PMD Apex / PMD Visualforce を使ってみたので、ハマりどころや CI の工夫などをまとめて</description>
+    </item>
+    
+    <item>
+      <title>Go の dep やら govendor やらを GitLab CI で回す</title>
+      <link>https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/</link>
+      <pubDate>Mon, 20 Nov 2017 22:46:31 +0900</pubDate>
+      <author>mikan@aosn.ws (Yutaka Kato)</author>
+      <guid>https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/</guid>
+      <description>今回は Go 言語 (Golang) の CI 環境に関する備忘録。難易度は低いのですが、カンペなしですらすら書けないので、あとで再利用するためにソースをぺったんするだけ</description>
+    </item>
+    
+  </channel>
+</rss>

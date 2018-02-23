@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Freertos on Yutaka 🍊 Kato</title>
+    <link>https://mikan.github.io/tags/freertos/</link>
+    <description>Recent content in Freertos on Yutaka 🍊 Kato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <managingEditor>mikan@aosn.ws (Yutaka Kato)</managingEditor>
+    <webMaster>mikan@aosn.ws (Yutaka Kato)</webMaster>
+    <lastBuildDate>Wed, 13 Dec 2017 23:31:44 +0900</lastBuildDate>
+    
+	<atom:link href="https://mikan.github.io/tags/freertos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する</title>
+      <link>https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/</link>
+      <pubDate>Wed, 13 Dec 2017 23:31:44 +0900</pubDate>
+      <author>mikan@aosn.ws (Yutaka Kato)</author>
+      <guid>https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/</guid>
+      <description>Amazon FreeRTOS は 2017/11/29 に Amazon のイベント re:Invent 2017 にて発表されたマイクロコントローラー向けリアルタイム OS のディストリビューションです。 今回、とりあえず触ってみようと</description>
+    </item>
+    
+  </channel>
+</rss>

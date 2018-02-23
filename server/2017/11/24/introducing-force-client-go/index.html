@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>force-client-go: Go で Salesforce の REST API を叩く  &middot; Yutaka 🍊 Kato</title>
+  <meta property="og:image" content="https://mikan.github.io/ogp.png" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="golang, force.com, github, ">
+
+
+<meta property="og:title" content="force-client-go: Go で Salesforce の REST API を叩く  &middot; Yutaka 🍊 Kato ">
+<meta property="og:site_name" content="Yutaka 🍊 Kato"/>
+<meta property="og:url" content="https://mikan.github.io/2017/11/24/introducing-force-client-go/" />
+<meta property="og:locale" content="ja-jp">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2017-11-24T00:34:56&#43;09:00" />
+<meta property="og:article:modified_time" content="2017-11-24T00:34:56&#43;09:00" />
+
+  
+    
+<meta property="og:article:tag" content="golang">
+    
+<meta property="og:article:tag" content="force.com">
+    
+<meta property="og:article:tag" content="github">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kagaorange" />
+<meta name="twitter:creator" content="@kagaorange" />
+<meta name="twitter:title" content="force-client-go: Go で Salesforce の REST API を叩く" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://mikan.github.io/2017/11/24/introducing-force-client-go/" />
+<meta name="twitter:domain" content="https://mikan.github.io/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "force-client-go: Go で Salesforce の REST API を叩く",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-11-24",
+    "description": "",
+    "wordCount": 1832
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="https://mikan.github.io/2017/11/24/introducing-force-client-go/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.36.1" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://mikan.github.io/css/bootswatch/sandstone/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://mikan.github.io/css/style.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/mikan.css">
+
+
+
+  <link rel="stylesheet" href="https://mikan.github.io/css/highlight/default.css">
+
+
+</head>
+<body class="map[name:sandstone]" data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="Yutaka 🍊 Kato" src="/logo.png">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/" >
+                <i class='fa fa-home'></i>
+                Home
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/post/" >
+                <i class='fa fa-archive'></i>
+                Archives
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/seminars/" >
+                <i class='fa fa-users'></i>
+                Seminars
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/about/" >
+                <i class='fa fa-info-circle'></i>
+                About
+              </a>
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>force-client-go: Go で Salesforce の REST API を叩く
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-11-24">24 Nov, 2017</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 4 min
+  &middot; (1832 words)
+  &middot; 
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=force-client-go%3a%20Go%20%e3%81%a7%20Salesforce%20%e3%81%ae%20REST%20API%20%e3%82%92%e5%8f%a9%e3%81%8f&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f&amp;title=force-client-go%3a%20Go%20%e3%81%a7%20Salesforce%20%e3%81%ae%20REST%20API%20%e3%82%92%e5%8f%a9%e3%81%8f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=force-client-go%3a%20Go%20%e3%81%a7%20Salesforce%20%e3%81%ae%20REST%20API%20%e3%82%92%e5%8f%a9%e3%81%8f&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://mikan.github.io/tags/golang" class="label label-primary">golang</a>
+  
+  <a href="https://mikan.github.io/tags/force.com" class="label label-primary">force.com</a>
+  
+  <a href="https://mikan.github.io/tags/github" class="label label-primary">github</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<p>Go 言語 (Golang) で Salesforce の Force.com REST API を叩く方法と、それらを簡単に扱うためにクライアントライブラリ <a href="https://github.com/mikan/force-client-go">force-client-go</a> を開発したので、そのご紹介。</p>
+
+
+<figure class="center">
+    <a href="https://www.salesforce.com/jp/products/platform/products/force/">
+        <img src="/img/logo/force-dot-com.png" width="50%" />
+    </a>
+    
+</figure>
+
+
+<p>Salesforce は CRM を始めとした様々な SaaS を提供していますが、Force.com と呼ばれる一連のサービスやツールを用いると様々なアプリケーションを開発・デプロイできる PaaS にもなり、中でも REST API によるデータ操作は極めて強力な拡張・連携ポイントになります。API コール制限<sup>[参考文献3]</sup>などの考慮すべき制約はあるものの、最初から制約を考慮して設計すればたいていのユースケースはクリアできますし、いざというときは札束で殴れます😇</p>
+
+<p>REST API を叩くとき、最初の難関は認証です。幸い Force.com REST API は以下の 3 つの選択肢があります:</p>
+
+<ol>
+<li>Web サーバーフロー</li>
+<li>ユーザエージェントフロー</li>
+<li>ユーザ名パスワードフロー</li>
+</ol>
+
+<p>1番目と2番目はユーザーがブラウザでログインした結果をアプリケーションに返すフローで、コールバックを受け付けるセキュアなエンドポイント (HTTP はダメ) を建てる必要があります。コンソールアプリケーションだったり、開発中にちょこっと叩いたりするには都合が悪いですね。
+従って、ここでは3番目を選びます。しかしこれはあくまで開発用、個人用アプリケーションのための選択肢であることをお忘れなく。なお、Salesforce の接続アプリケーションの設定ではコールバック URL の入力が必須項目になっていますが、3番目だけ使うならば「 <a href="https://localhost/">https://localhost/</a> 」など適当なものを入れておけば大丈夫です。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/salesforce-setting1.png" />
+    
+    
+</figure>
+
+
+<p>さて、これを Go 言語で叩く方法ですが、ベタベタ書くとこんな感じになります。</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;encoding/json&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;net/url&quot;
+)
+
+func main() {
+	const loginURL = &quot;https://login.salesforce.com/services/oauth2/token&quot;
+	values := url.Values{}
+	values.Add(&quot;grant_type&quot;, &quot;password&quot;)
+	values.Add(&quot;client_id&quot;, &quot;&lt;CLIENT_ID&gt;&quot;)
+	values.Add(&quot;client_secret&quot;, &quot;&lt;CLIENT_SECRET&gt;&quot;)
+	values.Add(&quot;username&quot;, &quot;&lt;USER_NAME&gt;&quot;)
+	values.Add(&quot;password&quot;, &quot;&lt;PASSWORD&gt;&quot;+&quot;&lt;SECURITY_TOKEN&gt;&quot;)
+	res, err := http.PostForm(loginURL, values)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var session map[string]string
+	decoder := json.NewDecoder(res.Body)
+	if err := decoder.Decode(&amp;session); err != nil {
+		log.Fatal(err)
+	}
+	log.Printf(&quot;Login successful. Instance: %s&quot;, session[&quot;instance_url&quot;])
+}
+</code></pre>
+
+<p>補足:</p>
+
+<ul>
+<li>Sandbox に接続する場合は <code>login.salesforce.com</code> ではなく <code>test.salesforce.com</code> になります</li>
+<li><code>&lt;SECURITY_TOKEN&gt;</code> はユーザメニューの設定から「私のセキュリティトークンのリセット」を選んでリセットすることで得られます</li>
+</ul>
+
+<p>認証応答には以下の要素が含まれています<sup>[参考文献4]</sup>:</p>
+
+<ul>
+<li><code>access_token</code>: アクセストークン</li>
+<li><code>instance_url</code>: API コール送信先の Salesforce インスタンス URL</li>
+<li><code>id</code>: 認証されたユーザの ID URL</li>
+<li><code>signature</code>: <code>id</code> の SHA256 の署名</li>
+<li><code>issued_at</code>: 署名作成日時</li>
+<li><code>token_type</code>: <code>Bearer</code> 固定 <small>(参考文献4には記載されていないがいつも返ってくる)</small></li>
+</ul>
+
+<p>ここの情報を使って様々な API エンドポイントにリクエストが送れるわけです。</p>
+
+<p>めでたくログインできたら、クエリを投げてみましょう。メソッドは GET ですが、ヘッダーをいくつか設定する必要があるため、便利な <code>http.Get(url)</code> は使えません (他の操作も同様)。</p>
+
+<pre><code class="language-go">	req, err := http.NewRequest(http.MethodGet, session[&quot;instance_url&quot;]+&quot;/services/data/v41.0/query&quot;, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	req.Header.Add(&quot;Authorization&quot;, session[&quot;token_type&quot;]+&quot; &quot;+session[&quot;access_token&quot;])
+	req.Header.Add(&quot;Accept&quot;, &quot;application/json&quot;)
+	values = url.Values{}
+	values.Add(&quot;q&quot;, &quot;SELECT Name FROM Contact LIMIT 3&quot;)
+	log.Printf(&quot;POST %s\n&quot;, req.URL)
+	req.URL.RawQuery = values.Encode()
+	res, err = http.DefaultClient.Do(req)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer res.Body.Close()
+	decoder = json.NewDecoder(res.Body)
+	var out interface{}
+	if err = decoder.Decode(&amp;out); err != nil {
+		log.Fatal(err)
+	}
+	log.Printf(&quot;%v\n&quot;, out)
+</code></pre>
+
+<p>補足:</p>
+
+<ul>
+<li>API によっては <code>X-PrettyPrint: 1</code> というヘッダーを追加することで、JSON レスポンスがインデントされて返ってくることがありますが、Query API は今のところ対応していないようです</li>
+</ul>
+
+<p>うまく結果が返ってきましたか？おめでとうございます🎉 もし <code>Authorization</code> ヘッダがおかしかったり、そもそもリクエスト先の <code>instance_url</code> が認証応答と違っていたりすると、以下のような応答が返ってきてしまいます。その際はコードや設定を見直してみてください。</p>
+
+<pre><code class="language-json">{
+  &quot;message&quot;: &quot;Session expired or invalid&quot;,
+  &quot;errorCode&quot;: &quot;INVALID_SESSION_ID&quot;
+}
+</code></pre>
+
+<p>それにしても、<code>http</code> パッケージの簡易メソッドが使えないため、だらだらと長いコードになっていますね。リクエスト結果をデコードするのも数行に渡っていて、ちょっとつらくなってきました。構造体にデータを入れようとしたら、さらに定義もつらつら書かないといけません。さらに Go 言語 1.7 で導入された <code>context</code> パッケージも使えていません。そこで、私が開発したクライアントライブラリ <a href="https://github.com/mikan/force-client-go">force-client-go</a> のご紹介です。</p>
+
+
+<figure class="center">
+    <a href="https://github.com/mikan/force-client-go">
+        <img src="/img/ss/github-force-client-go1.png" width="80%" />
+    </a>
+    
+    <figcaption>
+        <h4>force-client-go</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>これを import すれば、先程のダラダラ Query コードがこの通り！</p>
+
+<pre><code>var out interface{}
+client.Query(context.Background(), &quot;SELECT Name FROM Contact LIMIT 3&quot;, &amp;out)
+log.Printf(&quot;%v\n&quot;, out)
+</code></pre>
+
+<p>ね、簡単でしょ✨ しかも <code>context</code> を渡せるので、キャンセル処理を自在にコントロールできます。</p>
+
+<p>現在は、先程の Query 操作ほか基本的な CRUD 操作、いくつかの SObject の struct 定義、そして簡単に試せる CLI ユーティリティとサンプルコードが付属しています。</p>
+
+<pre><code>// Create
+contact := sobject.Contact{FirstName: &quot;Test&quot;, LastName: &quot;User&quot;}
+id, err := client.Create(context.Background(), sobject.ContactObjectName, &amp;contact)
+
+// Read
+var readResult sobject.Contact
+err = client.Read(context.Background(), sobject.ContactObjectName, id, &amp;readResult)
+
+// Update
+update := sobject.Contact{FirstName: &quot;Test2&quot;}
+err = client.Update(context.Background(), sobject.ContactObjectName, id, &amp;update)
+
+// Delete
+err = client.Delete(context.Background(), sobject.ContactObjectName, id)
+</code></pre>
+
+<p>今後暇をみて叩けるエンドポイントや SObject 定義を追加していこうと思います (README.md の <a href="https://github.com/mikan/force-client-go#future-works">Future works</a> 参照)。・・・それより先にカバレッジを上げろって？善処しまーす😇</p>
+
+<p>Stay tuned &amp; Happy hacking!</p>
+
+<h4 id="参考文献">参考文献</h4>
+
+<ol>
+<li><a href="https://developer.salesforce.com/docs/atlas.ja-jp.api_rest.meta/api_rest/intro_what_is_rest_api.htm">Force.com REST API の概要 | Force.com REST API 開発者ガイド | Salesforce Developers</a></li>
+<li><a href="https://www.salesforce.com/jp/campaign/dictionary/">セールスフォース・ドットコム用語解説 - セールスフォース・ドットコム</a></li>
+<li><a href="https://developer.salesforce.com/docs/atlas.ja-jp.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm">API 要求の制限 | Salesforce Developer の制限クイックリファレンス | Salesforce Developers</a></li>
+<li><a href="https://developer.salesforce.com/docs/atlas.ja-jp.api_rest.meta/api_rest/intro_understanding_username_password_oauth_flow.htm">ユーザ名パスワード OAuth 認証フローについて | Force.com REST API 開発者ガイド | Salesforce Developers</a></li>
+<li><a href="https://developer.salesforce.com/docs/atlas.ja-jp.api_rest.meta/api_rest/errorcodes.htm">状況コードとエラー応答 | Force.com REST API 開発者ガイド | Salesforce Developers</a></li>
+</ol>
+
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=force-client-go%3a%20Go%20%e3%81%a7%20Salesforce%20%e3%81%ae%20REST%20API%20%e3%82%92%e5%8f%a9%e3%81%8f&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f&amp;title=force-client-go%3a%20Go%20%e3%81%a7%20Salesforce%20%e3%81%ae%20REST%20API%20%e3%82%92%e5%8f%a9%e3%81%8f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=force-client-go%3a%20Go%20%e3%81%a7%20Salesforce%20%e3%81%ae%20REST%20API%20%e3%82%92%e5%8f%a9%e3%81%8f&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f24%2fintroducing-force-client-go%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/" title="Go の dep やら govendor やらを GitLab CI で回す">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/" title="PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//kagaorange.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="https://mikan.github.io/2018/01/23/data-visualization-on-static-sites-with-aws-lambda-go-and-chart-js/">AWS Lambda Go と Chart.js で実現する静的サイトのデータビジュアライゼーション</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/19/mashup-awards-2017/">Mashup Awards 2017</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/">STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/">G Suite を IdP にした Salesforce の SAML SSO の有効化</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/">PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/24/introducing-force-client-go/">force-client-go: Go で Salesforce の REST API を叩く</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/">Go の dep やら govendor やらを GitLab CI で回す</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/19/jjug-ccc-2017-fall/">JJUG CCC 2017 Fall</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/13/operate-github-org-scope/">GitHub OAuth の org スコープの適用と運用</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/">みちびき対応 GPS モジュール PA6C を Mbed で使う</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>category</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/categories/web">web</a></li><li><a href="/categories/iot">iot</a></li><li><a href="/categories/life">life</a></li><li><a href="/categories/salesforce">salesforce</a></li><li><a href="/categories/tools">tools</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>tag</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/tags/github">github</a></li><li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li><li><a href="/tags/golang">golang</a></li><li><a href="/tags/hugo">hugo</a></li><li><a href="/tags/aws">aws</a></li><li><a href="/tags/book">book</a></li><li><a href="/tags/force.com">force.com</a></li><li><a href="/tags/gitlab">gitlab</a></li><li><a href="/tags/java">java</a></li><li><a href="/tags/mbed">mbed</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+    
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+  Copyright&copy; <a href='/about/'>Yutaka Kato</a>
+
+</small>
+</div>
+
+
+    
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="7376c112ca70badebd8ee83050033a40afd51c35656127efca6d0e2f5b1f09c2" async="async"></script>
+
+<script src="https://mikan.github.io/js/jquery.min.js"></script>
+<script src="https://mikan.github.io/js/bootstrap.min.js"></script>
+
+
+<script src="https://mikan.github.io/js/highlight.pack.js"></script>
+<script src="https://mikan.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-68709286-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER = "", 
+EXPIRE_COOKIE = "", 
+SHOW_MODAL_TIMEOUT = "", 
+MOUSE_LEAVE = "", 
+MODAL_SIZE = "", 
+POST_URL = "", 
+SIGNUP_HEADER = "",
+HEADER_IMAGE = "",
+IMG_DESCRIPTION = "",
+SIGNUP_TEXT = "",
+INPUT_PLACEHOLDER = "",
+SUBMIT_BUTTON = "",
+SUCCESS_MESSAGE = "",
+ERROR_MESSAGE = "",
+OPTIN = "",
+COOKIE_NAME = "",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>技術ブログを作ってみた  &middot; Yutaka 🍊 Kato</title>
+  <meta property="og:image" content="https://mikan.github.io/ogp.png" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="book, hugo, ">
+
+
+<meta property="og:title" content="技術ブログを作ってみた  &middot; Yutaka 🍊 Kato ">
+<meta property="og:site_name" content="Yutaka 🍊 Kato"/>
+<meta property="og:url" content="https://mikan.github.io/2017/11/03/hello-world/" />
+<meta property="og:locale" content="ja-jp">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2017-11-03T00:05:15&#43;09:00" />
+<meta property="og:article:modified_time" content="2017-11-03T00:05:15&#43;09:00" />
+
+  
+    
+<meta property="og:article:tag" content="book">
+    
+<meta property="og:article:tag" content="hugo">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kagaorange" />
+<meta name="twitter:creator" content="@kagaorange" />
+<meta name="twitter:title" content="技術ブログを作ってみた" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://mikan.github.io/2017/11/03/hello-world/" />
+<meta name="twitter:domain" content="https://mikan.github.io/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "技術ブログを作ってみた",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-11-03",
+    "description": "",
+    "wordCount": 1338
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="https://mikan.github.io/2017/11/03/hello-world/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.36.1" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://mikan.github.io/css/bootswatch/sandstone/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://mikan.github.io/css/style.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/mikan.css">
+
+
+
+  <link rel="stylesheet" href="https://mikan.github.io/css/highlight/default.css">
+
+
+</head>
+<body class="map[name:sandstone]" data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="Yutaka 🍊 Kato" src="/logo.png">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/" >
+                <i class='fa fa-home'></i>
+                Home
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/post/" >
+                <i class='fa fa-archive'></i>
+                Archives
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/seminars/" >
+                <i class='fa fa-users'></i>
+                Seminars
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/about/" >
+                <i class='fa fa-info-circle'></i>
+                About
+              </a>
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>技術ブログを作ってみた
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-11-03">3 Nov, 2017</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 3 min
+  &middot; (1338 words)
+  &middot; 
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%e6%8a%80%e8%a1%93%e3%83%96%e3%83%ad%e3%82%b0%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f&amp;title=%e6%8a%80%e8%a1%93%e3%83%96%e3%83%ad%e3%82%b0%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%e6%8a%80%e8%a1%93%e3%83%96%e3%83%ad%e3%82%b0%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://mikan.github.io/tags/book" class="label label-primary">book</a>
+  
+  <a href="https://mikan.github.io/tags/hugo" class="label label-primary">hugo</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<p>突然ですが、技術ブログを作ってみました！</p>
+
+<p>実は 3～4 年前まで別の技術ブログを持っていました。しかし WordPress.com の操作ミスで消してしまったのです・・・。
+あぁ、私のキラキラ輝く山篭り生活 IN 北陸の秘密基地ライフが・・・ (本当に &ldquo;技術ブログ&rdquo; だったのか!? 😇)
+そこで 2017 年の頭に立てた目標の一つが、「技術ブログの復活」でした。さて、今は 11 月です。いったい今まで何をサボっていたのでしょう？</p>
+
+<h2 id="きっかけ">きっかけ</h2>
+
+<p><a href="http://amzn.to/2h5lk9V">Soft Skills</a> という本を読んだことがあるでしょうか。ぶっとんだフリーランスの John Sonmez 氏が執筆した本で、ゆるふわ系エンジニアの私は大変な刺激を受けたものです。
+と同時に、「うわっ・・・私の技術アウトプット、低すぎ・・・？」 😱 と気付かされたわけで、そこからたくさんセミナーに顔出して懇親会にももっと顔出すようになったり、日本 Java ユーザー会のカンファレンス (JJUG CCC 2017 Spring) の登壇にチャレンジしてみたり、少しずつアクティブになってきたと思ってきたところです。そんな中、目標の一つにかかげつつまだ達成できていなかったのが、技術ブログ執筆なわけです。</p>
+
+
+<figure class="center">
+    <a href="http://amzn.to/2h5lk9V">
+        <img src="/img/cover/softskills.png" width="20%" />
+    </a>
+    
+    <figcaption>
+        <h4>SOFT SKILLS ソフトウェア開発者の人生マニュアル</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>もう一点、私は今年の 9 月に (再) 転職をしてベンチャー企業に入ったわけなのですが、ここが今まで身を置いていた会社 (お硬い大企業とか) とは違い、ナレッジは社内で溜め込むより社外にガンガン出してくほうがもっと多くの人の役に立つし良くね？的なオープンなノリがあって、でも個人的に Q なんとかは受け入れがたくて、やっぱ自分のスタイルでパブリッシュしていくには技術ブログかなと改めて感じました。</p>
+
+<p>また、この後紹介しますが、今回は Git で原稿と HTML の双方をバージョン管理しており、ホスティングは GitHub Pages を使っています。これで、どんなアホな操作ミスをしても、武蔵小杉にミサイルが落ちてきても、サービスでデータロストが起きても、ブログのデータが地球から完全に消え去ってしまう可能性はかなり小さくなりました。つまり、WordPress ショックの再来 (注: 繰り返すが私の操作ミスで WP は悪くない) に怯えることもなくなったわけで、もはや書かない理由はなくなりました。</p>
+
+<h2 id="使っているもの">使っているもの</h2>
+
+<p>ホスティングは GitHub Pages を使っています。元々はこの URL で雑多なポートフォリオ等を載せていました。</p>
+
+<p>原稿から HTML を生成するツールには <a href="https://gohugo.io/">Hugo</a> を利用しています。一言で紹介するならば、Go で書かれた Jekyll クローン、でしょうか。しかしその一言で片付けるにはもったいないぐらい魅力があるツールです。</p>
+
+
+<figure class="center">
+    <a href="https://gohugo.io">
+        <img src="/img/ss/hugo.png" width="60%" />
+    </a>
+    
+    <figcaption>
+        <h4>Hugo</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>あえて GitHub Pages ネイティブな Jekyll ではなく Hugo を採用した理由は、速さと機能性、Ruby インタプリタ不要な取り回し安さなどがありますが、9 割は趣味です。だって Golang 製だし。</p>
+
+<h2 id="テーマ">テーマ</h2>
+
+<p>ずばり、「<strong>IoT</strong>」です。私のエンジニアとしての目標は「<strong>IoT フルスタックエンジニア</strong>」で、それこそが組み込みからサーバーサイドまで経験し、また継続して興味を持ち続けている私の生きる道だと思っています。
+もっとも、ここんところ (転職前も後も) 金融系の仕事が続いていますが、クラウド活用や大量データを扱う設計など IoT の技術群とオーバーラップするところも少なくないのではと思っています。IoT のしごとをしていないときも、IoT にこじつけながらブログをポストしつづけられることを目指しています。</p>
+
+<p>Stay tuned &amp; Happy hacking!</p>
+
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%e6%8a%80%e8%a1%93%e3%83%96%e3%83%ad%e3%82%b0%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f&amp;title=%e6%8a%80%e8%a1%93%e3%83%96%e3%83%ad%e3%82%b0%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%e6%8a%80%e8%a1%93%e3%83%96%e3%83%ad%e3%82%b0%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%bf%e3%81%9f&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f03%2fhello-world%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+
+    
+      <li class="next">
+        <a href="https://mikan.github.io/2017/11/03/hugo-on-gh-pages/" title="Hugo を GitHub Pages でホストする方法を考える">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//kagaorange.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="https://mikan.github.io/2018/01/23/data-visualization-on-static-sites-with-aws-lambda-go-and-chart-js/">AWS Lambda Go と Chart.js で実現する静的サイトのデータビジュアライゼーション</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/19/mashup-awards-2017/">Mashup Awards 2017</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/">STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/">G Suite を IdP にした Salesforce の SAML SSO の有効化</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/">PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/24/introducing-force-client-go/">force-client-go: Go で Salesforce の REST API を叩く</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/">Go の dep やら govendor やらを GitLab CI で回す</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/19/jjug-ccc-2017-fall/">JJUG CCC 2017 Fall</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/13/operate-github-org-scope/">GitHub OAuth の org スコープの適用と運用</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/">みちびき対応 GPS モジュール PA6C を Mbed で使う</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>category</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/categories/web">web</a></li><li><a href="/categories/iot">iot</a></li><li><a href="/categories/life">life</a></li><li><a href="/categories/salesforce">salesforce</a></li><li><a href="/categories/tools">tools</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>tag</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/tags/github">github</a></li><li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li><li><a href="/tags/golang">golang</a></li><li><a href="/tags/hugo">hugo</a></li><li><a href="/tags/aws">aws</a></li><li><a href="/tags/book">book</a></li><li><a href="/tags/force.com">force.com</a></li><li><a href="/tags/gitlab">gitlab</a></li><li><a href="/tags/java">java</a></li><li><a href="/tags/mbed">mbed</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+    
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+  Copyright&copy; <a href='/about/'>Yutaka Kato</a>
+
+</small>
+</div>
+
+
+    
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="7376c112ca70badebd8ee83050033a40afd51c35656127efca6d0e2f5b1f09c2" async="async"></script>
+
+<script src="https://mikan.github.io/js/jquery.min.js"></script>
+<script src="https://mikan.github.io/js/bootstrap.min.js"></script>
+
+
+<script src="https://mikan.github.io/js/highlight.pack.js"></script>
+<script src="https://mikan.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-68709286-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER = "", 
+EXPIRE_COOKIE = "", 
+SHOW_MODAL_TIMEOUT = "", 
+MOUSE_LEAVE = "", 
+MODAL_SIZE = "", 
+POST_URL = "", 
+SIGNUP_HEADER = "",
+HEADER_IMAGE = "",
+IMG_DESCRIPTION = "",
+SIGNUP_TEXT = "",
+INPUT_PLACEHOLDER = "",
+SUBMIT_BUTTON = "",
+SUCCESS_MESSAGE = "",
+ERROR_MESSAGE = "",
+OPTIN = "",
+COOKIE_NAME = "",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

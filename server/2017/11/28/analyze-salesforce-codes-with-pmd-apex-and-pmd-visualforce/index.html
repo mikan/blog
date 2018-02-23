@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する  &middot; Yutaka 🍊 Kato</title>
+  <meta property="og:image" content="https://mikan.github.io/ogp.png" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="force.com, apex, visualforce, gitlab, ">
+
+
+<meta property="og:title" content="PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する  &middot; Yutaka 🍊 Kato ">
+<meta property="og:site_name" content="Yutaka 🍊 Kato"/>
+<meta property="og:url" content="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/" />
+<meta property="og:locale" content="ja-jp">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2017-11-28T21:42:48&#43;09:00" />
+<meta property="og:article:modified_time" content="2017-11-28T21:42:48&#43;09:00" />
+
+  
+    
+<meta property="og:article:tag" content="force.com">
+    
+<meta property="og:article:tag" content="apex">
+    
+<meta property="og:article:tag" content="visualforce">
+    
+<meta property="og:article:tag" content="gitlab">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kagaorange" />
+<meta name="twitter:creator" content="@kagaorange" />
+<meta name="twitter:title" content="PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/" />
+<meta name="twitter:domain" content="https://mikan.github.io/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-11-28",
+    "description": "",
+    "wordCount": 2228
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.36.1" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://mikan.github.io/css/bootswatch/sandstone/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://mikan.github.io/css/style.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/mikan.css">
+
+
+
+  <link rel="stylesheet" href="https://mikan.github.io/css/highlight/default.css">
+
+
+</head>
+<body class="map[name:sandstone]" data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="Yutaka 🍊 Kato" src="/logo.png">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/" >
+                <i class='fa fa-home'></i>
+                Home
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/post/" >
+                <i class='fa fa-archive'></i>
+                Archives
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/seminars/" >
+                <i class='fa fa-users'></i>
+                Seminars
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/about/" >
+                <i class='fa fa-info-circle'></i>
+                About
+              </a>
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-11-28">28 Nov, 2017</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 5 min
+  &middot; (2228 words)
+  &middot; 
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=PMD%20Apex%20%2f%20PMD%20Visualforce%20%e3%81%a7%20Salesforce%20%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e9%9d%99%e7%9a%84%e8%a7%a3%e6%9e%90%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f&amp;title=PMD%20Apex%20%2f%20PMD%20Visualforce%20%e3%81%a7%20Salesforce%20%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e9%9d%99%e7%9a%84%e8%a7%a3%e6%9e%90%e3%81%99%e3%82%8b" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=PMD%20Apex%20%2f%20PMD%20Visualforce%20%e3%81%a7%20Salesforce%20%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e9%9d%99%e7%9a%84%e8%a7%a3%e6%9e%90%e3%81%99%e3%82%8b&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://mikan.github.io/tags/force.com" class="label label-primary">force.com</a>
+  
+  <a href="https://mikan.github.io/tags/apex" class="label label-primary">apex</a>
+  
+  <a href="https://mikan.github.io/tags/visualforce" class="label label-primary">visualforce</a>
+  
+  <a href="https://mikan.github.io/tags/gitlab" class="label label-primary">gitlab</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<p>Salesforce のカスタマイズで用いる独自言語、Apex と Visualforce のコードを静的解析できるツール PMD Apex / PMD Visualforce を使ってみたので、ハマりどころや CI の工夫などをまとめてみます。</p>
+
+
+<figure class="center">
+    <a href="https://pmd.github.io/">
+        <img src="/img/logo/pmd.png" width="40%" />
+    </a>
+    
+    <figcaption>
+        <h4>PMD</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>PMD といえば、Java 界隈では言わずと知れた静的解析ツール。同じく Java 界隈でよく使われる <a href="http://findbugs.sourceforge.net/">FindBugs</a> はソースコード (<code>*.java</code>) ではなくコンパイルされたクラスファイル (<code>*.class</code>) を解析対象とするため他の言語へ拡張が困難ですが、対して PMD はソースコードを AST (抽象構文木) 化して解析するため様々な言語に適用できるツールキットになるという特徴があります。
+PMD が Apex/Visualforce に対応しているのを同僚から教えてもらったときは「え、対応してたんだ！」とびっくりしたものですが、思えば Apex はコンパイル＆リンクを Force.com サーバーで行うため、クライアントサイドで解析するには PMD は大変良いアプローチなわけですね。</p>
+
+<p>蛇足ですが、PMD ロゴに添えられている「<strong>Don&rsquo;t shoot the messenger</strong>」とは英語圏のことわざで「悪い知らせを伝えてくる人に怒ってはいけない」といった意味のようです。何が言いたいかは・・・わかりますよね😄</p>
+
+<blockquote>
+<p>don&rsquo;t shoot the messenger Meaning in the Cambridge English Dictionary</p>
+
+<p><a href="https://dictionary.cambridge.org/dictionary/english/don-t-shoot-the-messenger">https://dictionary.cambridge.org/dictionary/english/don-t-shoot-the-messenger</a></p>
+</blockquote>
+
+<p>さて、本記事は事前条件として Apex/Visualforce ソースコードが手元にある場面を想定しています。以下のようなツールが役立つでしょう。Salesforce DX はとってもエンジニアフレンドリーですし積極採用していきたいところですね✨</p>
+
+<ul>
+<li><a href="https://developer.salesforce.com/docs/atlas.ja-jp.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm">Salesforce DX</a></li>
+<li><a href="https://developer.salesforce.com/docs/atlas.ja-jp.daas.meta/daas/meta_development.htm">Force.com Migration Tool</a></li>
+<li><a href="https://developer.salesforce.com/page/Force.com_IDE">Force.com IDE</a></li>
+</ul>
+
+<p>それでは PMD をセットアップしてみたいと思います。素晴らしいことに PMD のディストリビューションには最初から Apex も Visualforce も備わっています。従って、あなたがすべきことは PMD をダウンロードし、ソースコードの在り処、期待する出力フォーマット、そして適用したいルールセットを添えて実行するだけです。</p>
+
+<pre><code class="language-bash">cd $HOME
+wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F5.8.1/pmd-bin-5.8.1.zip
+unzip pmd-bin-5.8.1.zip
+alias pmd=&quot;$HOME/pmd-bin-5.8.1/bin/run.sh pmd&quot;
+pmd -d /path/to/src -f html -R apex-apexunit,apex-braces,apex-complexity,apex-performance,apex-security,apex-style,vf-security
+</code></pre>
+
+<p>備考:</p>
+
+<ul>
+<li><code>-d</code> はいろんなメタデータのディレクトリがある上のディレクトリ (つまり <code>src</code>) を指定すれば OK です。trigger だの component だのは指定せずとも拾ってくれます。明示する場合は <code>-d</code> オプションの代わりに <code>-fileset</code> オプションでパターンをカンマ区切りで指定します<sup>[参考文献1]</sup></li>
+<li><code>-l</code> で言語を指定することができますが<sup>[参考文献1]</sup>、この例ではあってもなくても結果が変わりませんでした</li>
+<li><code>-f</code> は出力フォーマットを指定する項目で、以下の選択肢があります<sup>[参考文献1]</sup>:
+
+<ul>
+<li><code>codeclimate</code>, <code>csv</code>, <code>emacs</code>, <code>html</code>, <code>ideaj</code>, <code>summaryhtml</code>, <code>text</code>, <code>textcolor</code>, <code>textpad</code>, <code>vbhtml</code>, <code>xml</code>, <code>xslt</code> (<code>xsltFilename</code> プロパティも指定), <code>yahtml</code> (<code>outputDir</code> プロパティも指定)</li>
+</ul></li>
+</ul>
+
+<p><code>-f html</code> で HTML レポートを出力すると、こんな感じの質素な HTML が<strong>標準出力</strong>されます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/pmd-report1.png" width="80%" />
+    
+    
+    <figcaption>
+        <h4>PMD HTML Report</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p><code>-f vbhtml</code> で HTML レポートを出力すると、こんな感じの HTML が標準出力されます。ファイルごとにまとまった感じで出力されていいですね。ちなみに vb とは Vladimir Bossicard (開発者の名前) のようです。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/pmd-report2.png" />
+    
+    
+    <figcaption>
+        <h4>PMD HTML Report (VB)</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p><code>-f yahtml</code> は Yet Another HTML というモードで、ディレクトリに複数の HTML 群を吐いてくれるモードですが、残念ながら Apex/Visualforce ではいい感じの HTML が生成されませんでした。なお、出力ディレクトリは <code>-P outputDir=xxx</code> で場所を教える必要があります。さらに、指定したディレクトリは既に存在する必要があります (通常は直前に <code>mkdir</code> する)。</p>
+
+<p><code>-f xml</code> は Jenkins のプラグインで集計する際などに使うフォーマットです。</p>
+
+<p><a href="https://www.microsoft.com/ja-jp/dev/products/code-vs.aspx">Visual Studio Code</a> をお使いの方は、開いたり保存したりしたときに PMD Apex を自動的に掛ける素晴らしいプラグインがあります:</p>
+
+<blockquote>
+<p>ChuckJonas/vscode-apex-pmd: PMD static analysis for Apex in vscode</p>
+
+<p><a href="https://github.com/ChuckJonas/vscode-apex-pmd">https://github.com/ChuckJonas/vscode-apex-pmd</a></p>
+</blockquote>
+
+<p>さて、ここまで書いたところで今更なのですが、私の手元の環境では重大な問題が発生していました。なんと、Java SE 9 では Apex 解析部分が正常に動作しないようです (PMD Java とかは問題なし)。以前出たバグの再発っぽいですが、詳細は解析中。今はひとまず Java SE 8 / OpenJDK 8 で回避しましょう。上述の VSCode プラグインも Java 9 環境では全く吠えてくれません😅</p>
+
+<pre><code>Exception in thread &quot;main&quot; java.lang.IncompatibleClassChangeError: Inconsistent constant pool data in classfile for class apex/jorje/semantic/symbol/member/method/MethodTable. Method lambda$static$64(Lapex/jorje/semantic/symbol/member/method/MethodInfo;)Z at index 85 is CONSTANT_MethodRef and should be CONSTANT_InterfaceMethodRef
+	at apex.jorje.semantic.symbol.member.method.MethodTable.&lt;clinit&gt;(MethodTable.java:38)
+	at apex.jorje.semantic.symbol.type.ModifierTypeInfo$Builder.build(ModifierTypeInfo.java:119)
+	at apex.jorje.semantic.symbol.type.ModifierTypeInfos.&lt;clinit&gt;(ModifierTypeInfos.java:54)
+	at apex.jorje.semantic.ast.modifier.ModifierGroups.&lt;clinit&gt;(ModifierGroups.java:27)
+	at apex.jorje.semantic.symbol.type.TypeInfos.&lt;clinit&gt;(TypeInfos.java:40)
+	at apex.jorje.semantic.symbol.member.variable.TriggerVariableMap.&lt;clinit&gt;(TriggerVariableMap.java:46)
+	at apex.jorje.semantic.symbol.resolver.StandardSymbolResolver.&lt;init&gt;(StandardSymbolResolver.java:80)
+	at apex.jorje.semantic.compiler.CompilerContext.&lt;init&gt;(CompilerContext.java:49)
+	at apex.jorje.semantic.compiler.ApexCompiler.&lt;init&gt;(ApexCompiler.java:57)
+	at apex.jorje.semantic.compiler.ApexCompiler.&lt;init&gt;(ApexCompiler.java:37)
+	at apex.jorje.semantic.compiler.ApexCompiler$Builder.build(ApexCompiler.java:210)
+	at net.sourceforge.pmd.lang.apex.ast.CompilerService.compile(CompilerService.java:95)
+	at net.sourceforge.pmd.lang.apex.ast.CompilerService.visitAstsFromStrings(CompilerService.java:90)
+	at net.sourceforge.pmd.lang.apex.ast.CompilerService.visitAstFromString(CompilerService.java:78)
+	at net.sourceforge.pmd.lang.apex.ast.ApexParser.parseApex(ApexParser.java:42)
+	at net.sourceforge.pmd.lang.apex.ast.ApexParser.parse(ApexParser.java:51)
+	at net.sourceforge.pmd.lang.apex.ApexParser.parse(ApexParser.java:37)
+	at net.sourceforge.pmd.SourceCodeProcessor.parse(SourceCodeProcessor.java:113)
+	at net.sourceforge.pmd.SourceCodeProcessor.processSource(SourceCodeProcessor.java:175)
+	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCode(SourceCodeProcessor.java:97)
+	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCode(SourceCodeProcessor.java:52)
+	at net.sourceforge.pmd.processor.PmdRunnable.call(PmdRunnable.java:88)
+	at net.sourceforge.pmd.processor.PmdRunnable.call(PmdRunnable.java:27)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+</code></pre>
+
+<p>最後に、GitLab CI で回す方法を試行錯誤してみました。</p>
+
+<p>基本的にやることはコマンドを叩くだけですが、先述の通り JRE のバージョンを気をつけることと、終了ステータスが 0 でなくても打ち切りにさせない方法、そして HTML レポートを artifact (成果物) として保存することの 3 点がミソです。</p>
+
+<pre><code class="language-yml">image: openjdk:8-jdk
+
+stages:
+  - pmd
+
+pmd:
+  stage: pmd
+  variables:
+    PMD_VAR: '5.8.1'
+    PMD_OUT: 'pmd.html'
+    RULESETS: 'apex-apexunit,apex-braces,apex-complexity,apex-performance,apex-security,apex-style,vf-security'
+  script:
+    - wget -q https://github.com/pmd/pmd/releases/download/pmd_releases%2F${PMD_VAR}/pmd-bin-${PMD_VAR}.zip
+    - unzip -q pmd-bin-${PMD_VAR}.zip
+    - echo `./pmd-bin-${PMD_VAR}/bin/run.sh pmd -d src -f html -R ${RULESETS}` &gt; $PMD_OUT
+  artifacts:
+    paths:
+      - $PMD_OUT
+</code></pre>
+
+<p>GitLab CI (他の Scriptable な CI サービスも同様) は終了ステータスが 0 か否かでステージの成功/失敗を判定し、しかも失敗の場合は後続の処理 (artifact の保存も含む) が実行されないため、何も対策しないと PMD が問題を見つけたとき (return 1 したとき) に肝心のレポートが見られなくなってしまいます。そこで、<code>echo</code> とバッククオートを使って回避してみました。<code>echo</code> した結果 (標準出力のみ) はファイルにリダイレクトしてレポートを作る仕組みです。</p>
+
+<p>Salesforce DX などでビルドやテスト、デプロイのステージを設ける際も、pmd ステージはレポートを保存しなければいけませんから、問題を検出した際に CI として失敗としたい場合は一旦 pmd ステージは通過させた上で、後続のパイプラインで再度 (今度は小細工なしで) <code>pmd</code> を実行して失敗に落とすのが良さそうです。</p>
+
+<p>PMD は現在 6.0 のメジャーリリースに向けて開発が進んでいます。ルールセットのカテゴリーが整理されることになり、既存のルールセット指定が変わる可能性があります (しばらくは後方互換性のために残る模様)。5.x 系も盛んにアップデートされているため、今後も開発の行方を追っていきたいところです。</p>
+
+<h4 id="参考文献">参考文献</h4>
+
+<ol>
+<li><a href="https://pmd.github.io/pmd-5.8.1/usage/running.html">PMD &#x2013; Running PMD via command line</a></li>
+<li><a href="https://pmd.github.io/latest/pmd-apex/rules/index.html">PMD Apex &#x2013; PMD Rulesets index: Current Rulesets</a></li>
+<li><a href="https://pmd.github.io/latest/pmd-visualforce/rules/index.html">PMD VF &#x2013; PMD Rulesets index: Current Rulesets</a></li>
+</ol>
+
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=PMD%20Apex%20%2f%20PMD%20Visualforce%20%e3%81%a7%20Salesforce%20%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e9%9d%99%e7%9a%84%e8%a7%a3%e6%9e%90%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f&amp;title=PMD%20Apex%20%2f%20PMD%20Visualforce%20%e3%81%a7%20Salesforce%20%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e9%9d%99%e7%9a%84%e8%a7%a3%e6%9e%90%e3%81%99%e3%82%8b" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=PMD%20Apex%20%2f%20PMD%20Visualforce%20%e3%81%a7%20Salesforce%20%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e9%9d%99%e7%9a%84%e8%a7%a3%e6%9e%90%e3%81%99%e3%82%8b&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f28%2fanalyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="https://mikan.github.io/2017/11/24/introducing-force-client-go/" title="force-client-go: Go で Salesforce の REST API を叩く">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/" title="G Suite を IdP にした Salesforce の SAML SSO の有効化">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//kagaorange.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="https://mikan.github.io/2018/01/23/data-visualization-on-static-sites-with-aws-lambda-go-and-chart-js/">AWS Lambda Go と Chart.js で実現する静的サイトのデータビジュアライゼーション</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/19/mashup-awards-2017/">Mashup Awards 2017</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/">STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/">G Suite を IdP にした Salesforce の SAML SSO の有効化</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/">PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/24/introducing-force-client-go/">force-client-go: Go で Salesforce の REST API を叩く</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/">Go の dep やら govendor やらを GitLab CI で回す</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/19/jjug-ccc-2017-fall/">JJUG CCC 2017 Fall</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/13/operate-github-org-scope/">GitHub OAuth の org スコープの適用と運用</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/">みちびき対応 GPS モジュール PA6C を Mbed で使う</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>category</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/categories/web">web</a></li><li><a href="/categories/iot">iot</a></li><li><a href="/categories/life">life</a></li><li><a href="/categories/salesforce">salesforce</a></li><li><a href="/categories/tools">tools</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>tag</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/tags/github">github</a></li><li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li><li><a href="/tags/golang">golang</a></li><li><a href="/tags/hugo">hugo</a></li><li><a href="/tags/aws">aws</a></li><li><a href="/tags/book">book</a></li><li><a href="/tags/force.com">force.com</a></li><li><a href="/tags/gitlab">gitlab</a></li><li><a href="/tags/java">java</a></li><li><a href="/tags/mbed">mbed</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+    
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+  Copyright&copy; <a href='/about/'>Yutaka Kato</a>
+
+</small>
+</div>
+
+
+    
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="7376c112ca70badebd8ee83050033a40afd51c35656127efca6d0e2f5b1f09c2" async="async"></script>
+
+<script src="https://mikan.github.io/js/jquery.min.js"></script>
+<script src="https://mikan.github.io/js/bootstrap.min.js"></script>
+
+
+<script src="https://mikan.github.io/js/highlight.pack.js"></script>
+<script src="https://mikan.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-68709286-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER = "", 
+EXPIRE_COOKIE = "", 
+SHOW_MODAL_TIMEOUT = "", 
+MOUSE_LEAVE = "", 
+MODAL_SIZE = "", 
+POST_URL = "", 
+SIGNUP_HEADER = "",
+HEADER_IMAGE = "",
+IMG_DESCRIPTION = "",
+SIGNUP_TEXT = "",
+INPUT_PLACEHOLDER = "",
+SUBMIT_BUTTON = "",
+SUCCESS_MESSAGE = "",
+ERROR_MESSAGE = "",
+OPTIN = "",
+COOKIE_NAME = "",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

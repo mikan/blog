@@ -1,0 +1,17 @@
+figure {
+    margin-bottom: 15px;
+}
+
+figure.center {
+    text-align: center;
+}
+figure.center img {
+    margin: 0 auto;
+}
+
+figure.inline {
+    display: inline;
+}
+figure.inline img {
+    display: inline;
+}

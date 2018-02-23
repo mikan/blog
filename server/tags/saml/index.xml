@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Saml on Yutaka 🍊 Kato</title>
+    <link>https://mikan.github.io/tags/saml/</link>
+    <description>Recent content in Saml on Yutaka 🍊 Kato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <managingEditor>mikan@aosn.ws (Yutaka Kato)</managingEditor>
+    <webMaster>mikan@aosn.ws (Yutaka Kato)</webMaster>
+    <lastBuildDate>Thu, 07 Dec 2017 00:19:59 +0900</lastBuildDate>
+    
+	<atom:link href="https://mikan.github.io/tags/saml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>G Suite を IdP にした Salesforce の SAML SSO の有効化</title>
+      <link>https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/</link>
+      <pubDate>Thu, 07 Dec 2017 00:19:59 +0900</pubDate>
+      <author>mikan@aosn.ws (Yutaka Kato)</author>
+      <guid>https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/</guid>
+      <description>唐突に G Suite と Salesforce を SAML で連携する方法をご紹介。 G Suite と Salesforce は共に SAML で SSO (シングルサインオン) 連携できる機能が標準で備わっており、またどちらも IdP (認証</description>
+    </item>
+    
+  </channel>
+</rss>

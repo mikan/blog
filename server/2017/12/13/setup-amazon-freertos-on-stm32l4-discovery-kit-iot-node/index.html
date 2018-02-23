@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する  &middot; Yutaka 🍊 Kato</title>
+  <meta property="og:image" content="https://mikan.github.io/ogp.png" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="aws, cloudwatch, freertos, c&#43;&#43;, ">
+
+
+<meta property="og:title" content="STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する  &middot; Yutaka 🍊 Kato ">
+<meta property="og:site_name" content="Yutaka 🍊 Kato"/>
+<meta property="og:url" content="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/" />
+<meta property="og:locale" content="ja-jp">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2017-12-13T23:31:44&#43;09:00" />
+<meta property="og:article:modified_time" content="2017-12-13T23:31:44&#43;09:00" />
+
+  
+    
+<meta property="og:article:tag" content="aws">
+    
+<meta property="og:article:tag" content="cloudwatch">
+    
+<meta property="og:article:tag" content="freertos">
+    
+<meta property="og:article:tag" content="c&#43;&#43;">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kagaorange" />
+<meta name="twitter:creator" content="@kagaorange" />
+<meta name="twitter:title" content="STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/" />
+<meta name="twitter:domain" content="https://mikan.github.io/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-12-13",
+    "description": "",
+    "wordCount": 5952
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.36.1" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://mikan.github.io/css/bootswatch/sandstone/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://mikan.github.io/css/style.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/mikan.css">
+
+
+
+  <link rel="stylesheet" href="https://mikan.github.io/css/highlight/default.css">
+
+
+</head>
+<body class="map[name:sandstone]" data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="Yutaka 🍊 Kato" src="/logo.png">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/" >
+                <i class='fa fa-home'></i>
+                Home
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/post/" >
+                <i class='fa fa-archive'></i>
+                Archives
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/seminars/" >
+                <i class='fa fa-users'></i>
+                Seminars
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/about/" >
+                <i class='fa fa-info-circle'></i>
+                About
+              </a>
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-12-13">13 Dec, 2017</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 12 min
+  &middot; (5952 words)
+  &middot; 
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=STM32L4%20Discovery%20Kit%20IoT%20Node%20%e3%81%ab%20Amazon%20FreeRTOS%20%e3%82%92%e5%b0%8e%e5%85%a5%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f&amp;title=STM32L4%20Discovery%20Kit%20IoT%20Node%20%e3%81%ab%20Amazon%20FreeRTOS%20%e3%82%92%e5%b0%8e%e5%85%a5%e3%81%99%e3%82%8b" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=STM32L4%20Discovery%20Kit%20IoT%20Node%20%e3%81%ab%20Amazon%20FreeRTOS%20%e3%82%92%e5%b0%8e%e5%85%a5%e3%81%99%e3%82%8b&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://mikan.github.io/tags/aws" class="label label-primary">aws</a>
+  
+  <a href="https://mikan.github.io/tags/cloudwatch" class="label label-primary">cloudwatch</a>
+  
+  <a href="https://mikan.github.io/tags/freertos" class="label label-primary">freertos</a>
+  
+  <a href="https://mikan.github.io/tags/c&#43;&#43;" class="label label-primary">c&#43;&#43;</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<p>Amazon FreeRTOS は 2017/11/29 に Amazon のイベント re:Invent 2017 にて発表されたマイクロコントローラー向けリアルタイム OS のディストリビューションです。
+今回、とりあえず触ってみようと対応ボードを買ってきてセットアップしてみたので、その手順をご紹介。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/photo/20171212-2101.jpg" width="80%" />
+    
+    
+</figure>
+
+
+<p>FreeRTOS 自体は 2003 年 Richard Barry 氏により開発されたリアルタイム OS です<sup>[参考文献1]</sup>。これまでは彼の会社である Real Time Engineers Ltd. によりメンテされていましたが、re:Invent 2017 で発表があったように今後は AWS によりメンテされることになります。また、ライセンスも例外付き GPL から MIT License に変更され、より商業利用に適したライセンスになりました。更に、ソースコードも GitHub でホスティングされるようになりました<sup>[参考文献2]</sup>。</p>
+
+<p><a href="https://aws.amazon.com/jp/freertos/">Amazon FreeRTOS</a> はこの FreeRTOS (kernel) と Amazon FreeRTOS Libraries の組み合わせで構成されており、Amazon FreeRTOS Libraries には以下の3つの役割が含まれています<sup>[参考文献3]</sup>:</p>
+
+<ul>
+<li>MQTT と Device Shadow を用いたデバイスと AWS IoT Cloud のセキュアな接続</li>
+<li>AWS Greengrass コアのディスカバリと接続</li>
+<li>Wi-Fi 接続の管理</li>
+</ul>
+
+<p>・・・なんだか <a href="https://www.mbed.com/en/development/mbed-os/">Mbed OS</a> のコンセプトと近いものを感じますね。</p>
+
+<p>FreeRTOS 自体は非常に多くのマイクロコントローラーに対応しているようなのですが、Amazon FreeRTOS として現在対応が謳われているボードは以下の 3 種類になります<sup>[参考文献2]</sup>。</p>
+
+<ul>
+<li>Texas Instruments (TI) - <a href="http://www.ti.com/tool/cc3220sf-launchxl">CC3220SF-LAUNCHXL</a></li>
+<li>STMicroelectronics (ST) - <a href="http://www.st.com/en/evaluation-tools/b-l475e-iot01a.html">STM32L4 Discovery kit IoT node</a></li>
+<li>NXP - <a href="http://www.nxp.com/LPC-AWS-Module">LPC54018 IoT Module</a></li>
+</ul>
+
+<p>(Microchip Technology Incorporated の Curiosity PIC32MZ EF Development Board はカミングスーン!)</p>
+
+<p>加えて、Windows 用のシミュレーターも提供されています。</p>
+
+<p>今回チョイスしたのは ST のボードです (冒頭の写真)。<strong>STM32L4 Discovery kit IoT node</strong> と呼ばれていますが、正式名称は <strong>B-L475E-IOT01A</strong> で、もっと正確には B-L475E-IOT01A<strong>2</strong> となっています。<a href="https://www.mouser.jp/search/ProductDetail.aspx?r=511-B-L475E-IOT01A2">Mouser Electronics</a> で ¥6,440 で購入しました。私の注文は UPS でアメリカから発送されました。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/ups1.png" width="50%" />
+    
+    
+</figure>
+
+
+<p>基盤たった1枚を、ダラス・フォートワース空港、ルイビル空港、アンカレッジ空港、成田空港と4空港も経由して運んできてくれるなんてなんだか胸が熱くなりますね。
+ちなみに、UPS がダイレクトに自宅に届けにきたときは不在だったのですが、電話が掛かってきて明日にしてと言ったらヤマト運輸に振替となりました。さすが世界の UPS！</p>
+
+<p>この基盤の素晴らしいところは、いろんな IO やセンサーがごった煮になっているところです。載っているものを調べて図示してみました。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/stm32iot1.png" />
+    
+    
+    <figcaption>
+        <h4>STM32L4 Discovery kit IoT node オモテ</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>めちゃめちゃたくさん載っていますね！ある意味スマホよりすごいかも！全く、こんなに載ってたらハックしがいがあるってもんです。</p>
+
+<p>それでは本題のセットアップをスタートしたいと想います (<strong>前置きが長い</strong>)。</p>
+
+<h3 id="事前準備">事前準備</h3>
+
+<p>用意するものは以下の 2 つです:</p>
+
+<ul>
+<li>AWS アカウント (<code>AmazonFreeRTOSFullAccess</code> ポリシーがアタッチされた IAM, または root account)</li>
+<li>対応ボード</li>
+<li>シリアルポートターミナルアプリ (screen, <a href="http://freeware.the-meiers.org/">Cool Term</a>, <a href="https://ja.osdn.net/projects/ttssh2/">Tera Term</a> 等)</li>
+<li>Wi-Fi (Open/WEP/WPA/WPA2) 接続環境</li>
+</ul>
+
+<p>なお、ドキュメントには <code>AWSFreeRTOSFullAccess</code> とありますが<sup>[参考文献5]</sup>、実際にはそんなポリシーはなく <code>AmazonFreeRTOSFullAccess</code> の間違いと思われます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/iam1.png" width="80%" />
+    
+    
+</figure>
+
+
+<h3 id="aws-iot-の設定">AWS IoT の設定</h3>
+
+<p>このセクションは FreeRTOS は全く関係ナシで、ひたすら AWS IoT の仕込みです。
+まず、AWS IoT コンソールを開き「<strong>モノ</strong>」(Thing) の定義を行います。</p>
+
+<blockquote>
+<p>AWS IoT</p>
+
+<p><a href="https://console.aws.amazon.com/iot">https://console.aws.amazon.com/iot</a></p>
+</blockquote>
+
+<p>左側のメニューから [管理 -&gt; モノ] を選び [モノの登録]、既に何かある場合は [作成] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot1.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>一番上の [単一のモノを作成する] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot2.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>モノにキュートな名前を付けてあげましょう。終わったら一番下までスクロールして [次へ] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot3.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>一番上の [証明書の作成] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot4.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>証明書が発行されたら、一通りダウンロードしておきましょう。そして [有効化] を押すのを忘れずに！</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot5.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>本当に有効化しましたか？ (しつこい) ボタンが [無効化] に変わっていれば大丈夫です。[ポリシーのアタッチ] に進みましょう。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot6.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>おや、何もありませんね。大丈夫、あとで作ります。というわけでそのまま [モノの登録] に進みます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot7.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>モノができました。これぞニッポンが誇るモノづくりです。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot8.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>・・・失礼。さっき飛ばしたポリシーを作りましょう。左側のメニューから [安全性] -&gt; [ポリシー] を選びます。[ポリシーの作成]、既に何かある場合は [作成] に進んでください。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot9.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>なにやら難しそうな画面がでてきました。ここでやることは大きく 2 つあります。</p>
+
+<ol>
+<li>名前の入力</li>
+<li>以下の通りステートメントを 4 つ追加:</li>
+</ol>
+
+<table>
+<thead>
+<tr>
+<th>アクション</th>
+<th>リソース ARN</th>
+<th>効果</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>iot:Connect</td>
+<td>arn:aws:iot:ap-northeast-1:580599857604:client/<strong>MQTTEcho</strong></td>
+<td>☑許可</td>
+</tr>
+
+<tr>
+<td>iot:Publish</td>
+<td>arn:aws:iot:ap-northeast-1:580599857604:topic/<strong>freertos/demos/echo</strong></td>
+<td>☑許可</td>
+</tr>
+
+<tr>
+<td>iot:Subscribe</td>
+<td>arn:aws:iot:ap-northeast-1:580599857604:topicfilter/<strong>freertos/demos/echo</strong></td>
+<td>☑許可</td>
+</tr>
+
+<tr>
+<td>iot:Receive</td>
+<td>arn:aws:iot:ap-northeast-1:580599857604:topic/<strong>freertos/demos/echo</strong></td>
+<td>☑許可</td>
+</tr>
+</tbody>
+</table>
+
+<p>リソース ARN 欄は自動で入力されますが、あくまでテンプレで<strong>サフィックス (replaceWithXXX 部分) の修正</strong>が重要です。表の通り修正してください。全て追加し終わったら [作成] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot10.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>作成し終わったら左側メニューから [安全性] -&gt; [証明書] を選びます。いつのまにか (モノの定義をしたときに) 出来ている証明書を選び、アクションメニューから [ポリシーのアタッチ] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot11.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>さっき作ったポリシーの名前は覚えていますか？忘れた？そんなあなたのために画面には既に先程作ったポリシーが現れています。チェックを入れて [アタッチ] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot12.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>これで一通り仕込みは済んだはず。それでは次のステップへ行きましょう。</p>
+
+<h3 id="amazon-freertos-の開発環境構築">Amazon FreeRTOS の開発環境構築</h3>
+
+<p>FreeRTOS をダウンロードしましょう。以下のリンクか、または IoT コンソールの左下の [ソフトウェア] -&gt; [Amazon FreeRTOS デバイスソフトウェア] ペインの [ダウンロードの設定] からも行くことができます。</p>
+
+<blockquote>
+<p>AWS IoT</p>
+
+<p><a href="https://console.aws.amazon.com/freertos">https://console.aws.amazon.com/freertos</a></p>
+</blockquote>
+
+<p>今回のお目当ては「Connect to AWS IoT - ST」です。ダウンロードします。高々 2.38 MB しかありません。ダウンロードしたら、ZIP を展開しておきましょう。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot13.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>展開すると AmazonFreeRTOS ディレクトリが入っているかと思います。この中のデモを開発環境で読み込んで、設定をちょちょいといじって配備するわけですが、か、開発環境？どこにあるの？なんか <code>.project</code> とかあるけど？Eclipse か！？ (※AmazonFreeRTOS/demos/st/stm32l475_discovery/ac6)</p>
+
+<p>Eclipse は半分正解で、半分間違いです。<strong>System Workbench for STM32</strong> という Eclipse ベースの開発環境を使います。以下のサイトからダウンロードします:</p>
+
+<blockquote>
+<p>OpenSTM32 Community Site | HomePage</p>
+
+<p><a href="http://www.openstm32.org/">http://www.openstm32.org/</a></p>
+</blockquote>
+
+<p>開くとこんな感じのウェブサイトが (ブラウザの「安全ではありません」警告と共に) 現れるはずです。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/openstm32-page1.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>悲しいことに、開発環境をダウンロードするにはログインしないといけないのです (実はファイル名がわかっていれば<a href="http://www.ac6-tools.com/downloads/SW4STM32/">ココ</a>からダウンロードもできますが、一応案内上ログインしないといけないことにさせてください😇)。</p>
+
+<p>しかも、https ではないサイトで入力フォームに必要事項を全て記入しないといけません。しかもしかも、MS メールだと弾かれるらしいです。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/openstm32-page2.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>登録が済んだら、次の URL からようやくダウンロードの案内にありつけます。</p>
+
+<blockquote>
+<p>OpenSTM32 Community Site | Downloading the System Workbench for STM32 installer</p>
+
+<p><a href="http://www.openstm32.org/Downloading+the+System+Workbench+for+STM32+installer">http://www.openstm32.org/Downloading+the+System+Workbench+for+STM32+installer</a></p>
+</blockquote>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/openstm32-page3.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>Windows 10 64bit な私は「Windows 7」の 64bit 版をダウンロードしました。<strong>433MB</strong> もあり、しかもダウンロードサーバーは激しく遅いです。ダウンロードをはじめたら、お風呂にでも入りに行きましょう (私は4時間ぐらいかかりました。90年代か！不安な場合は wget などレジューム可能なツールを使ったほうが良いかもしれません)。</p>
+
+<p>ダウンロードが終わったら、実行です。基本全部デフォルトで進めたほうが無難でしょう。もしエラーに遭遇したら <a href="http://www.openstm32.org/faq1">FAQ</a> が助けになるかもしれません。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb1.png" />
+    
+    
+</figure>
+
+
+<p>途中、インストール終盤では、ドライバをインストールする画面が別途出現します (Windows の場合)。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb2.png" />
+    
+    
+</figure>
+
+
+<p>全てうまくいくと、こんな感じ。[Done] で閉じます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb3.png" />
+    
+    
+</figure>
+
+
+<p>スタートメニューやデスクトップショートカットやら作る設定 (デフォルト) なら、出来ているはずなのでそこから起動します。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb4.png" />
+    
+    
+</figure>
+
+
+<p>起動スプラッシュはなかなか。起動途中に現れる Eclipse 同様のワークスペース選択設定は適当に。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb5.png" />
+    
+    
+</figure>
+
+
+<p>起動後も初回インストール処理のようなものが走ります。Eclipse IDE for C/C++ Developers がベースになっていることがわかります。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb6.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>メニューから [File] -&gt; [Import] を選び、Import 画面にて [General] -&gt; [Existing Project into Workspace] を選んで [Next &gt;] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb7.png" />
+    
+    
+</figure>
+
+
+<p>このセクションの冒頭でダウンロードした ZIP の中にある <code>AmazonFreeRTOS/demos/st/stm32l475_discovery/ac6</code> ディレクトリを指定し、<code>aws_demos</code> プロジェクトが選択されていることを確認します。最後に [Finish]!</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb8.png" />
+    
+    
+</figure>
+
+
+<p>Welcome タブを閉じてプロジェクトファイルを眺めたあと、メニューから [Project] -&gt; [Build All] を選びます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb9.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>👉エラーよし、👉ウォーニングよし、👉モチベーションよし！次に進みましょう。</p>
+
+<h3 id="iot-node-の構成">IoT Node の構成</h3>
+
+<p>System Workbench の Project Explorer にて <code>aws_clientcredential.h</code> を開きます。<code>application_code/common_demos/include</code> にあります (ファイルシステム上のパスは <code>AmazonFreeRTOS/demos/common/include</code> です)。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb10.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>以下の通り値を入れていきます　(定義場所は執筆時点の最新版のものです):</p>
+
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>定義場所 (行)</th>
+<th>デフォルト値</th>
+<th>入力値</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>clientcredentialMQTT_BROKER_ENDPOINT</code></td>
+<td>L39</td>
+<td>Paste AWS IoT Broker endpoint here.</td>
+<td>AWS IoT のエンドポイント</td>
+</tr>
+
+<tr>
+<td><code>clientcredentialIOT_THING_NAME</code></td>
+<td>L44</td>
+<td>Paste AWS IoT Thing name here.</td>
+<td>モノの名前 (この例では <code>stm32-001</code>)</td>
+</tr>
+
+<tr>
+<td><code>clientcredentialWIFI_SSID</code></td>
+<td>L59</td>
+<td>Paste WiFi SSID here.</td>
+<td>SSID</td>
+</tr>
+
+<tr>
+<td><code>clientcredentialWIFI_PASSWORD</code></td>
+<td>L64</td>
+<td>Paste WiFi password here.</td>
+<td>パスワード</td>
+</tr>
+
+<tr>
+<td><code>clientcredentialWIFI_SECURITY</code></td>
+<td>L71</td>
+<td><code>eWiFiSecurityWPA2</code></td>
+<td><code>eWiFiSecurityOpen</code>, <code>eWiFiSecurityWEP</code>, <code>eWiFiSecurityWPA</code>, <code>eWiFiSecurityWPA2</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>AWS IoT のエンドポイントは、<a href="https://console.aws.amazon.com/iot">IoT コンソール</a>の左側メニューの下にある [設定] より確認できる値です。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot14.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>次に、Project Explorer にて <code>config/aws_wifi_config.h</code> を開きます。これも先程と同様に、以下の箇所を修正します。ちなみにこれは公式ドキュメントにはない手順なのですが、設定しないと動きませんでした。</p>
+
+<table>
+<thead>
+<tr>
+<th>設定値</th>
+<th>定義場所 (行)</th>
+<th>デフォルト値</th>
+<th>入力値</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>wificonfigACCESS_POINT_SSID_PREFIX</code></td>
+<td>L68</td>
+<td>ConfigureMe</td>
+<td>SSID</td>
+</tr>
+
+<tr>
+<td><code>wificonfigACCESS_POINT_PASSKEY</code></td>
+<td>L73</td>
+<td>awsiotdevice</td>
+<td>パスワード</td>
+</tr>
+
+<tr>
+<td><code>wificonfigACCESS_POINT_SECURITY</code></td>
+<td>L90</td>
+<td>eWiFiSecurityWPA2</td>
+<td><code>eWiFiSecurityOpen</code>, <code>eWiFiSecurityWEP</code>, <code>eWiFiSecurityWPA</code>, <code>eWiFiSecurityWPA2</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>ファイルの編集が終わったら、次は証明書の設定です。</p>
+
+<p>ファイルブラウザ (エクスプローラー) にて <code>AmazonFreeRTOS/demos/common/devmode_key_provisioning/CertificateConfigurationTool</code> にある <code>CertificateConfigurator.html</code> を開きます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/freertos1.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>それぞれ指定するものは以前ダウンロードしておいた以下のファイルです:</p>
+
+<ul>
+<li>Certificate PEM file: <code>xxxxxxxxxx-certificate.pem.crt</code></li>
+<li>Private Key PEM file: <code>xxxxxxxxxx-private.pem.key</code></li>
+</ul>
+
+<p>ファイルを指定したら、[Generate and save aws_clientcredential_keys.h] を選択します。</p>
+
+<p>生成されたファイルは <code>AmazonFreeRTOS/demos/common/include</code> に配置 (上書き) します。</p>
+
+<p>メニューから [Project] -&gt; [Build All] を選び、コンパイルエラーがないかチェックします。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb9.png" width="80%" />
+    
+    
+</figure>
+
+
+<h3 id="デモ">デモ！</h3>
+
+<p>AWS IoT の左側のメニューより [テスト] を選び、MQTT サブスクリプションの設定を行います。トピック名 <code>freertos/demos/echo</code> とし、[MQTT ペイロード表示] は [ペイロードを文字列として表示 (より正確)] を選びます。最後に [トピックへの&hellip;] に進みます (何!? 英語は Subscribe to topic なので「トピックへのサブスクライブ」かな)。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot15.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>なお、このトピック名は <code>application_code/common_demos/source/aws_hello_world.c</code> の <code>echoTOPIC_NAME</code> 定義にあるもので、かつアタッチしたポリシーで記載したものと一致している必要があります。</p>
+
+<p>AWS IoT の準備が整ったら、次は基盤のほうをチェックです。パッケージのウラにも文書で書いてあるように、以下のようなコンフィギュレーションになっていることを確認します:</p>
+
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>State</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>JP4</td>
+<td>5V_ST_LINK</td>
+</tr>
+
+<tr>
+<td>JP5</td>
+<td>Closed</td>
+</tr>
+
+<tr>
+<td>JP6</td>
+<td>Closed</td>
+</tr>
+
+<tr>
+<td>JP7</td>
+<td>Closed</td>
+</tr>
+
+<tr>
+<td>JP8</td>
+<td>Open</td>
+</tr>
+</tbody>
+</table>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/stm32iot2.png" />
+    
+    
+    <figcaption>
+        <h4>STM32L4 Discovery kit IoT node ウラ</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>PC とボードを USB で接続します！繋ぐポートは USB ST-LINK (端っこの穴) です。向きに注意して優しくインサートしてください💕</p>
+
+
+<figure class="center">
+    
+        <img src="/img/photo/20171213-2032.jpg" width="80%" />
+    
+    
+</figure>
+
+
+<p>System Workbench のメニューで [Run] -&gt; [Run Configurations&hellip;] を選び、左側ペインで [Ac6 STM32 Debugging] -&gt; [aws_demos Debug] を選びます。さらに [Debugger] タブを開き、中腹にある [Show generator options&hellip;] を押します。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/swb11.png" />
+    
+    
+</figure>
+
+
+<p>[Connection Setup] の [Frequency] は [480MHz], [Mode Setup] の [Reset Mode] は [Software system reset] を選びます (または確認します)。設定を終えたら [Apply] ボタンで反映し、[Run] を押します。</p>
+
+<p>こんな感じのログが流れるはずです。</p>
+
+<pre><code>Open On-Chip Debugger 0.10.0-dev-00005-g4030e1c-dirty (2017-10-24-08:00)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+none separate
+
+(中略)
+
+verified 306816 bytes in 9.605227s (31.194 KiB/s)
+** Verified OK **
+** Resetting Target **
+Info : Stlink adapter speed set to 480 kHz
+adapter speed: 480 kHz
+shutdown command invoked
+</code></pre>
+
+<p>途中 ERROR とかも出てるけど大丈夫なんか・・・？😇 でも Verifyied OK とか言ってるし・・・？おそるおそる、シリアルポート端末アプリを開き (ここでは Cool Term)、Baudrate を 115200 にしてつなぎにいきます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/coolterm3.png" />
+    
+    
+</figure>
+
+
+<p>Cool Term は [OK] を押したあと、[Connect] を押す必要があります。繋がったら、ボードの <strong>リセットボタン</strong> (黒い物理ボタン) を押します。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/coolterm4.png" />
+    
+    
+</figure>
+
+
+<p>こんな感じでログが流れていればたぶん成功しています (TONKOTSU は我が家の AP です🍜)。途中で止まったりしている場合はなにかがおかしいです。詳しくは後述のトラブルシューティングのセクションで解説します。</p>
+
+<p>最初に開いておいた AWS IoT のトピック画面を見てみましょう！</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot16.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>ぞくぞくと届く Hello World たち！いいですね！🎉</p>
+
+<p>だいぶ記事も長くなってきたので、本編はこれでおしまいにします。今後の活用もお楽しみに！</p>
+
+<h3 id="トラブルシューティング">トラブルシューティング</h3>
+
+<p>さて、問題に直面したあなた (っていうかわたし) はより深い知見を得る絶好のチャンスです。切り分けの基本はまず事実を集めることです。というわけでログの確認から。例によって、AWS IoT は CloudWatch によるログ集計が可能です。が、デフォルトでオフになっています。有効にするには、左側メニューの下部にある [設定] から [ログ] ペインを確認します。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot17.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>レベルは [デバッグ]、ロールは新規に作ります。名前はなんでも良いです。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/awsiot18.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>設定できたら CloudWatch のコンソールに向かいます。</p>
+
+<blockquote>
+<p>CloudWatch</p>
+
+<p><a href="https://console.aws.amazon.com/cloudwatch">https://console.aws.amazon.com/cloudwatch</a></p>
+</blockquote>
+
+<p>[メトリクスの参照] を選択します。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/cloudwatch1.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>お、[IoT] ができていますね。選択し、続けて [プロトコルメトリクス] を選択します。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/cloudwatch2.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>MQTT や HTTP などいくつかのメトリクスが並んでいるので、まずは MQTT 系を全てチェックしグラフを眺めます。期待したものがなければ AWS IoT と疎通ができていないことが推測できますし、図のように <code>Connect.AuthError</code> が頻発しているときは、疎通はできているがポリシー違反などで弾かれていると推測できます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/cloudwatch3.png" width="80%" />
+    
+    
+</figure>
+
+
+<p>疎通ができていない場合に関しては、どのレイヤーで止まっているかを切り分ける必要があります。幸い WiFi 接続に関してはシリアルポートに結果が出るので、問題があればすぐに特定できます。</p>
+
+<p>WiFi は OK (AP や DHCP で振られた IP などが確認できる) が、その後で止まってしまった場合は解析が必要です。一番ありそうなのが、AWS IoT 通信で必須な TLS まわりでしょう。そこで、 <code>aws_mqtt_agent.c</code> の L1268 あたりに次のコードを挿入してみます。</p>
+
+<pre><code>configPRINTF( ( &quot;DEBUG: prvManageConnections() lBytesReceived=%d\r\n&quot;, lBytesReceived) );
+</code></pre>
+
+<p>ログはこうなりました。</p>
+
+<pre><code>14 28165 [MQTT] DEBUG: prvManageConnections() lBytesReceived=-1004
+15 32421 [MQTT] DEBUG: prvManageConnections() lBytesReceived=-1004
+16 33425 [MQTT] DEBUG: prvManageConnections() lBytesReceived=-1
+17 34428 [MQTT] DEBUG: prvManageConnections() lBytesReceived=-1
+...
+</code></pre>
+
+<p>数値の値は定義済のものです。<code>aws_secure_sockets.h</code> では以下のように定義されているのが確認できます:</p>
+
+<ul>
+<li><code>0</code>: 成功</li>
+<li><code>-1</code>: ソケットエラー</li>
+<li><code>-11</code>: 資源が一時的に利用できない</li>
+<li><code>-12</code>: メモリアロケーション失敗</li>
+<li><code>-22</code>:` 不正な引数</li>
+<li><code>-109</code>: 不正なオプション指定</li>
+<li><code>-128</code>: 提供されたソケットが既にクローズされている</li>
+<li><code>-1001</code>: TLS 初期化失敗</li>
+<li><code>-1002</code>: TLS ハンドシェイク失敗</li>
+<li><code>-1003</code>: 接続は確率したがサーバーを検証できない、ソケットのクローズがおすすめ</li>
+<li><code>-1004</code>: TLS 受信処理失敗</li>
+<li><code>-1005</code>: TLS 送信処理失敗</li>
+<li><code>-1006</code>: 通信機器がリセットされた</li>
+</ul>
+
+<p>上のログでは、どうやらデータ受信に失敗していたようです。私の場合はこのあと直っちゃったのですが、TLS 実装部まで追う場合は <code>aws_tls.c</code> をデバッグしていくことになります。ちなみにこのコード、実は Mbed OS などで使われている <a href="https://tls.mbed.org/">mbed TLS</a> なんです！んじゃ諦めて Mbed OS に乗りｋ・・・いやいや、もう少し頑張るんだ・・・😇 なお、先程用いたシリアルコンソール表示 <code>configPRINTF</code> はここでは <code>#include &quot;FreeRTOS.h&quot;</code> しないと使えません。</p>
+
+<p>疎通はできていて、CloudWatch で <code>Connect.AuthError</code> が記録される場合は、使った証明書が (証明書としては正しいけれど) 別のものだったか、証明書に適切なポリシーがない、ないしは間違っている可能性があります。過去の手順を今一度確認してみてください。</p>
+
+<p>Happy hacking!</p>
+
+<h4 id="参考文献">参考文献</h4>
+
+<ol>
+<li><a href="https://www.freertos.org/RTOS.html">RTOS - Free professionally developed and robust real time operating system for small embedded systems development</a></li>
+<li><a href="https://github.com/aws/amazon-freertos">aws/amazon-freertos: Cloud-native IoT operating system for microcontrollers.</a></li>
+<li><a href="https://docs.aws.amazon.com/freertos/latest/userguide/what-is-amazon-freertos.html">What Is Amazon FreeRTOS? - Amazon FreeRTOS</a></li>
+<li><a href="https://aws.amazon.com/jp/blogs/news/announcing-amazon-freertos/">アナウンス Amazon FreeRTOS – 何十億ものデバイスがクラウドから安全に利益を得ることを可能にする | Amazon Web Services ブログ</a></li>
+<li><a href="https://aws.amazon.com/jp/freertos/getting-started/">Amazon FreeRTOS - Get Started - AWS</a></li>
+<li><a href="http://www.st.com/ja/evaluation-tools/b-l475e-iot01a.html">B-L475E-IOT01A - STM32L4 Discovery kit IoT node,  low-power wireless, BLE, NFC, SubGHz, Wi-Fi - STMicroelectronics</a></li>
+<li><a href="https://www.youtube.com/watch?v=6eUqxjBL_wI">Getting starting with STM32L4 Discovery kit IoT node - YouTube</a></li>
+<li><a href="http://docs.aws.amazon.com/ja_jp/freertos/latest/userguide/freertos-security.html">Amazon FreeRTOS Security - Amazon FreeRTOS</a></li>
+</ol>
+
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=STM32L4%20Discovery%20Kit%20IoT%20Node%20%e3%81%ab%20Amazon%20FreeRTOS%20%e3%82%92%e5%b0%8e%e5%85%a5%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f&amp;title=STM32L4%20Discovery%20Kit%20IoT%20Node%20%e3%81%ab%20Amazon%20FreeRTOS%20%e3%82%92%e5%b0%8e%e5%85%a5%e3%81%99%e3%82%8b" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=STM32L4%20Discovery%20Kit%20IoT%20Node%20%e3%81%ab%20Amazon%20FreeRTOS%20%e3%82%92%e5%b0%8e%e5%85%a5%e3%81%99%e3%82%8b&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f12%2f13%2fsetup-amazon-freertos-on-stm32l4-discovery-kit-iot-node%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/" title="G Suite を IdP にした Salesforce の SAML SSO の有効化">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="https://mikan.github.io/2017/12/19/mashup-awards-2017/" title="Mashup Awards 2017">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//kagaorange.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="https://mikan.github.io/2018/01/23/data-visualization-on-static-sites-with-aws-lambda-go-and-chart-js/">AWS Lambda Go と Chart.js で実現する静的サイトのデータビジュアライゼーション</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/19/mashup-awards-2017/">Mashup Awards 2017</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/">STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/">G Suite を IdP にした Salesforce の SAML SSO の有効化</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/">PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/24/introducing-force-client-go/">force-client-go: Go で Salesforce の REST API を叩く</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/">Go の dep やら govendor やらを GitLab CI で回す</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/19/jjug-ccc-2017-fall/">JJUG CCC 2017 Fall</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/13/operate-github-org-scope/">GitHub OAuth の org スコープの適用と運用</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/">みちびき対応 GPS モジュール PA6C を Mbed で使う</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>category</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/categories/web">web</a></li><li><a href="/categories/iot">iot</a></li><li><a href="/categories/life">life</a></li><li><a href="/categories/salesforce">salesforce</a></li><li><a href="/categories/tools">tools</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>tag</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/tags/github">github</a></li><li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li><li><a href="/tags/golang">golang</a></li><li><a href="/tags/hugo">hugo</a></li><li><a href="/tags/aws">aws</a></li><li><a href="/tags/book">book</a></li><li><a href="/tags/force.com">force.com</a></li><li><a href="/tags/gitlab">gitlab</a></li><li><a href="/tags/java">java</a></li><li><a href="/tags/mbed">mbed</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+    
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+  Copyright&copy; <a href='/about/'>Yutaka Kato</a>
+
+</small>
+</div>
+
+
+    
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="7376c112ca70badebd8ee83050033a40afd51c35656127efca6d0e2f5b1f09c2" async="async"></script>
+
+<script src="https://mikan.github.io/js/jquery.min.js"></script>
+<script src="https://mikan.github.io/js/bootstrap.min.js"></script>
+
+
+<script src="https://mikan.github.io/js/highlight.pack.js"></script>
+<script src="https://mikan.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-68709286-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER = "", 
+EXPIRE_COOKIE = "", 
+SHOW_MODAL_TIMEOUT = "", 
+MOUSE_LEAVE = "", 
+MODAL_SIZE = "", 
+POST_URL = "", 
+SIGNUP_HEADER = "",
+HEADER_IMAGE = "",
+IMG_DESCRIPTION = "",
+SIGNUP_TEXT = "",
+INPUT_PLACEHOLDER = "",
+SUBMIT_BUTTON = "",
+SUCCESS_MESSAGE = "",
+ERROR_MESSAGE = "",
+OPTIN = "",
+COOKIE_NAME = "",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

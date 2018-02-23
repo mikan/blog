@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>みちびき対応 GPS モジュール PA6C を Mbed で使う  &middot; Yutaka 🍊 Kato</title>
+  <meta property="og:image" content="https://mikan.github.io/ogp.png" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="mbed, node-red, c&#43;&#43;, ">
+
+
+<meta property="og:title" content="みちびき対応 GPS モジュール PA6C を Mbed で使う  &middot; Yutaka 🍊 Kato ">
+<meta property="og:site_name" content="Yutaka 🍊 Kato"/>
+<meta property="og:url" content="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/" />
+<meta property="og:locale" content="ja-jp">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2017-11-07T20:34:00&#43;09:00" />
+<meta property="og:article:modified_time" content="2017-11-07T20:34:00&#43;09:00" />
+
+  
+    
+<meta property="og:article:tag" content="mbed">
+    
+<meta property="og:article:tag" content="node-red">
+    
+<meta property="og:article:tag" content="c&#43;&#43;">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kagaorange" />
+<meta name="twitter:creator" content="@kagaorange" />
+<meta name="twitter:title" content="みちびき対応 GPS モジュール PA6C を Mbed で使う" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/" />
+<meta name="twitter:domain" content="https://mikan.github.io/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "みちびき対応 GPS モジュール PA6C を Mbed で使う",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-11-07",
+    "description": "",
+    "wordCount": 1408
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.36.1" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="https://mikan.github.io/css/bootswatch/sandstone/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://mikan.github.io/css/style.css">
+
+
+<link rel="stylesheet" href="https://mikan.github.io/css/mikan.css">
+
+
+
+  <link rel="stylesheet" href="https://mikan.github.io/css/highlight/default.css">
+
+
+</head>
+<body class="map[name:sandstone]" data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="Yutaka 🍊 Kato" src="/logo.png">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/" >
+                <i class='fa fa-home'></i>
+                Home
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/post/" >
+                <i class='fa fa-archive'></i>
+                Archives
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/seminars/" >
+                <i class='fa fa-users'></i>
+                Seminars
+              </a>
+            </li>
+            
+            <li class="">
+
+              <a href="https://mikan.github.io/about/" >
+                <i class='fa fa-info-circle'></i>
+                About
+              </a>
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>みちびき対応 GPS モジュール PA6C を Mbed で使う
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2017-11-07">7 Nov, 2017</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 3 min
+  &middot; (1408 words)
+  &middot; 
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%e3%81%bf%e3%81%a1%e3%81%b3%e3%81%8d%e5%af%be%e5%bf%9c%20GPS%20%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab%20PA6C%20%e3%82%92%20Mbed%20%e3%81%a7%e4%bd%bf%e3%81%86&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f&amp;title=%e3%81%bf%e3%81%a1%e3%81%b3%e3%81%8d%e5%af%be%e5%bf%9c%20GPS%20%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab%20PA6C%20%e3%82%92%20Mbed%20%e3%81%a7%e4%bd%bf%e3%81%86" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%e3%81%bf%e3%81%a1%e3%81%b3%e3%81%8d%e5%af%be%e5%bf%9c%20GPS%20%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab%20PA6C%20%e3%82%92%20Mbed%20%e3%81%a7%e4%bd%bf%e3%81%86&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="https://mikan.github.io/tags/mbed" class="label label-primary">mbed</a>
+  
+  <a href="https://mikan.github.io/tags/node-red" class="label label-primary">node-red</a>
+  
+  <a href="https://mikan.github.io/tags/c&#43;&#43;" class="label label-primary">c&#43;&#43;</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<p><a href="/2017/11/06/using-esp-wroom-02-with-mbed/">前回の記事</a>に引き続き Mbed ネタです。今回ご紹介するのはコチラ！</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/pa6c-breakout.jpg" width="40%" />
+    
+    
+    <figcaption>
+        <h4>PA6C Breakout基板 (実装済み)</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>みちびき対応と謳われている GPS モジュール PA6C (FGPMMOPA6C) が載った基盤です。Running Electronics で \3,580 で売っているのを買ってきました (<a href="http://www.runele.com/ca2/7/p-r-s/">www.runele.com/ca2/7/p-r-s/</a>)。ブレッドボードに挿せる足も生えていて使いやすい基盤ですね。</p>
+
+<p>前回同様、mbed LPC1768 に繋いでみます。</p>
+
+<table>
+<thead>
+<tr>
+<th>mbed LPC1768</th>
+<th>FGPMMOPA6C</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>VOUT (3.3V)</td>
+<td>VCC (#1)</td>
+</tr>
+
+<tr>
+<td>P28 (TX)</td>
+<td>RX</td>
+</tr>
+
+<tr>
+<td>P29 (RX)</td>
+<td>TX</td>
+</tr>
+
+<tr>
+<td>GND</td>
+<td>GND (#3 or #4)</td>
+</tr>
+</tbody>
+</table>
+
+<p>シリアル通信と電源供給だけ。まるで USB だ。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/photo/20171106-2240.jpg" width="80%" />
+    
+    
+    <figcaption>
+        <h4>配線完了 (前回の写真を再掲)</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>早速出力を見てみたいと思います。下のコードは後で送信処理がしやすいようレコード1本単位でループが回るようにしています。</p>
+
+<pre><code class="language-c">#include &quot;mbed.h&quot;
+
+Serial gps(p28, p27);       // TX, RX
+Serial pc(USBTX, USBRX);    // TX, RX
+DigitalOut led1(LED1);
+
+int main() {
+    pc.baud(115200);
+    pc.printf(&quot;PA6C DEMO\n&quot;);
+    char gpsout[1024];
+    while (1) {
+        gpsout[0] = '\0';
+        while (1) {
+            char c = gps.getc();
+            char s[2];
+            s[0] = c;
+            s[1] = '\0';
+            strcat(gpsout, s);
+            if (c == '\n') {
+                break;
+            }
+        }
+        pc.printf(gpsout);
+        led1 = !led1;
+    }
+}
+</code></pre>
+
+<p>そうそう、Windows の方は mbed 用シリアルポートドライバ導入をお忘れなく。</p>
+
+<blockquote>
+<p>Windows serial configuration - Handbook | Mbed</p>
+
+<p><a href="https://os.mbed.com/handbook/Windows-serial-configuration">https://os.mbed.com/handbook/Windows-serial-configuration</a></p>
+</blockquote>
+
+<p>ではコンパイル、書き込み、ターミナル繋いでリセットボタン！</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/coolterm2.png" />
+    
+    
+    <figcaption>
+        <h4>PA6C からの出力</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>なにやら CSV っぽい見た目のフォーマットでデータが吐かれていきます。やたらゼロが多いような・・・？</p>
+
+<p>このフォーマットは <strong>NMEA 0183</strong> というフォーマット<sup>[参考文献3]</sup>で、お目当ての座標データは <code>$GPGGA</code> から始まるレコードに含まれている模様。後に続くカンマ区切りの値がそれぞれ以下を意味します。</p>
+
+<ul>
+<li>UTC 時刻 (HHmmss.SS)</li>
+<li>緯度 (Google Map とかで使う緯度の 100 倍の値)</li>
+<li>緯度の符号 (N or S)</li>
+<li>経度 (Google Map とかで使う緯度の 100 倍の値)</li>
+<li>経度の符号 (E or W)</li>
+<li>(以下略)</li>
+</ul>
+
+<p>値がなかったりゼロが並んでたりするのは、まだ計測できていないことを示しています。屋内ではなかなか時間がかかる模様&hellip;</p>
+
+<p>このままデータを眺めていても退屈なので、このデータをビジュアライズしてくれるツールを使ってみましょう。以下のページから <strong>Mini GPS tool (windows only)</strong> をダウンロードします。</p>
+
+<blockquote>
+<p>Resources | Adafruit Ultimate GPS | Adafruit Learning System</p>
+
+<p><a href="https://learn.adafruit.com/adafruit-ultimate-gps/resources">https://learn.adafruit.com/adafruit-ultimate-gps/resources</a></p>
+</blockquote>
+
+<p>起動するとこんな感じです。Comport は [Auto Detect] を押すと自動でセットされます。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/minigps1.png" />
+    
+    
+    <figcaption>
+        <h4>Mini GPS Tool その1</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>やはり、まだ電波をキャッチできていないようです。でもしばらく待つと、12 というマークがついて日付・時刻が入りました。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/minigps2.png" />
+    
+    
+    <figcaption>
+        <h4>Mini GPS Tool その2</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>参考文献4によると、12番くんはアメリカの GPS、2R-16M のようです。みちびき1号機は193番、2号機は194番なので、まだ PA6C の底力は発揮できていませんね。GPS は最低でも衛星3機＋時間差を補正するためのもう1機の<strong>合計4機</strong>がないと測位できないため、この状態では測れません。外に出たくないならば、辛抱強く待ちましょう。</p>
+
+<p>・・・と思ったのですが、窓をあけてちょこっと突き出しただけでこの通り！</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/minigps3.png" />
+    
+    
+    <figcaption>
+        <h4>Mini GPS Tool その3</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>193番、みちびき1号機登場！座標もドンピシャで出ました (モザイクいれていますが)。</p>
+
+<p>ここまで確認できれば、あとは煮るなり焼くなりです。とりあえず前回の記事の Wi-Fi モジュールを使って <a href="https://www.vultr.com/?ref=7053029">VULTR VPS 東京リージョン</a> に置いた Node-RED に送りつけてみました。NMEA 0183 フォーマットのまま送りつけているので、パースもクラウド上です。こんな感じで lat, lon を取り出すことができました。</p>
+
+
+<figure class="center">
+    
+        <img src="/img/ss/nodered1.png" />
+    
+    
+    <figcaption>
+        <h4>Node-RED</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>理想は mbed 側で NMEA パースし、さらに LoRaWAN 送信を見越すと11バイト以内 (例えば Float x2 など) に収めたいところですが、それは今後の課題ということで、今日はここまで。</p>
+
+<p>Stay tuned &amp; Happy hacking!</p>
+
+<h4 id="参考文献">参考文献</h4>
+
+<ol>
+<li><a href="http://runele.jp/pa6cbo/pa6cbreak.pdf">FGPMMOPA6C Breakout 基板 ユーザーズマニュアル</a></li>
+<li><a href="https://os.mbed.com/users/yamato/notebook/gps_Serial/">GPSモジュールを使ってシリアル通信をやってみる。 | Mbed</a></li>
+<li><a href="http://www2.nc-toyama.ac.jp/~mkawai/lecture/radionav/nmea0183.html">NMEA 0183 Format</a></li>
+<li><a href="http://qzss.go.jp/technical/satellites/index.html">各国の測位衛星｜技術情報｜みちびき（準天頂衛星システム：QZSS）公式サイト - 内閣府</a></li>
+</ol>
+
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%e3%81%bf%e3%81%a1%e3%81%b3%e3%81%8d%e5%af%be%e5%bf%9c%20GPS%20%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab%20PA6C%20%e3%82%92%20Mbed%20%e3%81%a7%e4%bd%bf%e3%81%86&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f&amp;title=%e3%81%bf%e3%81%a1%e3%81%b3%e3%81%8d%e5%af%be%e5%bf%9c%20GPS%20%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab%20PA6C%20%e3%82%92%20Mbed%20%e3%81%a7%e4%bd%bf%e3%81%86" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%e3%81%bf%e3%81%a1%e3%81%b3%e3%81%8d%e5%af%be%e5%bf%9c%20GPS%20%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab%20PA6C%20%e3%82%92%20Mbed%20%e3%81%a7%e4%bd%bf%e3%81%86&amp;body=Check out this site https%3a%2f%2fmikan.github.io%2f2017%2f11%2f07%2fusing-pa6c-with-mbed%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="https://mikan.github.io/2017/11/06/using-esp-wroom-02-with-mbed/" title="ESP-WROOM-02 を Mbed で使う">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="https://mikan.github.io/2017/11/13/operate-github-org-scope/" title="GitHub OAuth の org スコープの適用と運用">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//kagaorange.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="https://mikan.github.io/2018/01/23/data-visualization-on-static-sites-with-aws-lambda-go-and-chart-js/">AWS Lambda Go と Chart.js で実現する静的サイトのデータビジュアライゼーション</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/19/mashup-awards-2017/">Mashup Awards 2017</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/13/setup-amazon-freertos-on-stm32l4-discovery-kit-iot-node/">STM32L4 Discovery Kit IoT Node に Amazon FreeRTOS を導入する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/12/07/enabling-saml-based-sso-to-salesforce-with-g-suite-as-idp/">G Suite を IdP にした Salesforce の SAML SSO の有効化</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/28/analyze-salesforce-codes-with-pmd-apex-and-pmd-visualforce/">PMD Apex / PMD Visualforce で Salesforce のコードを静的解析する</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/24/introducing-force-client-go/">force-client-go: Go で Salesforce の REST API を叩く</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/20/working-go-dep-and-govendor-on-gitlab-ci/">Go の dep やら govendor やらを GitLab CI で回す</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/19/jjug-ccc-2017-fall/">JJUG CCC 2017 Fall</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/13/operate-github-org-scope/">GitHub OAuth の org スコープの適用と運用</a>
+          </li>
+        
+          <li>
+          <a href="https://mikan.github.io/2017/11/07/using-pa6c-with-mbed/">みちびき対応 GPS モジュール PA6C を Mbed で使う</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>category</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/categories/web">web</a></li><li><a href="/categories/iot">iot</a></li><li><a href="/categories/life">life</a></li><li><a href="/categories/salesforce">salesforce</a></li><li><a href="/categories/tools">tools</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>tag</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/tags/github">github</a></li><li><a href="/tags/c&#43;&#43;">c&#43;&#43;</a></li><li><a href="/tags/golang">golang</a></li><li><a href="/tags/hugo">hugo</a></li><li><a href="/tags/aws">aws</a></li><li><a href="/tags/book">book</a></li><li><a href="/tags/force.com">force.com</a></li><li><a href="/tags/gitlab">gitlab</a></li><li><a href="/tags/java">java</a></li><li><a href="/tags/mbed">mbed</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+    
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+  Copyright&copy; <a href='/about/'>Yutaka Kato</a>
+
+</small>
+</div>
+
+
+    
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="7376c112ca70badebd8ee83050033a40afd51c35656127efca6d0e2f5b1f09c2" async="async"></script>
+
+<script src="https://mikan.github.io/js/jquery.min.js"></script>
+<script src="https://mikan.github.io/js/bootstrap.min.js"></script>
+
+
+<script src="https://mikan.github.io/js/highlight.pack.js"></script>
+<script src="https://mikan.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-68709286-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER = "", 
+EXPIRE_COOKIE = "", 
+SHOW_MODAL_TIMEOUT = "", 
+MOUSE_LEAVE = "", 
+MODAL_SIZE = "", 
+POST_URL = "", 
+SIGNUP_HEADER = "",
+HEADER_IMAGE = "",
+IMG_DESCRIPTION = "",
+SIGNUP_TEXT = "",
+INPUT_PLACEHOLDER = "",
+SUBMIT_BUTTON = "",
+SUCCESS_MESSAGE = "",
+ERROR_MESSAGE = "",
+OPTIN = "",
+COOKIE_NAME = "",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+
