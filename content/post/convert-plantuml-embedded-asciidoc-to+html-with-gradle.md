@@ -109,7 +109,7 @@ $ gradle asciidoctor
 
 {{< figure src="/img/ss/asciidoctor1.png" title="Asciidoctor 出力 HTML" class="center" width="80%">}}
 
-ばっちりですね:sparkles: 文書間のリンクもちゃんと `.html` になっていることが確認できるはずです｀。
+ばっちりですね:sparkles: 文書間のリンクもちゃんと `.html` になっていることが確認できるはずです。
 
 さて、これで仕事が終わるなら簡単すぎてブログ記事になりません。**問題はここから**なのです・・・！
 
