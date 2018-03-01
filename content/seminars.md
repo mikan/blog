@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2018/03/01 | [Salesforce Developers Meetup #17](https://www.meetup.com/ja-JP/Tokyo-Salesforce-Developer-Group/events/247136464/) | ウフル (神谷町) | 50 |
 | 2018/02/20 | [Meguro.dev #0](https://meguro-dev.connpass.com/event/77362/) | アマゾンウェブサービスジャパン (目黒) | 100 |
 | 2018/02/17 | [Java読書会BOF 18.02](http://www.javareading.com/bof/)🍺 | 川崎市教育文化会館 (川崎) | 20 |
 | 2018/01/27 | [横浜Go読書会 #13](https://yokohama-go-reading.connpass.com/event/74316/)🍺 | かながわ県民センター (横浜) | 15 |
