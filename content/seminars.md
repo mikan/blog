@@ -19,10 +19,11 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2018/03/03 | [横浜Go読書会 #14](https://yokohama-go-reading.connpass.com/event/78070/)🍺 | かながわ県民センター (横浜) | 16 |
 | 2018/03/01 | [Salesforce Developers Meetup #17](https://www.meetup.com/ja-JP/Tokyo-Salesforce-Developer-Group/events/247136464/) | ウフル (神谷町) | 50 |
 | 2018/02/20 | [Meguro.dev #0](https://meguro-dev.connpass.com/event/77362/) | アマゾンウェブサービスジャパン (目黒) | 100 |
 | 2018/02/17 | [Java読書会BOF 18.02](http://www.javareading.com/bof/)🍺 | 川崎市教育文化会館 (川崎) | 20 |
-| 2018/01/27 | [横浜Go読書会 #13](https://yokohama-go-reading.connpass.com/event/74316/)🍺 | かながわ県民センター (横浜) | 15 |
+| 2018/01/27 | [横浜Go読書会 #13](https://yokohama-go-reading.connpass.com/event/74316/)🍺 | かながわ県民センター (横浜) | 16 |
 | 2018/01/14 | [Java読書会BOF 18.01](http://www.javareading.com/bof/)🍺 | 川崎市教育文化会館 (川崎) | 20 |
 | 2018/01/12 | [Salesforce Heroku ハンズオンセミナー](https://www.salesforce.com/jp/) | セールスフォース・ドットコム (東京) | 30 |
 
@@ -33,7 +34,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 | 2017/12/19 | [AWS re:Invent 2017 Technology re:CAP for APN](https://aws.amazon.com/jp/) | AP東京 八重洲通り (東京) | 250 |
 | 2017/12/16 | [おつかれ Mashup Awards 2017](https://mashupawards.connpass.com/event/74201/)🍺 | リクルート (銀座) | 70 |
 | 2017/12/16 | [FESTA 2017 by Mashup Awards](https://mashupawards.connpass.com/event/72237/)🍺 | TABLOID (日の出) | 256 |
-| 2017/12/09 | [横浜Go読書会 #12](https://yokohama-go-reading.connpass.com/event/72071/)🍺 | かながわ県民センター (横浜) | 15 |
+| 2017/12/09 | [横浜Go読書会 #12](https://yokohama-go-reading.connpass.com/event/72071/)🍺 | かながわ県民センター (横浜) | 16 |
 | 2017/12/08 | [JAWS-UG IoT専門支部 re:Invent アップデート](https://jawsug-iot.connpass.com/event/71205/) | アマゾンウェブサービスジャパン (目黒) | 120 |
 | 2017/12/05 | [技術書の歩き方勉強会「テスト駆動開発」編](https://connpass.com/event/69821/) | Speee (六本木一丁目) | 100 |
 | 2017/12/05 | [Salesforce IoT セミナー](https://www.salesforce.com/jp/) | セールスフォース・ドットコム (東京) | 30 |
