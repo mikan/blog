@@ -1,5 +1,5 @@
 ---
-title: "Hangouts Chat の Incoming webhook を Go で叩く"
+title: "Hangouts Chat の Incoming Webhook を Go で叩く"
 date: 2018-03-15T22:41:43+09:00
 draft: false
 categories: ["web"]
@@ -13,7 +13,7 @@ tags: [
 
 {{<figure src="/img/logo/hangouts-chat.png" class="center">}}
 
-今月頭の 3 月 1 日、Google が [Hangouts Chat](https://gsuite.google.com/products/chat/) の正式版をアナウンスしました。
+今月頭の 3月1日、Google が [Hangouts Chat](https://gsuite.google.com/products/chat/) の正式版をアナウンスしました。
 IT 系ニュースメディアは早速「Slack のライバル」などとセンセーショナルに報じています<sup>[参考文献1]</sup>。
 ですが、Hangouts Chat はあくまで G Suite の一機能なので、独立したチャットサービスである Slack とはターゲットは幾分か異なるはずです。しかし機能強化を続けていけばいずれ Slack に追いつき追い越すことも容易に想像できます。
 
