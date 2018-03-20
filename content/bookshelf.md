@@ -198,7 +198,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [Code Complete 第2版 上](http://amzn.to/2imrdfX)                     | 2005/03/26 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [ITコンサルタントのための経営戦略入門](http://amzn.to/2pn0XWQ)            | 2005/03/10 | Printed | :jp: | :waxing_crescent_moon: | |
 
-## 2004 発売
+## 2004
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
