@@ -57,6 +57,13 @@ disqusShortname = "kagaorange"
 	pre = "<i class='fa fa-users'></i>"
 	
 [[menu.main]]
+	name = "Bookshelf"
+	identifier = "bookshelf"
+	url = "/bookshelf/"
+	weight = -140
+	pre = "<i class='fa fa-users'></i>"
+
+[[menu.main]]
 	name = "About"
 	identifier = ""
 	url = "/about/"
