@@ -30,7 +30,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [Jenkins実践入門 改訂第3版](http://amzn.to/2AYE0AK)                    | 2017/05/24 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
 | [プロフェッショナルSSL/TLS](http://amzn.to/2u3EPFF)                    | 2017/03/31 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Goプログラミング実践入門](http://amzn.to/2zSORrm)                      | 2017/03/17 | Kindle  | :jp: | :waxing_crescent_moon: | |
-| [RxJavaリアクティブプログラミング](http://amzn.to/2u1CuuR)              | 2017/02/17 | Printed | :jp: | :full_moon: | :star: |
+| [RxJavaリアクティブプログラミング](http://amzn.to/2u1CuuR) <sup>JRBOF</sup> | 2017/02/17 | Printed | :jp: | :full_moon: | :star: |
 | [アジャイルコーチング](http://amzn.to/2FX5Z2g)                         | 2017/01/21 | Printed | :jp: | :waxing_crescent_moon: | |
 | [初めてのJavaScript 第3版](http://amzn.to/2ntsHuo)                    | 2017/01/20 | Printed | :jp: | :waxing_crescent_moon: | |
 
