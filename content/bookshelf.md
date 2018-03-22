@@ -20,6 +20,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [Goならわかるシステムプログラミング](http://amzn.to/2psIIhJ) <sup>YGOBR</sup> | 2017/10/19 | Printed | :jp: | :waxing_crescent_moon: | |
 | [テスト駆動開発](http://amzn.to/2B03u0o)                              | 2017/10/14 | Printed | :jp: | :waxing_crescent_moon: | |
 | [プロダクションレディマイクロサービス](http://amzn.to/2FNIZad)            | 2017/09/13 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Nim in Action](http://amzn.to/2pxuNXB)                             | 2017/08/24 | Printed | :gb: | :waxing_crescent_moon: | |
 | [英語の品格](http://amzn.to/2iqMG7H)                                  | 2017/08/07 | Printed | :jp: | :waxing_gibbous_moon: | :star::star::star: |
 | [日本企業がシリコンバレーのスピードを身につける方法](http://amzn.to/2ilYFTL) | 2017/07/18 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [現場で役立つシステム設計の原則](http://amzn.to/2zSPe5e) <sup>AOSN</sup> | 2017/07/05 | Printed | :jp: |:full_moon: | :star: |
