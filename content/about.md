@@ -37,7 +37,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
   * **Go**
   * **C#** 5.0
   * **JavaScript** (jQuery, jQuery UI, Node-RED)
-  * **Apex/Visualforce** (Service Cloud, Community Cloud)
+  * **Apex/Visualforce** (Sales Cloud, Service Cloud, Community Cloud, Analytics Cloud)
   * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, Salesforce SOQL/SOSL)
 * 社内ツール、コンテスト等の開発経験があるもの:
   * **C/C++**
