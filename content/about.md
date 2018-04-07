@@ -51,7 +51,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 * Effective Java (Joshua Bloch)
 * ピープルウェア (Tom Demarco & Timothy Lister)
 
-[Bookshelf](/bookshelf)をご覧ください。
+[Bookshelf](/bookshelf)もご覧ください。
 
 ### 学歴
 
