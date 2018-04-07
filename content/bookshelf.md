@@ -19,6 +19,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [IoTの基本・仕組み・重要事項が全部わかる教科書](http://amzn.to/2inkan5)    | 2017/10/19 | Printed | :jp: | :first_quarter_moon: | |
 | [Goならわかるシステムプログラミング](http://amzn.to/2psIIhJ) <sup>YGOBR</sup> | 2017/10/19 | Printed | :jp: | :waxing_crescent_moon: | |
 | [テスト駆動開発](http://amzn.to/2B03u0o)                              | 2017/10/14 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Amazon Web Services負荷試験入門](https://amzn.to/2Gm7n2I)            | 2017/09/23 | Printed | :jp: | :waxing_crescent_moon: | |
 | [プロダクションレディマイクロサービス](http://amzn.to/2FNIZad)            | 2017/09/13 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Nim in Action](http://amzn.to/2pxuNXB)                             | 2017/08/24 | Printed | :gb: | :waxing_crescent_moon: | |
 | [英語の品格](http://amzn.to/2iqMG7H)                                  | 2017/08/07 | Printed | :jp: | :waxing_gibbous_moon: | :star::star::star: |
@@ -135,7 +136,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [What's New in Java 7](http://amzn.to/2nyPl4C)                       | 2011/10/20 | Kindle  | :gb: | :full_moon: | :star::star: |
 | [アジャイルサムライ](http://amzn.to/2IF1hrF)                            | 2011/07/16 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [Building and Testing With Gradle](http://amzn.to/2psvGkr)           | 2011/07/13 | PDF    | :gb: | :full_moon: | :star::star: |
-| [ウェブオペレーション](http://amzn.to/2BWoDFX)                          | 2011/05/14 | Printed | :jp: | :waxing_gibbous_moon: | |
+| [ウェブオペレーション](http://amzn.to/2BWoDFX)                          | 2011/05/14 | Printed | :jp: | :full_moon: | :star::star: |
 | [エリック・エヴァンスのドメイン駆動設計](http://amzn.to/2ioBnNg)           | 2011/04/09 | Printed | :jp: | :first_quarter_moon: | |
 | [Java: The Good Parts](http://amzn.to/2u4BSES)                       | 2011/02/24 | Printed | :jp: | :full_moon: | :star::star: |
 | [Effective C# 4.0](http://amzn.to/2A89apf)                           | 2011/02/16 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
