@@ -11,7 +11,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-## お仕事
+## 開発経験
 
 ----------
 
@@ -30,39 +30,28 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ### スキル
 
-#### 言語
+#### 言語/フレームワーク
 
 * プロダクション開発経験があるもの:
-  * **Java** 1.3, 1.4, 6, 7, 8, **Go**, **Apex**, **C#** 5.0
-  * **JavaScript**
-  * **HTML** 4, 5, **Visualforce**
+  * **Java** 1.3, 1.4, 6, 7, 8 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
+  * **Go**
+  * **C#** 5.0
+  * **JavaScript** (jQuery, jQuery UI, Node-RED)
+  * **Apex/Visualforce** (Service Cloud, Community Cloud)
+  * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, Salesforce SOQL/SOSL)
 * 社内ツール、コンテスト等の開発経験があるもの:
   * **C/C++**
   * **Python** 2
 * 趣味でぼちぼち触るもの:
-  * Processing, Ceylon, Kotlin, Elixir
-
-#### ミドルウェア等
-
-* DB:
-  * MySQL/MariaDB, SQL Server, MongoDB, Redis, Elasticsearch
-* APサーバー・フレームワーク:
-  * Java: Java EE (GlassFish), OSGi (Knopflerfish), Apache Tomcat, Spring Framework/Boot, Apache Spark
-* PaaS:
-  * Cloud Foundry (IBM Bluemix), AWS Lambda, Azure App Service, Google App Engine, Heroku
-* UI:
-  * Java: JSF, JSP, Vaadin
-  * JavaScript: jQuery/jQUery UI, React
-* OS:
-  * UNIX: Solaris (9~)
-  * UNIX-like: Debian (2.2~), Red Hat (RHL8.0~), Gentoo Linux, NetBSD (1.6~)
-  * Windows Server (2k3~)
+  * Kotlin, Elixir, Nim
 
 #### 好きな本3冊
 
 * モダンオペレーティングシステム (Andrew S. Tanenbaum)
 * Effective Java (Joshua Bloch)
 * ピープルウェア (Tom Demarco & Timothy Lister)
+
+[Bookshelf](/bookshelf)をご覧ください。
 
 ### 学歴
 
