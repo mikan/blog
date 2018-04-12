@@ -73,6 +73,8 @@ adoc-test
 4 directories, 3 files
 ```
 
+:bulb: ソースディレクトリを変更したい場合は、 `build.gradle` に `asciidoctor{ sourceDir = file('./docs') }` のようにパスを教えてあげる必要があります。
+
 adoc の中身はなんでも良いですが、今回はサンプルとしてこんなものを置いてみました (`index.adoc` の中身)。
 
 ```adoc
@@ -110,6 +112,8 @@ $ gradle asciidoctor
 {{< figure src="/img/ss/asciidoctor1.png" title="Asciidoctor 出力 HTML" class="center" width="80%">}}
 
 ばっちりですね:sparkles: 文書間のリンクもちゃんと `.html` になっていることが確認できるはずです。
+
+:bulb: アウトプットディレクトリを変更したい場合は、 `build.gradle` に `asciidoctor{ sourceDir = file('./docs') }` のようにパスを教えてあげる必要があります。
 
 さて、これで仕事が終わるなら簡単すぎてブログ記事になりません。**問題はここから**なのです・・・！
 
@@ -203,11 +207,28 @@ asciidoctor-gradle-plugin は **1.5.3** をお使いください！これより�
 #### PDF 埋め込み機能
 
 Asciidoctor には PDF を出力する機能を追加することができますが、今の所 PlantUML のレンダリング結果を拾ってくれません (`'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.16'` で検証)。
-ログを見ると png レンダリングされたファイルがある `outputDir` のパスではなく `sourceDir` のほうを読みに行ってしまっている様子。あと一歩な気がする！
+ログを見ると png レンダリングされたファイルがある `outputDir` のパスではなく `sourceDir` のほうを読みに行ってしまっている様子。 ~~あと一歩な気がする！~~
+そこで、 `asciidoctor` ブロックを以下のように設定し、正しいパスを教えてあげます。
+
+```groovy
+asciidoctor {
+    backends = ['html5','pdf']
+    requires = ['asciidoctor-diagram']
+    attributes "imagesdir": buildDir
+}
+```
+
+`buildscript` の `dependencies` に次を追記するのもお忘れなく。
+
+```groovy
+classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.16'
+```
+
+:sparkles: _2018/04/13 加筆しました (Thanks [@osamus](#comment-3851233493))_
 
 #### org.jruby.ext.openssl がないと言われる
 
-やっつけですが、`build.gradle` の buildscript の dependencies に以下を追加することで回避できたことがあります:
+やっつけですが、`build.gradle` の `buildscript` の `dependencies` に以下を追加することで回避できたことがあります:
 
 ```groovy
 classpath 'rubygems:jruby-openssl:0.9.21'
@@ -226,3 +247,4 @@ Stay tuned & Happy hacking!
 1. [Frequently Asked Questions (FAQs) and Troubleshooting](http://asciidoctor.org/docs/faq/) - asciidoctor.org
 2. [Extentions dissapear with gradle daemon after first run · Issue #222 · asciidoctor/asciidoctor-gradle-plugin](https://github.com/asciidoctor/asciidoctor-gradle-plugin/issues/222)
 3. [Java 実行環境のフォント - ArchWiki](https://wiki.archlinux.jp/index.php/Java_%E5%AE%9F%E8%A1%8C%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88)
+4. [asciidoctor/asciidoctorj-pdf: AsciidoctorJ PDF bundles the Asciidoctor PDF RubyGem (asciidoctor-pdf) so it can be loaded into the JVM using JRuby.](https://github.com/asciidoctor/asciidoctorj-pdf)
