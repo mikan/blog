@@ -116,7 +116,7 @@ Node.js では、Spring Boot のような重厚長大な設定機能はありま
 早速アプリケーションに導入してみましょう。
 
 ```
-npm i dotenv --save
+npm i --save dotenv
 ```
 
 プロジェクトルートに `.env` というファイルを用意し、`KEY=VALUE` を並べていきます。こんな感じです。
@@ -148,7 +148,7 @@ npm i -g foreman
 nf run node app.js
 ```
 
-なお、　foreman の場合は　 `.env` の中身を以下のような JSON フォーマットでも記述できるようです。
+なお、　foreman の場合は `.env` の中身を以下のような JSON フォーマットでも記述できるようです。
 
 ```json
 {
