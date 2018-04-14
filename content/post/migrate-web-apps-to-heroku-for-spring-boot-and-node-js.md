@@ -190,6 +190,15 @@ bootJar {
 }
 ```
 
+`system.properties` のほうは、Java のバージョンを指定するために利用します。こんな感じです。
+
+```properties
+java.runtime.version=1.8
+```
+
+Heroku は最新の Java の追従がとても速く (Go 等他の言語もめっちゃ速い！)、(この記事を書いている今) 出たばかりの OpenJDK 10 も選べます (`java.runtime.version=10`)。
+さらにすごいことに、 OpenJDK だけでなく Azul Zulu JDK も選ぶことができます。ただしこちらは現時点では 9.0.1 が最新でした (`java.runtime.version=zulu-9.0.1`)。
+
 #### 2.2 Node.js
 
 Node.js (npm) の場合は、今の所何もしなくても良さげです。Heroku が振るランダムなポート番号も勝手に Node.js に渡ります。
