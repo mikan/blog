@@ -139,7 +139,7 @@ import (
 )
 
 func Upload(name string, data []byte) {
-	bucket := "ws.aosn.chart"
+	bucket := "chart.aosn.ws"
 	service := s3.New(session.Must(session.NewSession(&aws.Config{
 		Region: aws.String(endpoints.ApNortheast1RegionID),
 	})))

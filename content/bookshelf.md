@@ -15,7 +15,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [Effective SQL](http://amzn.to/2FWeuuJ)                             | 2017/12/20 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Clean Code](http://amzn.to/2psJ87N)                                | 2017/12/18 | Printed | :jp: | :waxing_crescent_moon: | |
 | [ベタープログラマー](http://amzn.to/2jbD553) <sup>AOSN</sup>           | 2017/12/15 | Printed | :jp: | :waxing_crescent_moon: | |
-| [Kotlinイン・アクション](http://amzn.to/2B06gCX) <sup>JRBOF</sup>      | 2017/10/31 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Kotlinイン・アクション](http://amzn.to/2B06gCX) <sup>JRBOF</sup>      | 2017/10/31 | Printed | :jp: | :first_quarter_moon: | |
 | [IoTの基本・仕組み・重要事項が全部わかる教科書](http://amzn.to/2inkan5)    | 2017/10/19 | Printed | :jp: | :first_quarter_moon: | |
 | [Goならわかるシステムプログラミング](http://amzn.to/2psIIhJ) <sup>YGOBR</sup> | 2017/10/19 | Printed | :jp: | :waxing_crescent_moon: | |
 | [テスト駆動開発](http://amzn.to/2B03u0o)                              | 2017/10/14 | Printed | :jp: | :waxing_crescent_moon: | |
