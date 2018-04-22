@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2018/04/21 | [Java読書会BOF 18.04](http://www.javareading.com/bof/)🍺 | 川崎市教育文化会館 (川崎) | 20 |
 | 2018/04/15 | [Go Conference 2018 Spring](https://gocon.connpass.com/event/82515/) | サイボウズ (日本橋) | 170 |
 | 2018/04/07 | [横浜Go読書会 #15](https://yokohama-go-reading.connpass.com/event/81380/)🍺 | かながわ県民センター (横浜) | 16 |
 | 2018/03/10 | [JAWS DAYS 2018](https://jawsdays2018.jaws-ug.jp/) | TOC五反田メッセ (不動前) | 2000 |
