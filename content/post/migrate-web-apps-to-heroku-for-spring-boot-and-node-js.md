@@ -190,6 +190,8 @@ bootJar {
 }
 ```
 
+- 最後の `--server.port=$PORT` の部分は `application.yml` に `server.port: ${PORT}` などと指定があれば必要ありません。
+
 `system.properties` のほうは、Java のバージョンを指定するために利用します。こんな感じです。
 
 ```properties
