@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2018/04/24 | [#bq_sushi tokyo #7](https://bq-sushi.connpass.com/event/82711/) | リクルート (東京) | 70 |
 | 2018/04/23 | [TensorFlow.js もくもく会 #1](https://connpass.com/event/84522/) | ウフル (神谷町) | 20 |
 | 2018/04/21 | [Java読書会BOF 18.04](http://www.javareading.com/bof/)🍺 | 川崎市教育文化会館 (川崎) | 20 |
 | 2018/04/15 | [Go Conference 2018 Spring](https://gocon.connpass.com/event/82515/) | サイボウズ (日本橋) | 170 |
