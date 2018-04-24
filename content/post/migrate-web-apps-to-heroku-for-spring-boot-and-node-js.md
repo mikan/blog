@@ -181,6 +181,7 @@ web: java -jar -Dspring.profiles.active=production build/libs/app.jar --server.p
 
 - 冒頭の `web:` は Web Dyno であることを指しています。Worker Dyno なら `worker:` で始まります<sup>[参考文献7]</sup>。
 - `spring.profiles.active` は前述の環境変数入りプロファイルを指定するために書いていますが、指定しない場合は `-D` ごと削除してください。なお、`SPRING_PROFILES_ACTIVE` 環境変数を用いて、この指定自体を外出しすることも可能です。
+- 最後の `--server.port=$PORT` の部分は `application.yml` に `server.port: ${PORT}` などと指定があれば必要ありません。
 - jar ファイルの名前を固定するには、ビルドツールにそのように指示しなければなりません。Gradle の場合は、以下のように記述します:
 
 ```groovy
@@ -189,8 +190,6 @@ bootJar {
     archiveName = baseName + "." + extension
 }
 ```
-
-- 最後の `--server.port=$PORT` の部分は `application.yml` に `server.port: ${PORT}` などと指定があれば必要ありません。
 
 `system.properties` のほうは、Java のバージョンを指定するために利用します。こんな感じです。
 
