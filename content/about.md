@@ -40,10 +40,11 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
   * **Apex/Visualforce** (Sales Cloud, Service Cloud, Community Cloud, Analytics Cloud)
   * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, Salesforce SOQL/SOSL)
 * 社内ツール、コンテスト等の開発経験があるもの:
+  * **Kotlin**
   * **C/C++**
   * **Python** 2
 * 趣味でぼちぼち触るもの:
-  * Kotlin, Elixir, Nim
+  * Elixir, Nim
 
 #### 好きな本3冊
 
