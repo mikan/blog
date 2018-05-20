@@ -27,7 +27,11 @@ Hugo は Jekyll と違い GitHub でビルドはしてくれないので、設�
 
 今回の私の最大のニーズは mikan.github.io のルートでホストすることでした。従って1番目のパターンしか取りえません。一方、サブディレクトリ (例: mikan.github.io/blog/) を許容する場合は、全てのパターンが選択肢になります。例えば2番目のパターンは、&lt;user/org&gt;.github.io リポジトリの master の直下に Hugo のファイル一式を置いて設定で `publishDir = "blog"` とサブフォルダを指定しつつ、更に index.md 等を置いてルートは Jekyll として利用するというハイブリッドな使い方も可能なパターンになります。
 
-なお、独自ドメイン利用時の注意点として、現在の GitHub Pages では独自ドメイン経由でアクセスする際には HTTPS が使えません (証明書のアップロードとかできるようにして欲しいな・・・)。ただしリバプロはできるので、例えば CloudFlare を使い DNS サーバーを変更して CloudFlare 経由にルーティングすれば、CloudFlare の無料 SSL/TLS 証明書を利用することができます。
+~~なお、独自ドメイン利用時の注意点として、現在の GitHub Pages では独自ドメイン経由でアクセスする際には HTTPS が使えません (証明書のアップロードとかできるようにして欲しいな・・・)。ただしリバプロはできるので、例えば CloudFlare を使い DNS サーバーを変更して CloudFlare 経由にルーティングすれば、CloudFlare の無料 SSL/TLS 証明書を利用することができます。~~
+
+**UPDATE:** 2018/5/1 にカスタムドメインの GitHub Pages で Let's Encrypt による HTTPS サービスが開始されました！ [Custom domains on GitHub Pages gain support for HTTPS &#124; The GitHub Blog](https://blog.github.com/2018-05-01-github-pages-custom-domains-https/)
+
+:sparkles: _2018/05/20 追記しました_
 
 様々なセットアップ手順は参考文献の1番目 (公式ドキュメント) に譲りますが、ここでは今回構築した1番目のパターンの手順をご紹介します。
 
