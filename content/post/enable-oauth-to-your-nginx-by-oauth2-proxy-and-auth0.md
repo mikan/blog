@@ -1,5 +1,5 @@
 ---
-title: "oauth2_proxy と Auth0 を用いた　Nginx のお手軽 OAuth 化"
+title: "oauth2_proxy と Auth0 を用いた Nginx のお手軽 OAuth 化"
 date: 2018-05-23T20:42:54+09:00
 draft: false
 categories: ["web"]
