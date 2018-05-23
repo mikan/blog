@@ -29,14 +29,14 @@ auth_basic "Restricted";
 auth_basic_user_file /path/to/htpasswd;
 ```
 
-肝心の `htpasswd` も、ブラウザでちょちょいと生成してくれる便利なジェネレーターを使えば `apache2-utils` など取り寄せる必要すらありません<sup>[1]</sup>。
+肝心の `htpasswd` も、ブラウザでちょちょいと生成してくれる便利なジェネレーターを使えば `apache2-utils` など取り寄せる必要すらありません<sup>[参考文献1]</sup>。
 
 でも、同じぐらいの (とまではいかなくてもあとすこしほんのちょっとの) 手順で好きな認証サービスと自在に繋がったらかっこよくありませんか？
 そんなことを考えながら色々と調べたり試したりしていたところ、サーバーサイドに仕込むツールと、クラウドサービスの組み合わせが最高だったのでご紹介。
 
 ### アーキテクチャ
 
-今回認証を実現するのに用いるツールは短縮 URL サービスの Bitly 社が開発している [oauth2_proxy](https://github.com/bitly/oauth2_proxy) というものです。これは Nginx とは独立して (別プロセスとして) 動く Go 言語製のサーバープログラムで、Nginx の `auth_request` と連動させて利用します。
+今回認証を実現するのに用いるツールは短縮 URL サービスの Bitly 社が開発している [oauth2_proxy](https://github.com/bitly/oauth2_proxy) というものです。これは Nginx とは独立して (別プロセスとして) 動く Go 言語製のサーバープログラムで、Nginx の `auth_request` と連動させて利用します<sup>[参考文献2,3]</sup>。
 
 認証サービスは包括的な認証統合サービスである [Auth0](https://auth0.com/) をチョイスします。なお、oauth2_proxy はそれ自体が Google, LinkedIn, Facebook, GitHub, Azure, GitLab を直接サポートしていますので、これ以外には絶対に手を出さん！というのならそれでも良いと思います。しかし Auth0 は一度使ってみると便利すぎて震えること間違いなしです！自前のユーザーストアはもちろん備わってますし、ソーシャルログイン 2 箇所までは無料で利用できます。しかも有効化はたったのワンクリックです。対応するサービスは Google, Facebook, Microsoft, LinkedIn, GitHub, Dropbox, BitBucket, PayPal, Twitter, Amazon, vKontakte, Yandex, Yahoo!, 37 signals, Box, Salesforce, Salesforce Community, Fitbit, Baidu, Renren, Weibo, AOL, Shopify, WordPress, Dwolla, MiiCard, Yammer, SoundCloud, Instagram, The City, Planning Center, Evernote, Exact, DoCoMo... とにかくたくさんあります！
 
