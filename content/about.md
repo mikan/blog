@@ -4,7 +4,6 @@ date: 2017-11-03T00:09:42+09:00
 draft: false
 ---
 
-
 ![mikan](https://github.com/mikan.png?size=40 "mikan") Yutaka Kato / 加藤 裕 @ "IoT フルスタック" エンジニア (自称)
 
 GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.linkedin.com/in/yutakakato) / Email: mikan@aosn.ws
@@ -16,7 +15,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 ----------
 
 * 2017-present: クラウド開発エンジニア @ 日系ITベンチャー
-  * IoT システム概念検証向け開発
+  * IoT システム概念検証向け開発
   * Salesforce インテグレーション・カスタマイズ開発
 * 2017: デリバリーエンジニア @ 外資系ITサービスベンダー
   * 金融業界向け金融工学演算システム開発
