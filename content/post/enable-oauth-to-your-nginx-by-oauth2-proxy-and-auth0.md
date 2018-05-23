@@ -250,7 +250,7 @@ sudo service nginx reload
 
 {{<figure src="/img/ss/oauth2proxy1.png" class="center">}}
 
-複数していだと、こんな感じ。
+複数指定していたら、こんな感じ。
 
 {{<figure src="/img/ss/oauth2proxy3.png" class="center">}}
 
@@ -260,7 +260,7 @@ sudo service nginx reload
 
 Auth0 の認証画面が表示されましたか？おめでとうございます :sparkles:
 
-もし **Callback URL mismatch.** と表示された場合は、oauth2_proxy で指定した `redirect_url` の値が Auth0 の "Settings" タブの "Allowed Callback URLs" に追加 (修正) してください。
+もし **Callback URL mismatch.** と表示された場合は、oauth2_proxy で指定した `redirect_url` の値と、 Auth0 の "Settings" タブの "Allowed Callback URLs" に記入した値が合っていないか、設定を忘れています。修正してください。
 
 {{<figure src="/img/ss/authzero6.png" class="center">}}
 
