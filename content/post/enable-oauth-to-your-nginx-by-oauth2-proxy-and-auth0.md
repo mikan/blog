@@ -70,7 +70,7 @@ auth_basic_user_file /path/to/htpasswd;
 
 :bulb: 設置サイト (Nginx) で後ほど `/oauth2` 以下を oauth2_proxy ツールにプロキシするので、ここでは設置サイトのホスト名のところ (`your-site.com` と書いたところ) だけ合わせてください
 
-設定はここだけです。以下の情報を後で用います。
+以下の情報を後で用いますので、覚えておいてください (といっても暗記は無理なレベルです・・・)。
 
 - Domain (`xxx.auth0.com`)
 - Client ID (32文字)
