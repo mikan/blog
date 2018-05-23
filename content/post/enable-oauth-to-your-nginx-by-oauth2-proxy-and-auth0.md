@@ -76,7 +76,7 @@ auth_basic_user_file /path/to/htpasswd;
 - Client ID (32文字)
 - Client Secret (64文字)
 
-"Connections" タブを開き、このアプリケーションに適用する認証手段を選択します。
+"Settings" タブの要点を抑えたら、次は "Connections" タブを開き、このアプリケーションに適用する認証手段を選択します。
 ソーシャルログインのソースは画面左側のメニューから "Connections" を選び、好きなサービスを有効化します (無料枠は 2 つまで)。
 
 {{<figure src="/img/ss/authzero5.png" class="center" width="80%">}}
