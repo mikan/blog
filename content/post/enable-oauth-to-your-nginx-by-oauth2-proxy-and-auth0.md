@@ -256,7 +256,7 @@ sudo service nginx reload
 
 では、ボタンを押してみましょう！
 
-{{<figure src="/img/ss/authzero10.png" class="center">}}
+{{<figure src="/img/ss/authzero10.png" class="center" width="60%">}}
 
 Auth0 の認証画面が表示されましたか？おめでとうございます :sparkles:
 
