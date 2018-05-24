@@ -11,7 +11,7 @@ tags: [
   ]
 ---
 
-{{<figure src="/img/ss/authzero7.png" class="center">}}
+{{<figure src="/img/ss/authzero10.png" class="center" width="50%">}}
 
 Nginx でホストしているページや Web アプリにちょっとした認証をかけたいとき、簡単だからと BASIC 認証をかけて運用しているケースは少なくないと思います。
 例えば、サーバー監視用のダッシュボードだったり、本番ではないステージングや開発環境だったり、ひみつのファイル置き場だったり。
