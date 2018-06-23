@@ -80,7 +80,7 @@ fs.protected_hardlinks = 1
 fs.protected_symlinks = 1
 ```
 
-もう一つ設定ファイルをいじります。これは Raspbian Stretch を選んだ場合のみ起きる減少に対処するためです <sup>[参考文献5]</sup>。
+もう一つ設定ファイルをいじります。これは Raspbian Stretch を選んだ場合のみ起きる現象に対処するためです <sup>[参考文献5]</sup>。
 
 ```console
 sudo vi /boot/cmdline.txt
@@ -109,7 +109,7 @@ sudo apt install oracle-java8-jdk
 ```
 
 導入されたら、Greengrass が Java 8 を認識するために `java8` コマンドを作ります。
-SDK の README には "Make sure the file is not a symlink." と書いてあるのですが・・・一旦無視します:sunglasses:
+SDK の README には "Make sure the file is not a symlink." と書いてあるのですが・・・うーん、やはりめんどくさいのでここはシンボリックリンクで:sunglasses:
 
 ```bash
 $ sudo ln -s /usr/bin/java /usr/bin/java8
@@ -293,6 +293,8 @@ task buildZip(type: Zip) {
 
 build.dependsOn buildZip
 ```
+
+:bulb: 完全版は後述の "トラブルシューティング" を参照してください。
 
 編集が終わったら、 Gradle プロジェクトをリフレッシュしましょう。
 画面右手にある [Gradle] というツールウインドウを開き (ツールウインドウがなければ、画面の一番左下の ❏ ←こんなアイコンをクリック)、次に再読込ボタン (下の画像だと左手にある青くて丸いボタン :cyclone:) をクリックします。
@@ -563,6 +565,12 @@ $ JAVA_HOME=`/usr/libexec/java_home -v 1.8` ./gradlew clean buildZip
 このほか、今回公式サポート外の環境 (Raspbian Stretch など) で行っています。
 他にも環境依存の様々な問題が発生する可能性があるので、正しい環境も用意してそちらで動くか試す等の切り分けが必要になるかもしれません。
 そして、こうした環境依存の切り分けのためにも、 SD カードは常に最低 2 枚は用意しておきたいところです。
+
+最後に、完全な `build.gradle` などを含むサンプルコード一式をアップしたので紹介します。うまく動かないときに参考にしてみてください。
+
+> mikan/ggc-kotlin-demo
+>
+> https://github.com/mikan/ggc-kotlin-demo
 
 Stay tuned & Happy hacking!
 
