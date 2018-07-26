@@ -33,7 +33,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 * プロダクション開発経験があるもの:
   * **Java** 1.3, 1.4, 6, 7, 8 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
-  * **Kotlin** 1.x
+  * **Kotlin** 1.x (Spring Framework/Boot)
   * **Go** 1.x
   * **C#** 5.0
   * **JavaScript** ES5,6 (jQuery, jQuery UI, Node-RED)
