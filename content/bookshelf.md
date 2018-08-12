@@ -8,6 +8,13 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 上付き文字は読書会課題本を示します (<sup>AOSN</sup> [AOSN読書会](https://aosn.ws), <sup>JRBOF</sup> [Java読書会BOF](http://javareading.com/bof), <sup>YGOBR</sup> [横浜Go読書会](https://yokohama-go-reading.connpass.com/))。
 
+## 2018
+
+| タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
+| ------ | ----- | ---- | --- | --- | ------ |
+| [プログラミングRust](https://amzn.to/2MaoqIe) | 2018/08/10 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Google Cloud Platform エンタープライズ設計ガイド](https://amzn.to/2Mc1sAj) | 2018/05/17 | Printed | :jp: | :first_quarter_moon: | |
+
 ## 2017
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
