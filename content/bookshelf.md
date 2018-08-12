@@ -21,19 +21,19 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | ------ | ----- | ---- | --- | --- | ------ |
 | [Effective SQL](http://amzn.to/2FWeuuJ)                             | 2017/12/20 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Clean Code](http://amzn.to/2psJ87N)                                | 2017/12/18 | Printed | :jp: | :waxing_crescent_moon: | |
-| [ベタープログラマー](http://amzn.to/2jbD553) <sup>AOSN</sup>           | 2017/12/15 | Printed | :jp: | :waxing_crescent_moon: | |
-| [Kotlinイン・アクション](http://amzn.to/2B06gCX) <sup>JRBOF</sup>      | 2017/10/31 | Printed | :jp: | :first_quarter_moon: | |
+| [ベタープログラマー](http://amzn.to/2jbD553) <sup>AOSN</sup>           | 2017/12/15 | Printed | :jp: | :first_quarter_moon: | |
+| [Kotlinイン・アクション](http://amzn.to/2B06gCX) <sup>JRBOF</sup>      | 2017/10/31 | Printed | :jp: | :full_moon: | |
 | [IoTの基本・仕組み・重要事項が全部わかる教科書](http://amzn.to/2inkan5)    | 2017/10/19 | Printed | :jp: | :first_quarter_moon: | |
-| [Goならわかるシステムプログラミング](http://amzn.to/2psIIhJ) <sup>YGOBR</sup> | 2017/10/19 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Goならわかるシステムプログラミング](http://amzn.to/2psIIhJ) <sup>YGOBR</sup> | 2017/10/19 | Printed | :jp: | :first_quarter_moon: | |
 | [テスト駆動開発](http://amzn.to/2B03u0o)                              | 2017/10/14 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Amazon Web Services負荷試験入門](https://amzn.to/2Gm7n2I)            | 2017/09/23 | Printed | :jp: | :waxing_crescent_moon: | |
 | [プロダクションレディマイクロサービス](http://amzn.to/2FNIZad)            | 2017/09/13 | Printed | :jp: | :waxing_crescent_moon: | |
-| [Nim in Action](http://amzn.to/2pxuNXB)                             | 2017/08/24 | Printed | :gb: | :waxing_crescent_moon: | |
+| [Nim in Action](http://amzn.to/2pxuNXB)                             | 2017/08/24 | Printed | :gb: | :first_quarter_moon: | |
 | [英語の品格](http://amzn.to/2iqMG7H)                                  | 2017/08/07 | Printed | :jp: | :waxing_gibbous_moon: | :star::star::star: |
 | [日本企業がシリコンバレーのスピードを身につける方法](http://amzn.to/2ilYFTL) | 2017/07/18 | Kindle | :jp: | :waxing_crescent_moon: | |
-| [現場で役立つシステム設計の原則](http://amzn.to/2zSPe5e) <sup>AOSN</sup> | 2017/07/05 | Printed | :jp: |:full_moon: | :star: |
+| [現場で役立つシステム設計の原則](http://amzn.to/2zSPe5e) <sup>AOSN, JRBOF</sup> | 2017/07/05 | Printed | :jp: |:full_moon: | :star: |
 | [サーバーレスシングルページアプリケーション](http://amzn.to/2B02zwP)       | 2017/06/23 | Printed | :jp: | :waxing_crescent_moon: | |
-| [Real World HTTP](http://amzn.to/2ICAOv1) <sup>AOSN</sup>           | 2017/06/14 | Printed | :jp: | :first_quarter_moon: | |
+| [Real World HTTP](http://amzn.to/2ICAOv1) <sup>AOSN</sup>           | 2017/06/14 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
 | [プログラマのためのGoogle Cloud Platform入門](http://amzn.to/2AZXqVx)   | 2017/06/02 | Kindle | :jp: | :new_moon: | |
 | [しあわせを引き寄せる洋菓子の事典](http://amzn.to/2ntuRdh)                | 2017/05/26 | Printed | :jp: | :first_quarter_moon: | |
 | [Jenkins実践入門 改訂第3版](http://amzn.to/2AYE0AK)                    | 2017/05/24 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
@@ -47,16 +47,16 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [ジョイ・インク](http://amzn.to/2AHoZ3d)                              | 2016/12/20 | Kindle  | :jp: | :waxing_crescent_moon: | |
+| [ジョイ・インク](http://amzn.to/2AHoZ3d)                              | 2016/12/20 | Kindle  | :jp: | :first_quarter_moon: | |
 | [新装版 達人プログラマー](http://amzn.to/2B05OEv)                       | 2016/10/20 | Printed | :jp: | :waxing_crescent_moon: | |
 | [リーンエンタープライズ](http://amzn.to/2G4IZC1)                        | 2016/10/15 | ePub    | :jp: | :waxing_crescent_moon: | |
 | [ブロックチェーン 仕組みと理論](http://amzn.to/2A7VY3I) <sup>AOSN</sup>  | 2016/10/15 | Printed | :jp:  |:full_moon: | :star: |
 | [Deep Learning Javaプログラミング](http://amzn.to/2nwe3lW) <sup>JRBOF</sup> | 2016/10/07 | Printed | :jp: | :full_moon: | :star: |
-| [みんなのGo言語](http://amzn.to/2nvj7ae)                              | 2016/09/09 | Printed | :jp: |  :waxing_gibbous_moon: | :star::star: |
+| [みんなのGo言語](http://amzn.to/2nvj7ae)                              | 2016/09/09 | Printed | :jp: |  :full_moon: | :star::star: |
 | [スケーラブルリアルタイムデータ分析入門](http://amzn.to/2A900c4)          | 2016/08/24 | Printed | :jp: | :waxing_crescent_moon: | |
 | [プログラミングElixir](http://amzn.to/2nwJkoG) <sup>AOSN</sup>        | 2016/08/19 | Printed | :jp: | :full_moon: | :star::star: |
 | [合格対策 AWS認定ソリューションアーキテクトアソシエイト](http://amzn.to/2DDNCxz) | 2016/08/17 | Printed | :jp: | :first_quarter_moon: | |
-| [Slack入門](http://amzn.to/2HNTOoZ)                                  | 2016/06/28 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
+| [Slack入門](http://amzn.to/2HNTOoZ)                                  | 2016/06/28 | Printed | :jp: | :full_moon: | :star::star: |
 | [プログラミング言語Go](http://amzn.to/2A7WLS4) <sup>YGOBR</sup>        | 2016/06/20 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [SOFT SKILLS](http://amzn.to/2imC6OG)                               | 2016/05/20 | Kindle | :jp: | :full_moon: | :star::star::star: |
 | [あなたの知らないところでソフトウェアは何をしているのか?](http://amzn.to/2A9zZcr) | 2016/05/18 | Printed | :jp: | :first_quarter_moon: | |
@@ -74,7 +74,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [Java EE 7徹底入門](http://amzn.to/2A8f0qA) <sup>JRBOF</sup>         | 2015/12/16 | Printed | :jp: | :waxing_crescent_moon: | :star:  |
+| [Java EE 7徹底入門](http://amzn.to/2A8f0qA) <sup>JRBOF</sup>         | 2015/12/16 | Printed | :jp: | :full_moon: | :star:  |
 | [現場で使える Java SE 7 / 8 速攻入門](http://amzn.to/2pqtlXi)          | 2015/11/19 | Printed | :jp: |:full_moon: | :star::star: |
 | [オープンデータ時代の標準Web API SPARQL](http://amzn.to/2B04HVB)        | 2015/11/13 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [The Go Programming Language](http://amzn.to/2iptN4K)               | 2015/11/05 | Kindle | :gb: | :full_moon: | :star::star::star: |
