@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2018/08/19 | [Java読書会BOF 18.08](http://www.javareading.com/bof/)🍺 | 川崎市教育文化会館 (川崎) | 20 |
 | 2018/07/21 | [Java読書会BOF 18.07](http://www.javareading.com/bof/)🍺 | 川崎マリエン (川崎) | 10 |
 | 2018/06/30 | [Java研修 OB・OG会 #5](https://yshibata.blog.so-net.ne.jp/2018-07-01)🍺 | Freee (五反田) | 39 |
 | 2018/05/30 | [AWS Summit Tokyo 2018](https://www.awssummit.tokyo/tokyo/) | グランドプリンスホテル新高輪 (品川) | ? |
