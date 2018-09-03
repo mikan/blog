@@ -13,7 +13,9 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
 | [プログラミングRust](https://amzn.to/2MaoqIe) | 2018/08/10 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Clean Architecture](https://amzn.to/2LTW27V) | 2018/07/27 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [Google Cloud Platform エンタープライズ設計ガイド](https://amzn.to/2Mc1sAj) | 2018/05/17 | Printed | :jp: | :first_quarter_moon: | |
+| [scikit-learnとTensorFlowによる実践機械学習](https://amzn.to/2NHA0Hf) | 2018/04/29 | Printed | :jp: | :waxing_crescent_moon: | |
 
 ## 2017
 
@@ -33,7 +35,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [日本企業がシリコンバレーのスピードを身につける方法](http://amzn.to/2ilYFTL) | 2017/07/18 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [現場で役立つシステム設計の原則](http://amzn.to/2zSPe5e) <sup>AOSN, JRBOF</sup> | 2017/07/05 | Printed | :jp: |:full_moon: | :star: |
 | [サーバーレスシングルページアプリケーション](http://amzn.to/2B02zwP)       | 2017/06/23 | Printed | :jp: | :waxing_crescent_moon: | |
-| [Real World HTTP](http://amzn.to/2ICAOv1) <sup>AOSN</sup>           | 2017/06/14 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
+| [Real World HTTP](http://amzn.to/2ICAOv1) <sup>AOSN</sup>           | 2017/06/14 | Printed | :jp: | :full_moon: | :star::star: |
 | [プログラマのためのGoogle Cloud Platform入門](http://amzn.to/2AZXqVx)   | 2017/06/02 | Kindle | :jp: | :new_moon: | |
 | [しあわせを引き寄せる洋菓子の事典](http://amzn.to/2ntuRdh)                | 2017/05/26 | Printed | :jp: | :first_quarter_moon: | |
 | [Jenkins実践入門 改訂第3版](http://amzn.to/2AYE0AK)                    | 2017/05/24 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
@@ -182,6 +184,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [ThoughtWorksアンソロジー](http://amzn.to/2GKhCuP)                     | 2008/12/27 | PDF | :jp: | :waxing_gibbous_moon: | :star::star: |
 | [Groovyイン・アクション](http://amzn.to/2DGXc2G)                       | 2008/09/27 | Printed | :jp: | :waxing_crescent_moon: |  |
 | [Javaで作って学ぶ暗号技術](http://amzn.to/2nuTGWp) <sup>JRBOF</sup>     | 2008/05/13 | Printed | :jp: | :first_quarter_moon: | :star: |
+| [家畜飼育の基礎](https://amzn.to/2NMd8GV) | 2008/04/01 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Googleを支える技術](http://amzn.to/2psPbJx)                           | 2008/03/28 | Printed | :jp: | :full_moon: | :star::star::star: |
 
 ## 2007
