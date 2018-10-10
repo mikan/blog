@@ -14,7 +14,9 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-* 2017-present: クラウド開発エンジニア @ 日系ITベンチャー
+* 2018-present: 研究開発エンジニア @ 日経IoTスタートアップ
+  * 農業向け IoT プラットフォーム開発
+* 2017-2018: クラウド開発エンジニア @ 日系ITベンチャー
   * IoT システム概念検証向け開発
   * Salesforce インテグレーション・カスタマイズ開発
 * 2017: デリバリーエンジニア @ 外資系ITサービスベンダー
@@ -41,7 +43,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
   * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, Salesforce SOQL/SOSL)
 * 社内ツール、コンテスト等の開発経験があるもの:
   * **C/C++**
-  * **Python** 2
+  * **Python** 2.x, 3.x
 * 趣味でぼちぼち触るもの:
   * Elixir, Nim
 
