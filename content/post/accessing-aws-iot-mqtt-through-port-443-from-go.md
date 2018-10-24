@@ -164,10 +164,12 @@ func main() {
 }
 
 func newTLSConfig() (*tls.Config, error) {
-	pool := x509.NewCertPool()
-	if rootCA, err := ioutil.ReadFile(RootCAFile); err != nil {
-		pool.AppendCertsFromPEM(rootCA)
+	rootCA, err := ioutil.ReadFile(RootCAFile)
+	if err != nil {
+		return nil, err
 	}
+	pool := x509.NewCertPool()
+	pool.AppendCertsFromPEM(rootCA)
 	cert, err := tls.LoadX509KeyPair(CertFile, KeyFile)
 	if err != nil {
 		return nil, err
