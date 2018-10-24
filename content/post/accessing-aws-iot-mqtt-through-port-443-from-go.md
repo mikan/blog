@@ -64,8 +64,6 @@ Go の ALPN サポートは標準ライブラリ `crypt/tls` にて提供され�
 ```go
 tls.Config{
     RootCAs:            pool,
-    ClientAuth:         tls.NoClientCert,
-    ClientCAs:          nil,
     InsecureSkipVerify: true,
     Certificates:       []tls.Certificate{cert},
 }
@@ -77,11 +75,9 @@ tls.Config{
 ```go
 tls.Config{
     RootCAs:            pool,
-    ClientAuth:         tls.NoClientCert,
-    ClientCAs:          nil,
     InsecureSkipVerify: true,
     Certificates:       []tls.Certificate{cert},
-    NextProtos:         []string{"x-amzn-mqtt-ca"}, // Add
+    NextProtos:         []string{"x-amzn-mqtt-ca"}, // Port 443 ALPN
 }
 ```
 
@@ -169,8 +165,8 @@ func main() {
 
 func newTLSConfig() (*tls.Config, error) {
 	pool := x509.NewCertPool()
-	if pemCerts, err := ioutil.ReadFile(RootCAFile); err == nil {
-		pool.AppendCertsFromPEM(pemCerts)
+	if rootCA, err := ioutil.ReadFile(RootCAFile); err != nil {
+		pool.AppendCertsFromPEM(rootCA)
 	}
 	cert, err := tls.LoadX509KeyPair(CertFile, KeyFile)
 	if err != nil {
@@ -181,11 +177,9 @@ func newTLSConfig() (*tls.Config, error) {
 		return nil, err
 	}
 	return &tls.Config{
-		RootCAs:            pool,
-		ClientAuth:         tls.NoClientCert,
-		ClientCAs:          nil,
-		InsecureSkipVerify: true,
-		Certificates:       []tls.Certificate{cert},
+        RootCAs:            pool,
+        InsecureSkipVerify: true,
+        Certificates:       []tls.Certificate{cert},
 		NextProtos:         []string{"x-amzn-mqtt-ca"}, // Port 443 ALPN
 	}, nil
 }
