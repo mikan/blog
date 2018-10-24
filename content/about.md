@@ -14,7 +14,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-* 2018-present: 研究開発エンジニア @ 日経IoTスタートアップ
+* 2018-present: 研究開発エンジニア @ 日系IoTスタートアップ
   * 農業向け IoT プラットフォーム開発
 * 2017-2018: クラウド開発エンジニア @ 日系ITベンチャー
   * IoT システム概念検証向け開発
