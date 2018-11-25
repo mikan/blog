@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2018/11/25 | [HTML5 Conference 2018](https://html5j.connpass.com/event/105561/) | 東京電機大学 (北千住) | 1600 |
 | 2018/11/08 | [Kubernetes Meetup Tokyo #14](https://k8sjp.connpass.com/event/104450/) | Google (六本木) | 220 |
 | 2018/10/27 | [Rakuten Technology Conference 2018](https://tech.rakuten.co.jp/) | 楽天 (二子玉川) | ? |
 | 2018/10/19 | [KotlinConf 2018 報告会](https://kotlin.connpass.com/event/103395/)🍺 | LINE (新宿) | 100 |
