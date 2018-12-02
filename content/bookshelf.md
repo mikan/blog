@@ -12,8 +12,8 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [Effective Java 第3版](https://amzn.to/2OWgSKc)                     | 2018/10/30 | Printed | :jp: | :new_moon: | |
-| [Go言語による並行処理](https://amzn.to/2CIsZ6m) <sup>YGOBR</sup>      | 2018/10/26 | Printed | :jp: | :new_moon: | |
+| [Effective Java 第3版](https://amzn.to/2OWgSKc)                     | 2018/10/30 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Go言語による並行処理](https://amzn.to/2CIsZ6m) <sup>YGOBR</sup>      | 2018/10/26 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Goで学ぶAWS Lambda](https://booth.pm/ja/items/1034858)             | 2018/10/08 | PDF     | :jp: | :full_moon: | |
 | [プログラミングRust](https://amzn.to/2MaoqIe) <sup>AOSN</sup>        | 2018/08/10 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Clean Architecture](https://amzn.to/2LTW27V)                      | 2018/07/27 | Kindle | :jp: | :waxing_crescent_moon: | |
