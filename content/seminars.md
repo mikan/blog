@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2018/12/05 | [AWS re:Invent 2018 Serverless re:Cap](https://aws-serverless.connpass.com/event/110591/) | アマゾンウェブサービスジャパン (目黒) | 140 |
 | 2018/12/03 | [JAWS-UG 横浜 #14](https://jawsug-yokohama.connpass.com/event/103954/) | アトラシアン (馬車道) | 80 |
 | 2018/12/01 | [横浜Go読書会 #23](https://yokohama-go-reading.connpass.com/event/109447/)🍺 | かながわ県民センター (横浜) | 16 |
 | 2018/11/30 | [#bq_sushi tokyo #9](https://bq-sushi.connpass.com/event/106178/) | Google (六本木) | 90 |
