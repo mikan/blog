@@ -12,9 +12,10 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
+| [Refactoring 2nd Edition](https://amzn.to/2COjvVF)                 | 2018/11/30 | Printed | :en: | :waxing_crescent_moon: | |
 | [Effective Java 第3版](https://amzn.to/2OWgSKc)                     | 2018/10/30 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Go言語による並行処理](https://amzn.to/2CIsZ6m) <sup>YGOBR</sup>      | 2018/10/26 | Printed | :jp: | :waxing_crescent_moon: | |
-| [Goで学ぶAWS Lambda](https://booth.pm/ja/items/1034858)             | 2018/10/08 | PDF     | :jp: | :full_moon: | |
+| [Goで学ぶAWS Lambda](https://booth.pm/ja/items/1034858)             | 2018/10/08 | PDF     | :jp: | :full_moon: |  :star: |
 | [プログラミングRust](https://amzn.to/2MaoqIe) <sup>AOSN</sup>        | 2018/08/10 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Clean Architecture](https://amzn.to/2LTW27V)                      | 2018/07/27 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [Google Cloud Platform エンタープライズ設計ガイド](https://amzn.to/2Mc1sAj) | 2018/05/17 | Printed | :jp: | :first_quarter_moon: | |
@@ -29,10 +30,10 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [ベタープログラマー](http://amzn.to/2jbD553) <sup>AOSN</sup>           | 2017/12/15 | Printed | :jp: | :first_quarter_moon: | |
 | [Kotlinイン・アクション](http://amzn.to/2B06gCX) <sup>JRBOF</sup>      | 2017/10/31 | Printed | :jp: | :full_moon: | |
 | [IoTの基本・仕組み・重要事項が全部わかる教科書](http://amzn.to/2inkan5)    | 2017/10/19 | Printed | :jp: | :first_quarter_moon: | |
-| [Goならわかるシステムプログラミング](http://amzn.to/2psIIhJ) <sup>YGOBR</sup> | 2017/10/19 | Printed | :jp: | :waxing_gibbous_moon: | |
+| [Goならわかるシステムプログラミング](http://amzn.to/2psIIhJ) <sup>YGOBR</sup> | 2017/10/19 | Printed | :jp: | :full_moon: | :star: |
 | [テスト駆動開発](http://amzn.to/2B03u0o)                              | 2017/10/14 | Printed | :jp: | :waxing_crescent_moon: | |
-| [Amazon Web Services負荷試験入門](https://amzn.to/2Gm7n2I)            | 2017/09/23 | Printed | :jp: | :waxing_crescent_moon: | |
-| [プロダクションレディマイクロサービス](http://amzn.to/2FNIZad)            | 2017/09/13 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Amazon Web Services負荷試験入門](https://amzn.to/2Gm7n2I)            | 2017/09/23 | Printed | :jp: | :first_quarter_moon: | |
+| [プロダクションレディマイクロサービス](http://amzn.to/2FNIZad)            | 2017/09/13 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [Nim in Action](http://amzn.to/2pxuNXB)                             | 2017/08/24 | Printed | :gb: | :first_quarter_moon: | |
 | [英語の品格](http://amzn.to/2iqMG7H)                                  | 2017/08/07 | Printed | :jp: | :waxing_gibbous_moon: | :star::star::star: |
 | [日本企業がシリコンバレーのスピードを身につける方法](http://amzn.to/2ilYFTL) | 2017/07/18 | Kindle | :jp: | :waxing_crescent_moon: | |
