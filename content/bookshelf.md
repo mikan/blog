@@ -8,12 +8,18 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 上付き文字は読書会課題本を示します (<sup>AOSN</sup> [AOSN読書会](https://aosn.ws), <sup>JRBOF</sup> [Java読書会BOF](http://javareading.com/bof), <sup>YGOBR</sup> [横浜Go読書会](https://yokohama-go-reading.connpass.com/))。
 
+## 2019
+
+| タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
+| ------ | ----- | ---- | --- | --- | ------ |
+| [入門 監視](https://amzn.to/2Xo132G)             | 2019/01/17 | Printed     | :jp: | :full_moon: |  :star::star::star: |
+
 ## 2018
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
 | [Refactoring 2nd Edition](https://amzn.to/2COjvVF)                 | 2018/11/30 | Printed | :en: | :waxing_crescent_moon: | |
-| [Effective Java 第3版](https://amzn.to/2OWgSKc)                     | 2018/10/30 | Printed | :jp: | :waxing_crescent_moon: | |
+| [Effective Java 第3版](https://amzn.to/2OWgSKc) <sup>JRBOF</sup>   | 2018/10/30 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Go言語による並行処理](https://amzn.to/2CIsZ6m) <sup>YGOBR</sup>      | 2018/10/26 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Goで学ぶAWS Lambda](https://booth.pm/ja/items/1034858)             | 2018/10/08 | PDF     | :jp: | :full_moon: |  :star: |
 | [プログラミングRust](https://amzn.to/2MaoqIe) <sup>AOSN</sup>        | 2018/08/10 | Printed | :jp: | :waxing_crescent_moon: | |
