@@ -80,6 +80,12 @@ function tick(i) {
   } else {
     show(m, s);
   }
+  if (document.getElementById("bell-1").value == n) {
+    bell1();
+  }
+  if (document.getElementById("bell-2").value == n) {
+    bell2();
+  }
 }
 
 function show(m, s) {
@@ -96,6 +102,14 @@ function reset() {
   document.getElementById("stop").disabled = true;
   document.getElementById("timer").style.color = COLOR.NORMAL;
   clearInterval(t);
+}
+
+function bell1() {
+  new Audio("../bell-1.wav").play();
+}
+
+function bell2() {
+  new Audio("../bell-2.wav").play();
 }
 </script>
 <style>
@@ -146,11 +160,20 @@ input {
   <button type="button" id="start" onclick="startCounting()">Start</button>
   <button type="button" id="stop" onclick="stopCounting()" disabled>Stop</button>
   <button type="reset" onclick="resetCounter()">Reset</button>
+  <br/>
+  <label for="bell-1">Bell 1</label>
+  <input type="text" id="bell-1" value="30" size="3" title="specify remaining sec."/>
+  <button type="button" onclick="bell1()">Test</button>
+  <br/>
+  <label for="bell-2">Bell 2</label>
+  <input type="text" id="bell-2" value="0" size="3" title="specify remaining sec."/>
+  <button type="button" onclick="bell2()">Test</button>
 </form>
 </div>
 <p id="footer">
 LT Timer by <a href="https://mikan.github.io">mikan</a>, licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br/>
 Font by <a href="http://torinak.com/7segment">torinak</a>, licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br/>
+Sound by <a href="https://freesound.org/people/Sojan/">sojan</a>, public domain<br/>
 </p>
 </body>
 </html>
