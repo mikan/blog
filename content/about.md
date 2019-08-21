@@ -6,7 +6,7 @@ draft: false
 
 ![mikan](https://github.com/mikan.png?size=40 "mikan") Yutaka Kato / 加藤 裕 @ "IoT フルスタック" エンジニア (自称)
 
-GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.linkedin.com/in/yutakakato) / Email: mikan@aosn.ws
+GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.linkedin.com/in/yutakakato) / Email: mikan@aomikan.org
 
 ----------
 
@@ -45,7 +45,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 * 社内ツール、コンテスト等の開発経験があるもの:
   * **C/C++**
 * 趣味でぼちぼち触るもの:
-  * Elixir, Nim
+  * Elixir, Nim, Rust
 
 #### 好きな本3冊
 

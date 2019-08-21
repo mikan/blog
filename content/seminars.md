@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2019/08/22 | [JAWS-UG IoT専門支部 19.08](https://jawsug-iot.connpass.com/event/138727/) | アマゾンウェブサービスジャパン (目黒) | 100 |
 | 2019/07/27 | [Heroku Meetup #25](https://herokujp.doorkeeper.jp/events/93092)🍺 | TRAVEL HUB MIX (東京) | 50 |
 | 2019/06/13 | [AWS Summit Tokyo 2019](https://www.awssummit.tokyo/tokyo/) | 幕張メッセ (海浜幕張) | ? |
 | 2019/06/12 | [Interop Tokyo 2019](https://www.interop.jp/) | 幕張メッセ (海浜幕張) | 140000 |

@@ -61,7 +61,14 @@ disqusShortname = "kagaorange"
 	identifier = "bookshelf"
 	url = "/bookshelf/"
 	weight = -140
-	pre = "<i class='fa fa-users'></i>"
+	pre = "<i class='fa fa-book'></i>"
+
+[[menu.main]]
+	name = "Tools"
+	identifier = "tools"
+	url = "/tools/"
+	weight = -120
+	pre = "<i class='fa fa-cut'></i>"
 
 [[menu.main]]
 	name = "About"
