@@ -35,7 +35,7 @@ OAuth には scope という概念があり<sup>[参考文献3]</sup>、GitHub �
 要求したスコープは、ユーザーの承諾なしに認可されることはなく、また認可トークンは各 OAuth アプリに閉じています。
 この仕組みを活用することで、悪い OAuth アプリからの攻撃や認可情報の流出による被害を最小限に留められ、そして問題を発見した際には対象を無効化するだけで対処することができるわけです。
 
-今回は、3年前に立ち上げ現在も継続しているオンライン読書会「[AOSN読書会](https://aosn.ws)」の課題本投票システム「[Mosaic](https://vote.aosn.ws)」がお題です。
+今回は、3年前に立ち上げ現在も継続しているオンライン読書会「[AOSN読書会](https://aosn.github.io)」の課題本投票システム「[Mosaic](https://aosn-vote.herokuapp.com)」がお題です。
 
 {{<figure src="/img/ss/mosaic1.png" class="center" width="80%">}}
 

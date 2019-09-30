@@ -79,7 +79,7 @@ adoc の中身はなんでも良いですが、今回はサンプルとしてこ
 
 ```adoc
 = Asciidoc てすと
-mikan <mikan@aosn.ws>
+mikan <mikan@aomikan.org>
 v0.1, 2018-02
 ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 :toc:
@@ -125,7 +125,7 @@ $ gradle asciidoctor
 
 ```adoc
 = 機能仕様書
-mikan <mikan@aosn.ws>
+mikan <mikan@aomikan.org>
 v0.1, 2018-02
 :toc:
 

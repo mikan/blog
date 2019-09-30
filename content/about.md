@@ -100,8 +100,8 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 最新の技術書をオンラインで輪読する読書会。
 
-{{<figure src="/img/ss/aosn.png" class="inline" link="https://aosn.ws/" alt="AOSN">}}
-{{<figure src="/img/ss/aosn-java8.png" class="inline" link="https://aosn.ws/workshop/1-java8" alt="AOSN">}}
+{{<figure src="/img/ss/aosn.png" class="inline" link="https://aosn.github.io/" alt="AOSN">}}
+{{<figure src="/img/ss/aosn-java8.png" class="inline" link="https://aosn.github.io/workshop/1-java8" alt="AOSN">}}
 
 #### Java 読書会 BOF
 

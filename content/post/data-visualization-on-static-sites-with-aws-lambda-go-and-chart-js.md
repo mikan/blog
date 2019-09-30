@@ -17,7 +17,7 @@ tags: [
 
 AWS Lambda は言わずと知れたサーバーレスアーキテクチャのプラットフォームですが、今まで Node.js, Java, Python, C# (.NET Core 1.0) の 4 種類のランタイムしか使えませんでした。それが今回、Go <sup>[参考文献1]</sup> と C# .NET Core 2.0 <sup>[参考文献2]</sup> に対応し、ますます強力なプラットフォームに進化しました。特に Go は、そのエコシステムがもたらすプロセスのフットプリントの小ささから、実行時間とメモリ消費でスケールする Lambda の課金体系にダイレクトに効いてくる事が大いに期待できます。そしてもちろん、AWS 公式ライブラリを始めとした膨大な Go コード資産を容易に Lambda 化出来るようになったという点も大きな魅力です。
 
-今回は、AOSN 読書会のウェブサイト ([https://aosn.ws](https://aosn.ws)) の課題本ごとのページに設置した参加記録のチャートを動的に生成する仕組みを AWS Lambda Go と Chart.js を用いて実現することができたので紹介します。
+今回は、AOSN 読書会のウェブサイト ([https://aosn.github.io](https://aosn.github.io)) の課題本ごとのページに設置した参加記録のチャートを動的に生成する仕組みを AWS Lambda Go と Chart.js を用いて実現することができたので紹介します。
 
 {{<figure src="/img/ss/aosn-chart.png" class="center" width="50%">}}
 
@@ -139,7 +139,7 @@ import (
 )
 
 func Upload(name string, data []byte) {
-	bucket := "chart.aosn.ws"
+	bucket := "xxxxxxx"
 	service := s3.New(session.Must(session.NewSession(&aws.Config{
 		Region: aws.String(endpoints.ApNortheast1RegionID),
 	})))
@@ -166,8 +166,8 @@ S3 のコンソール ([https://s3.console.aws.amazon.com](https://s3.console.aw
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
 <CORSRule>
-    <AllowedOrigin>http://aosn.ws</AllowedOrigin>
-    <AllowedOrigin>https://aosn.ws</AllowedOrigin>
+    <AllowedOrigin>http://aosn.github.io</AllowedOrigin>
+    <AllowedOrigin>https://aosn.github.io</AllowedOrigin>
     <AllowedMethod>GET</AllowedMethod>
     <MaxAgeSeconds>3000</MaxAgeSeconds>
     <AllowedHeader>*</AllowedHeader>

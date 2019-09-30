@@ -18,7 +18,7 @@ Jekyll (正確には Klamdown) の場合は、 `{:refdef}` で対象を囲むこ
 {: refdef}
 ```
 
-([AOSN 読書会](https://aosn.ws)のウェブサイトの例)
+([AOSN 読書会](https://aosn.github.io)のウェブサイトの例)
 
 Hugo の場合、テーマとの兼ね合いになってきます。本ブログで採用しているテーマ ([hugo-bootstrap-premium](https://github.com/appernetic/hugo-bootstrap-premium)) の場合は、ソースコードを読むと `customCSS` という設定項目を読み込むように記述されているのを見つけました。
 

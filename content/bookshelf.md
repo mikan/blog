@@ -6,7 +6,7 @@ draft: false
 
 mikan の本棚にある本たち。技術書や自己啓発本に限ります。サブタイトルは省略しています。
 
-上付き文字は読書会課題本を示します (<sup>AOSN</sup> [AOSN読書会](https://aosn.ws), <sup>JRBOF</sup> [Java読書会BOF](http://javareading.com/bof), <sup>YGOBR</sup> [横浜Go読書会](https://yokohama-go-reading.connpass.com/))。
+上付き文字は読書会課題本を示します (<sup>AOSN</sup> [AOSN読書会](https://aosn.github.io), <sup>JRBOF</sup> [Java読書会BOF](http://javareading.com/bof), <sup>YGOBR</sup> [横浜Go読書会](https://yokohama-go-reading.connpass.com/))。
 
 ## 2019
 

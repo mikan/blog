@@ -1,5 +1,5 @@
-mikan.aosn.ws
-=============
+mikan.github.io
+===============
 
 [mikan](https://github.com/mikan) の技術ブログの中身です。[Hugo](https://gohugo.io/) と GitHub Pages を利用しています。
 
