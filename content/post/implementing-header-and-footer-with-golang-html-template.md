@@ -47,7 +47,7 @@ Go の標準ライブラリの `html/template` (`text/template` ではない) �
 ```
 
 `server.go` を書きましょう。
-上記のテンプレート `index.html` では `Title` と `Message` の 2 つの値を参照していました。
+上記のテンプレート `index.html` では `Title`, `Message` と `Time` の 3 つの値を参照していました。
 値を供給してテンプレートを実行します。
 
 ```go
