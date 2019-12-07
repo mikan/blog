@@ -180,11 +180,12 @@ func loadTemplate(name string) *template.Template {
 {{end}}
 ```
 
-元の `index.html` はどうなるのでしょうか？ここが味噌です。こうなります！
+元の `index.html` はどうなるのでしょうか？ここがミソです。こうなります！
 
 ```html
 {{template "header" .}}
 <p>{{.Message}}</p>
+<p>現在時刻: {{.Time.Format "2006/1/2 15:04:05"}}</p>
 {{template "footer"}}
 ```
 
