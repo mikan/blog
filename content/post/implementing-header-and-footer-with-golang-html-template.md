@@ -201,7 +201,11 @@ header と footer の呼び出しがちょこっとだけ違うことに気が�
 
 ```go
 func loadTemplate(name string) *template.Template {
-	t, err := template.ParseFiles("template/" + name + ".html", "template/_footer.html", "template/_header.html")
+	t, err := template.ParseFiles(
+		"template/"+name+".html",
+		"template/_header.html",
+		"template/_footer.html",
+	)
 	if err != nil {
 		log.Fatalf("template error: %v", err)
 	}
