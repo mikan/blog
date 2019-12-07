@@ -1,5 +1,5 @@
 ---
-title: "Go の html/template でヘッダーやフッター等を実現する方法"
+title: "Go の html/template でヘッダーやフッター等の共通化を実現する方法"
 date: 2019-12-08T01:04:20+09:00
 draft: false
 categories: ["web"]
