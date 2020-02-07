@@ -8,14 +8,20 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 上付き文字は読書会課題本を示します (<sup>AOSN</sup> [AOSN読書会](https://aosn.github.io), <sup>JRBOF</sup> [Java読書会BOF](http://javareading.com/bof), <sup>YGOBR</sup> [横浜Go読書会](https://yokohama-go-reading.connpass.com/))。
 
+## 2020
+
+| タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
+| ------ | ----- | ---- | --- | --- | ------ |
+| [みんなのKotlin](https://amzn.to/37a4lY1)            | 2020/01/29 | Printed     | :jp: | :waxing_crescent_moon: | |
+
 ## 2019
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [初めてのGraphQL](:star::star::star:)            | 2019/11/13 | Printed     | :jp: | :waxing_crescent_moon: | |
-| [ゼロトラストネットワーク](https://amzn.to/2CQGfF6) | 2019/10/28 | Printed     | :jp: | :first_quarter_moon: | |
+| [初めてのGraphQL](https://amzn.to/37741JD)            | 2019/11/13 | Printed     | :jp: | :waxing_crescent_moon: | |
+| [ゼロトラストネットワーク](https://amzn.to/2CQGfF6)      | 2019/10/28 | Printed     | :jp: | :first_quarter_moon: | |
 | [Kaggleで勝つデータ分析の技術](https://amzn.to/2RwFfyw) | 2019/10/09 | Printed | :jp: | :waxing_crescent_moon: | |
-| [入門 監視](https://amzn.to/2Xo132G)             | 2019/01/17 | Printed     | :jp: | :full_moon: |  :star::star::star: |
+| [入門 監視](https://amzn.to/2Xo132G)                  | 2019/01/17 | Printed     | :jp: | :full_moon: |  :star::star::star: |
 
 ## 2018
 

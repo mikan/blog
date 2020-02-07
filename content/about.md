@@ -34,14 +34,15 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 #### 言語/フレームワーク
 
 * プロダクション開発経験があるもの:
-  * **Java** 1.3, 1.4, 6, 7, 8 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
-  * **Kotlin** 1.x (Spring Framework/Boot)
+  * **Java** 1.3, 1.4, 6, 7, 8, 11 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
+  * **Kotlin** 1.x (Spring Framework/Boot, Android)
   * **Go** 1.x
   * **Python** 2.x, 3.x (Django)
-  * **JavaScript** ES5,6 (jQuery, jQuery UI, Node-RED)
+  * **TypeScript** 3.x (Vue.js, TypeScript, AWS CDK)
+  * **JavaScript** ES5,6 (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
   * **C#** 5.0
   * **Apex/Visualforce** (Sales Cloud, Service Cloud, Community Cloud)
-  * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, Salesforce SOQL/SOSL)
+  * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, BugQuery, Salesforce SOQL/SOSL)
 * 社内ツール、コンテスト等の開発経験があるもの:
   * **C/C++**
 * 趣味でぼちぼち触るもの:
