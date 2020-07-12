@@ -28,7 +28,7 @@ MongoDB, Inc. では独自の DBaaS である Atlas をローンチしており�
 
 Heroku はシャットダウン予告のメールの中で別の MongoDB Add-on の「ObjectRocket」への移行を提案しています。
 
-{{<figure src="/img/ss/heroku2.png" class="center" width="50%">}}
+{{<figure src="/img/ss/heroku2.png" class="center" width="80%">}}
 
 Heroku Add-on の使い勝手の良さを引き続き享受するにはこれしかありません。引き続き Add-on 代を徴収したい Heroku としても、こちらを推したいはずです (※ Add-on 自体の提供元は Heroku ではないサードパーティ)。
 
@@ -57,14 +57,14 @@ DBaaS 自体をやめるという選択肢もあります。でも MongoDB を�
 >
 > https://www.mongodb.com/cloud/atlas
 
-{{<figure src="/img/ss/atlas1.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas1.png" class="center" width="80%">}}
 
 Start free ボタンを押して、個人情報を入力してサインアップします。
 
 私は実行したら `CORS_ORIGIN_DENIED` というエラー画面になってしまいました😇
 先行きがとっても不安です・・・。しかし大丈夫、ちゃんとサインアップメールが届いていました。メールのリンクをクリックしてログインします。
 
-{{<figure src="/img/ss/atlas2.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas2.png" class="center" width="80%">}}
 
 同じ画面になりましたか？それでは次のステップです。
 
@@ -74,12 +74,12 @@ Start free ボタンを押して、個人情報を入力してサインアップ
 
 画面左上の葉っぱ (失礼) の右側にある歯車アイコン⚙️をクリックし、 "Organization Settings" 画面を開いてください。
 
-{{<figure src="/img/ss/atlas4.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas4.png" class="center" width="80%">}}
 
 一番下までぐぐっとスクロールすると、"Connect to mLab" というペインが登場しています！素晴らしい！
 早速 [Connect to mLab] ボタンを押します。
 
-{{<figure src="/img/ss/mlab1.png" class="center" width="50%">}}
+{{<figure src="/img/ss/mlab1.png" class="center" width="80%">}}
 
 mLab のログイン画面になりますね。でも Heroku Add-on だとアイパスがわかりません。
 で、どうするかというと、ここで一旦、 **同じブラウザで別タブ** を開き、Heroku Dashboard にアクセスします。
@@ -102,20 +102,20 @@ mLab のダッシュボードが開きましたね！この時点でブラウザ
 
 するとあら不思議、画面が変わりました。
 
-{{<figure src="/img/ss/mlab2.png" class="center" width="50%">}}
+{{<figure src="/img/ss/mlab2.png" class="center" width="80%">}}
 
 次は **ブラウザの戻るボタン**で Atlas に戻ります。
 
-{{<figure src="/img/ss/atlas4.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas4.png" class="center" width="80%">}}
 
 もう一回 [Connect to mLab] ボタンを押します。
 あらあら不思議、新しい画面が現れました。
 
-{{<figure src="/img/ss/mlab3.png" class="center" width="50%">}}
+{{<figure src="/img/ss/mlab3.png" class="center" width="80%">}}
 
 [Authorize] ボタンを押すと、Atlas の画面に戻ります。
 
-{{<figure src="/img/ss/atlas5.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas5.png" class="center" width="80%">}}
 
 ### 指定したデータベースのマイグレーション
 
@@ -129,7 +129,7 @@ mLab のダッシュボードが開きましたね！この時点でブラウザ
 
 冒頭で言及した「11ステップ」というのはここから始まります！ (いままでのは事前準備...)
 
-{{<figure src="/img/ss/atlas7.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas7.png" class="center" width="80%">}}
 
 #### D. マイグレーションウィザードのタスクの実施
 
@@ -137,7 +137,7 @@ mLab のダッシュボードが開きましたね！この時点でブラウザ
 
 マイグレーションウィザードの1番目のボタン [Create or Select Target Project] を押しましょう。
 
-{{<figure src="/img/ss/atlas8.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas8.png" class="center" width="80%">}}
 
 "Project 0" がありましたのでこれを選択します。いったいつ作ったんでしょう？きっとサインアップしたときですね。もしなければ画面に従って作ってください。
 
@@ -145,14 +145,14 @@ mLab のダッシュボードが開きましたね！この時点でブラウザ
 
 **Step 2. データベースユーザーのインポート**
 
-{{<figure src="/img/ss/atlas9.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas9.png" class="center" width="80%">}}
 
 マイグレーションガイドでは特に何も指示されていません。警告アイコンが気になりますが、そのまま進めましょう。
 [Import Database Users And Continue] ボタンを押します。
 
 **Step 3. IP ホワイトリストの設定**
 
-{{<figure src="/img/ss/atlas10.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas10.png" class="center" width="80%">}}
 
 "Allow all IP address..." と続くチェックボックスを入れます。Heroku は原則ソース IP が不定ですからね。
 
@@ -160,24 +160,24 @@ mLab のダッシュボードが開きましたね！この時点でブラウザ
 
 **Step 4. 対象 Atlas クラスターの作成**
 
-{{<figure src="/img/ss/atlas11.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas11.png" class="center" width="80%">}}
 
 "Cluster" のプルダウンを開くと "Create most equivalent new cluster RECOMMENDED" という唯一の選択肢があるので選択します。
 
 するとクラスターの設定を選ぶ重要な画面になります。各項目を確認しながら一番下までスクロールしてください。
 
-{{<figure src="/img/ss/atlas12.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas12.png" class="center" width="80%">}}
 
 M0 が無料の Sandbox です！お値段の見積もりも表示されていますね。M0 なら $0 なのを確認してください。
 十分に確認したら [Confirm Target And Continue] ボタンを押します。
 
 すると、クラスター作成中表示が現れます。しばらく待ちましょう。私は3分待ちました。
 
-{{<figure src="/img/ss/atlas13.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas13.png" class="center" width="80%">}}
 
 終わるとこんな表示になります。
 
-{{<figure src="/img/ss/atlas14.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas14.png" class="center" width="80%">}}
 
 **Step 5. 移行元と移行対象を確認**
 
@@ -185,13 +185,13 @@ M0 が無料の Sandbox です！お値段の見積もりも表示されてい�
 
 (and だったり And だったりが気になりますね...)
 
-{{<figure src="/img/ss/atlas15.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas15.png" class="center" width="80%">}}
 
 確認したら [Confirm And Continue] ボタンを押します。
 
 **Step 6. マイグレーションのテスト**
 
-{{<figure src="/img/ss/atlas16.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas16.png" class="center" width="80%">}}
 
 マイグレーションのテストを実行するかどうかを選択できます。
 
@@ -206,15 +206,15 @@ M0 が無料の Sandbox です！お値段の見積もりも表示されてい�
 
 テスト実行中は以下のような画面になります。しばらく待ちましょう。私は2分待ちました。
 
-{{<figure src="/img/ss/atlas17.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas17.png" class="center" width="80%">}}
 
 終わったら次のような画面になるので、 [Confirm Connectivity] ボタンを押します。
 
-{{<figure src="/img/ss/atlas18.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas18.png" class="center" width="80%">}}
 
 **Step 7. 接続テスト**
 
-{{<figure src="/img/ss/atlas19.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas19.png" class="center" width="80%">}}
 
 接続テストの案内画面になりました。
 
@@ -241,7 +241,7 @@ M0 が無料の Sandbox です！お値段の見積もりも表示されてい�
 
 **Step 8. Heroku アドオンの config var からの独立性確保**
 
-{{<figure src="/img/ss/atlas20.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas20.png" class="center" width="80%">}}
 
 マイグレーション完了後、mLab アドオンは削除することになりますが、その際に `MONGODB_URI` config var (環境変数) も Heroku App から削除されてしまいます。
 そのため、`MONGODB_URI` 以外の config var を別に作り、アプリが参照する環境変数をそちらに切り替える作業を行ってください。
@@ -261,7 +261,7 @@ M0 が無料の Sandbox です！お値段の見積もりも表示されてい�
 
 いよいよマイグレーション実行のときが来ました。
 
-{{<figure src="/img/ss/atlas21.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas21.png" class="center" width="80%">}}
 
 必要に応じてアプリケーションを止め (メンテナンスモードにするなど)、注意事項を確認したら、 "I understand that..." のチェックボックスを入れて、
 
@@ -271,19 +271,19 @@ M0 が無料の Sandbox です！お値段の見積もりも表示されてい�
 
 マイグレーション実行中は以下のような画面になります。しばらく待ちましょう。私は3分待ちました。
 
-{{<figure src="/img/ss/atlas22.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas22.png" class="center" width="80%">}}
 
 終わりましたか？おめでとうございます！では [Start Using Atlas] ボタンを押しましょう。
 
-{{<figure src="/img/ss/atlas23.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas23.png" class="center" width="80%">}}
 
 **Step 10. Atlas の利用を開始**
 
-{{<figure src="/img/ss/atlas24.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas24.png" class="center" width="80%">}}
 
 先程作った Heroku config var の `DB_URI` を、Step 7 でテストした接続文字列に置き換えます。
 
-{{<figure src="/img/ss/heroku5.png" class="center" width="50%">}}
+{{<figure src="/img/ss/heroku5.png" class="center" width="80%">}}
 
 config ver を変更するとほぼ即座に Dyno がリスタートすることにご注意ください。
 
@@ -295,7 +295,7 @@ config ver を変更するとほぼ即座に Dyno がリスタートすること
 
 **Step 11. mLab Add-on の削除**
 
-{{<figure src="/img/ss/atlas25.png" class="center" width="50%">}}
+{{<figure src="/img/ss/atlas25.png" class="center" width="80%">}}
 
 注意事項が表示されるだけです。削除操作は自分で操作する必要があります。
 
