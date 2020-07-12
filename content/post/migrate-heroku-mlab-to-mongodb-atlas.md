@@ -28,7 +28,7 @@ MongoDB, Inc. では独自の DBaaS である Atlas をローンチしており�
 
 Heroku はシャットダウン予告のメールの中で別の MongoDB Add-on の「ObjectRocket」への移行を提案しています。
 
-{{<figure src="/img/ss/heroku2.png" class="center" width="80%">}}
+{{<figure src="/img/ss/heroku2.png" class="center" width="50%">}}
 
 Heroku Add-on の使い勝手の良さを引き続き享受するにはこれしかありません。引き続き Add-on 代を徴収したい Heroku としても、こちらを推したいはずです (※ Add-on 自体の提供元は Heroku ではないサードパーティ)。
 
