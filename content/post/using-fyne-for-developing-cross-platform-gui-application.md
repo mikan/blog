@@ -106,7 +106,7 @@ Fyne のビルドには C コンパイラが必要です。いくつか選択肢
 
 [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) とその command line tools が必要です。
 command line tools の導入は `xcode-select --install` でいけます。
-導入済であっても、macOS をアップグレードした後とかに再度このコマンドを打つ必要になることがあります。
+導入済であっても、macOS をアップグレードした後とかに再度このコマンドを打たないといけないことがあります。
 
 #### Linux の方
 
