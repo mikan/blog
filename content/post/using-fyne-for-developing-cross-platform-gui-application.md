@@ -255,7 +255,7 @@ go run .
 ```
 2020/07/12 08:34:21 Fyne error:  font load error
 2020/07/12 08:34:21   Cause: freetype: invalid TrueType format: bad TTF version
-2020/07/12 08:34:21   At: /Users/yutaka/Projects/go/pkg/mod/fyne.io/fyne@v1.3.2/internal/painter/font.go:20
+2020/07/12 08:34:21   At: go/pkg/mod/fyne.io/fyne@v1.3.2/internal/painter/font.go:20
 panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x1d4 pc=0x42a5c31]
 ```
