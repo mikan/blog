@@ -260,7 +260,8 @@ panic: runtime error: invalid memory address or nil pointer dereference
 [signal SIGSEGV: segmentation violation code=0x1 addr=0x1d4 pc=0x42a5c31]
 ```
 
-なお、 `Label` や `HyperLink` ではスタイルを指定できる `NewXxxWithStyle()` という関数もあり、こんな感じで太字・斜体・等幅が指定できます。
+もうひとつ問題があります。
+`Label` や `HyperLink` ではスタイルを指定できる `NewXxxWithStyle()` という関数があり、こんな感じで太字・斜体・等幅が指定できます。
 
 ```
 widget.NewLabelWithStyle("らべる", fyne.TextAlignCenter, fyne.TextStyle{
