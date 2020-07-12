@@ -98,7 +98,7 @@ Fyne のビルドには C コンパイラが必要です。いくつか選択肢
 - [Cygwin](https://www.cygwin.com/)
 
 私が使っているのは [mingw-w64](http://mingw-w64.org/doku.php/download/mingw-builds) です。MSYS2 にもこれが入っています。
-[Chocolatey](https://chocolatey.org/) パッケージマネージャーをお使いの方は `choco install mingw` で `mingw-w64` が一発で入ります！
+[Chocolatey](https://chocolatey.org/) パッケージマネージャーをお使いの方は `choco install mingw` で mingw-w64 が一発で入ります！
 
 導入後は cc コマンドにパスが通っていることを確認してください。
 
@@ -271,7 +271,7 @@ widget.NewLabelWithStyle("らべる", fyne.TextAlignCenter, fyne.TextStyle{
 })
 ```
 
-しかしフォントの指定の口は環境変数1つのみです。Fyne のコードを見る限り、ファイル名に `Regular` が含まれていると、その部分を `Bold`, `BoldItalic`, `Italic` に変換するようです。それ以外は指定しても効きません。この実装はちょっと不便です (しかも undocumented)。
+しかしフォントの指定の口は環境変数1つのみです。Fyne のコードを見る限り、ファイル名に `Regular` が含まれていると、その部分を `Bold`, `BoldItalic`, `Italic` に変換するようです。このファイル名パターンに一致しない場合は `TextStyle` を指定しても変化しません。この実装はちょっと不便です (しかも undocumented)。
 また等幅フォントについては `FYNE_FONT` 環境変数ではなく `FYNE_FONT_MONOSPACE` 環境変数で指定するように実装されています。
 
 実際にアプリケーションとしてパッケージングして配布することを考えても、環境変数で指定するというのはあまり都合の良い方式ではありません。
