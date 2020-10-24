@@ -53,7 +53,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [Amazon Web Services負荷試験入門](https://amzn.to/2Gm7n2I)            | 2017/09/23 | Printed | :jp: | :first_quarter_moon: | |
 | [プロダクションレディマイクロサービス](http://amzn.to/2FNIZad)            | 2017/09/13 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [Nim in Action](http://amzn.to/2pxuNXB)                             | 2017/08/24 | Printed | :gb: | :first_quarter_moon: | |
-| [英語の品格](http://amzn.to/2iqMG7H)                                  | 2017/08/07 | Printed | :jp: | :waxing_gibbous_moon: | :star::star::star: |
+| [英語の品格](http://amzn.to/2iqMG7H)                                  | 2017/08/07 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [日本企業がシリコンバレーのスピードを身につける方法](http://amzn.to/2ilYFTL) | 2017/07/18 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [現場で役立つシステム設計の原則](http://amzn.to/2zSPe5e) <sup>AOSN, JRBOF</sup> | 2017/07/05 | Printed | :jp: |:full_moon: | :star: |
 | [サーバーレスシングルページアプリケーション](http://amzn.to/2B02zwP)       | 2017/06/23 | Printed | :jp: | :waxing_crescent_moon: | |
@@ -156,6 +156,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [アプリケーションをつくる英語](http://amzn.to/2psK0Kk)                    | 2012/09/21 | Printed | :jp: | :first_quarter_moon: |  |
 | [リーダブルコード](http://amzn.to/2IE7nIT)                              | 2012/06/23 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [What Every Man Thinks About Apart from Sex](http://amzn.to/2BYdDIe) | 2012/05/01 | Printed | :gb: | :full_moon: | :star::star: |
+| [7つのデータベース、7つの世界](https://amzn.to/3omBdXb)                  | 2012/02/26 | Printed | :jp: | :waxing_crescent_moon: |
 | [Clean Coder](http://amzn.to/2DHdNTW)                                | 2012/01/27 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
 
 ## 2011
