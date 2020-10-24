@@ -19,6 +19,7 @@ mikan が参加した社外の勉強会・セミナーの記録です。オン�
 
 | Date | Subject | Venue | Capacity |
 | ---- | ------- | ----- | -------- |
+| 2020/10/24 | [Java読書会BOF 20.10](http://www.javareading.com/bof/)🍺 | てくのかわさき (溝の口) | 10 |
 | 2020/02/16 | [Object-Oritented Conference](https://ooc.connpass.com/event/157193/) | お茶の水女子大学 (茗荷谷) | 1200 |
 | 2020/02/08 | [クラウドモバイルビルド・テスト Meetup](https://connpass.com/event/161541/) | GA technologies (六本木一丁目) | 150 |
 
