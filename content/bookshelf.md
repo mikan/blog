@@ -147,6 +147,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [Raspberry Piをはじめよう](http://amzn.to/2pp1mbk)                     | 2013/09/26 | Printed | :jp: | :first_quarter_moon: |  |
 | [コンピュータネットワーク 第5版](http://amzn.to/2GLnzaU)                  | 2013/09/12 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [Guide to Scala](http://amzn.to/2GJtIEv)                             | 2013/03/02 | Kindle | :jp: | :waxing_crescent_moon: |  |
+| [7つのデータベース 7つの世界](https://amzn.to/2HQjRBR)                   | 2020/02/26 | Printed | :jp: | :waxing_crescent_moon: | |
 | [Effective JavaScript](http://amzn.to/2zP1pAg)                       | 2013/02/19 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
 
 ## 2012
@@ -156,7 +157,6 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [アプリケーションをつくる英語](http://amzn.to/2psK0Kk)                    | 2012/09/21 | Printed | :jp: | :first_quarter_moon: |  |
 | [リーダブルコード](http://amzn.to/2IE7nIT)                              | 2012/06/23 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [What Every Man Thinks About Apart from Sex](http://amzn.to/2BYdDIe) | 2012/05/01 | Printed | :gb: | :full_moon: | :star::star: |
-| [7つのデータベース、7つの世界](https://amzn.to/3omBdXb)                  | 2012/02/26 | Printed | :jp: | :waxing_crescent_moon: |
 | [Clean Coder](http://amzn.to/2DHdNTW)                                | 2012/01/27 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
 
 ## 2011
