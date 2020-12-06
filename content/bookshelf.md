@@ -166,6 +166,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [Go言語プログラミング入門 on Google App Engine](http://amzn.to/2IB8VDw)  | 2011/12/14 | Printed | :jp: | :waxing_crescent_moon: | :star: |
 | [プロジェクト・マネジャーが知るべき97のこと](http://amzn.to/2pqOdgN)        | 2011/11/29 | Printed | :jp: | :waxing_crescent_moon: | |
 | [What's New in Java 7](http://amzn.to/2nyPl4C)                       | 2011/10/20 | Kindle  | :gb: | :full_moon: | :star::star: |
+| [7つの言語、7つの世界](https://amzn.to/3lONvoK)                         | 2011/07/23 | Printed | :jp: | :waxing_crescent_moon: | |
 | [アジャイルサムライ](http://amzn.to/2IF1hrF)                            | 2011/07/16 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [Building and Testing With Gradle](http://amzn.to/2psvGkr)           | 2011/07/13 | PDF    | :gb: | :full_moon: | :star::star: |
 | [ウェブオペレーション](http://amzn.to/2BWoDFX)                          | 2011/05/14 | Printed | :jp: | :full_moon: | :star::star: |
