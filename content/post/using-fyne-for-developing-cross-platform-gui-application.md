@@ -111,7 +111,7 @@ command line tools の導入は `xcode-select --install` でいけます。
 #### Linux の方
 
 gcc に加え、X11 関係の開発用ヘッダファイル等が必要になります。
-Linux/Ubuntu では `apt install gcc xorg-dev libgl1-meta-dev`, Fedora とかでは `dnf install gcc libXcursor-devel libXrandr-devel mesa-libGL-devel libXi-devel libXinerama-devel`, Arch では `pacman -S xorg-server-devel` です。
+Linux/Ubuntu では `apt install gcc xorg-dev libgl1-mesa-dev`, Fedora とかでは `dnf install gcc libXcursor-devel libXrandr-devel mesa-libGL-devel libXi-devel libXinerama-devel`, Arch では `pacman -S xorg-server-devel` です。
 
 ### ライトテーマ
 
