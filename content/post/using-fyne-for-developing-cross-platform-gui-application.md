@@ -11,6 +11,8 @@ tags: [
 
 {{<figure src="/img/ss/fyne1.png" class="center">}}
 
+**お知らせ** Fyne v2.0.0 がリリースされ、この記事の内容は少し古くなってしまったのでご注意ください (2021/01/25 追記)
+
 皆さんは **デスクトップアプリ** を作ろう！となったとき、どんな UI ツールキットで作りますか？
 OS が決まっているならば SwiftUI, WPF あるいは GTK+ や Qt でしょうか。
 色んな OS をサポートしたい場合は、Tcl/Tk, wxWidgets, JavaFX, Xamarin, Electron, React Native なども良いですね。
