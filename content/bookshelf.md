@@ -29,8 +29,8 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [初めてのGraphQL](https://amzn.to/37741JD)            | 2019/11/13 | Printed     | :jp: | :waxing_crescent_moon: | |
 | [ゼロトラストネットワーク](https://amzn.to/2CQGfF6)      | 2019/10/28 | Printed     | :jp: | :first_quarter_moon: | |
 | [Kaggleで勝つデータ分析の技術](https://amzn.to/2RwFfyw) | 2019/10/09 | Printed      | :jp: | :waxing_crescent_moon: | |
-| [データ志向アプリケーションデザイン](https://amzn.to/31aIHCT) <sup>JRBOF</sup> | 2019/07/18 | Printed  | :jp: | :waxing_crescent_moon: | |
-| [入門 監視](https://amzn.to/2Xo132G)                  | 2019/01/17 | Printed     |  :jp: | :full_moon: |  :star::star::star: |
+| [データ志向アプリケーションデザイン](https://amzn.to/31aIHCT) <sup>JRBOF</sup> | 2019/07/18 | Printed  | :jp: | :full_moon: | :star::star::star: |
+| [入門 監視](https://amzn.to/2Xo132G)                  | 2019/01/17 | Printed     |  :jp: | :full_moon: | :star::star::star: |
 
 ## 2018
 
