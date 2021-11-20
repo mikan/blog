@@ -18,6 +18,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
+| [1on1ミーティング](https://amzn.to/3kTzcBZ)                        | 2020/11/25 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [マイクロサービスパターン](https://amzn.to/2Wy2Gfz) <sup>JRBOF</sup> | 2020/03/26 | Printed | :jp: | :waxing_crescent_moon: | |
 | [プログラミングTypeScript](https://amzn.to/3gmf5Yu)                | 2020/03/16 | Printed | :jp: | :waxing_crescent_moon: | |
 | [新世代Javaプログラミングガイド](https://amzn.to/2Wy6L3v)            | 2020/03/13 | Printed | :jp: | :waxing_crescent_moon: | |
@@ -32,6 +33,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [ゼロトラストネットワーク](https://amzn.to/2CQGfF6)      | 2019/10/28 | Printed     | :jp: | :first_quarter_moon: | |
 | [Kaggleで勝つデータ分析の技術](https://amzn.to/2RwFfyw) | 2019/10/09 | Printed      | :jp: | :waxing_crescent_moon: | |
 | [データ志向アプリケーションデザイン](https://amzn.to/31aIHCT) <sup>JRBOF</sup> | 2019/07/18 | Printed  | :jp: | :full_moon: | :star::star::star: |
+| [戦略的IoTマネジメント](https://amzn.to/3nzgHEw)            | 2019/02/16 | Printed | :jp: | :waxing_crescent_moon: | |
 | [入門 監視](https://amzn.to/2Xo132G)                  | 2019/01/17 | Printed     |  :jp: | :full_moon: | :star::star::star: |
 
 ## 2018
@@ -70,7 +72,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [しあわせを引き寄せる洋菓子の事典](http://amzn.to/2ntuRdh)                | 2017/05/26 | Printed | :jp: | :first_quarter_moon: | |
 | [Jenkins実践入門 改訂第3版](http://amzn.to/2AYE0AK)                    | 2017/05/24 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
 | [プロフェッショナルSSL/TLS](http://amzn.to/2u3EPFF)                    | 2017/03/31 | Printed | :jp: | :waxing_crescent_moon: | |
-| [ヤフーの1on1](https://amzn.to/3ajwtfV)                              | 2017/03/27 | Kindle | :jp: | :first_quarter_moon: | |
+| [ヤフーの1on1](https://amzn.to/3ajwtfV)                              | 2017/03/27 | Kindle | :jp: | :full_moon: | :star::star: |
 | [Goプログラミング実践入門](http://amzn.to/2zSORrm)                      | 2017/03/17 | Kindle  | :jp: | :waxing_crescent_moon: | |
 | [RxJavaリアクティブプログラミング](http://amzn.to/2u1CuuR) <sup>JRBOF</sup> | 2017/02/17 | Printed | :jp: | :full_moon: | :star: |
 | [アジャイルコーチング](http://amzn.to/2FX5Z2g)                         | 2017/01/21 | Printed | :jp: | :waxing_crescent_moon: | |
@@ -166,6 +168,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [アプリケーションをつくる英語](http://amzn.to/2psK0Kk)                    | 2012/09/21 | Printed | :jp: | :first_quarter_moon: |  |
 | [リーダブルコード](http://amzn.to/2IE7nIT)                              | 2012/06/23 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [What Every Man Thinks About Apart from Sex](http://amzn.to/2BYdDIe) | 2012/05/01 | Printed | :gb: | :full_moon: | :star::star: |
+| [リーン・スタートアップ](https://amzn.to/3nBT7XU)                        | 2012/04/12 | Kindle | :jp: | :waxing_crescent_moon: | |
 | [Clean Coder](http://amzn.to/2DHdNTW)                                | 2012/01/27 | Printed | :jp: | :waxing_gibbous_moon: | :star::star: |
 
 ## 2011
