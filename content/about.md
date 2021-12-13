@@ -14,9 +14,11 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-* 2018-present: 研究開発エンジニア @ 日系IoTベンチャー
+* 2021-present: CTO @ 日系AI・IoTベンチャー
+* 2018-2021: シニア IoT スペシャリスト @ 日系AI・IoTベンチャー
   * 農業向け IoT プラットフォーム開発
-* 2017-2018: クラウド開発エンジニア @ 日系ITベンチャー
+  * 各種 IoT プロダクト開発
+* 2017-2018: リードエンジニア @ 日系ITベンチャー
   * IoT システム概念検証向け開発
   * Salesforce インテグレーション・カスタマイズ開発
 * 2017: デリバリーエンジニア @ 外資系ITサービスベンダー
@@ -34,7 +36,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 #### 言語/フレームワーク
 
 * プロダクション開発経験があるもの:
-  * **Java** 1.3, 1.4, 6, 7, 8, 11 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
+  * **Java** 1.3, 1.4, 6, 7, 8, 11, 17 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
   * **Kotlin** 1.x (Spring Framework/Boot, Android)
   * **Go** 1.x
   * **Python** 2.x, 3.x (Django)
@@ -79,12 +81,15 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 * 2017/05/13 [横浜Go読書会 #6](https://yokohama-go-reading.connpass.com/event/55162/) 「present でスライドを作ろう」
   * スライド資料: [go-talks.appspot.com/github.com/mikan/talks/intro-to-present.slide](https://go-talks.appspot.com/github.com/mikan/talks/intro-to-present.slide)
 
-[![AOSN](/img/logo/aosn.png)](https://aosn.github.io/)
+[![E3](/img/logo/e3.png)](https://e3meetup.connpass.com/)
 
-* 2017/09/16 [「プログラマーの日」合宿 2017 LT](http://aosn.github.io/event/6-0916camp/)「Slack の過去ログ倉庫を建てよう」
-  * スライド資料: [go-talks.appspot.com/github.com/mikan/talks/aosn-lt-2017.slide](https://go-talks.appspot.com/github.com/mikan/talks/aosn-lt-2017.slide)
-* 2016/09/17 [「プログラマーの日」合宿 2016 LT](http://aosn.github.io/event/3-0917camp/)「データで見るAOSN読書会」
-  * スライド資料: [go-talks.appspot.com/github.com/mikan/talks/aosn-lt-2016.slide](https://go-talks.appspot.com/github.com/mikan/talks/aosn-lt-2016.slide)
+* 2020/12/10 [Engineering Mix Session vol.1](https://e3meetup.connpass.com/event/197623/) 「牛のための IoT プラットフォーム U-motion®」
+  * スライド資料: [speakerdeck.com/mikan/u-motion-r](https://speakerdeck.com/mikan/u-motion-r)
+
+[![AWS](/img/logo/aws-2.png)](https://aws.amazon.com/jp/)
+
+* 2021/5/28 (非公開イベント) 「Go CDK を触ってみた (LT)」
+  * スライド資料: [speakerdeck.com/mikan/introducing-go-cdk-developer-preview](https://speakerdeck.com/mikan/introducing-go-cdk-developer-preview)
 
 ### 技術書レビュー参加
 
@@ -96,13 +101,6 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 {{<figure src="/img/cover/gopl_ja_ack.jpg" class="inline" link="http://amzn.to/2A2mtDc" alt="プログラミング言語Go">}}
 
 ### 技術書読書会
-
-#### AOSN Workshop
-
-最新の技術書をオンラインで輪読する読書会。
-
-{{<figure src="/img/ss/aosn.png" class="inline" link="https://aosn.github.io/" alt="AOSN">}}
-{{<figure src="/img/ss/aosn-java8.png" class="inline" link="https://aosn.github.io/workshop/1-java8" alt="AOSN">}}
 
 #### Java 読書会 BOF
 
