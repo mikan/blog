@@ -8,6 +8,12 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 上付き文字は読書会課題本を示します (<sup>AOSN</sup> [AOSN読書会](https://aosn.github.io), <sup>JRBOF</sup> [Java読書会BOF](http://javareading.com/bof), <sup>YGOBR</sup> [横浜Go読書会](https://yokohama-go-reading.connpass.com/))。
 
+## 2022
+
+| タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
+| ------ | ----- | ---- | --- | --- | ------ |
+| [エキスパートたちのGo言語](https://amzn.to/37PDqql)   | 2022/01/07 | Printed | :jp: | :waxing_crescent_moon: | |
+
 ## 2021
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
