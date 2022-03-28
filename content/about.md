@@ -150,10 +150,10 @@ Go 関連書籍限定の技術書読書会。横浜市内で毎月開催。
 
 :busts_in_silhouette: [T.Okamoto](https://github.com/MrBearing), T.Namikawa & me [Leader]
 
-作品 "John Metro" は次の URL でサービス中: [jm.tasktoys.com](https://jm.tasktoys.com)
+作品 "John Metro" は次の URL でサービス中: [johnmetro.herokuapp.com](https://johnmetro.herokuapp.com/)
 
 {{<figure src="/img/ss/tmod.png" class="inline" alt="TMODC">}}
-{{<figure src="/img/ss/johnmetro.png" class="inline" link="https://jm.tasktoys.com" alt="TMODC">}}
+{{<figure src="/img/ss/johnmetro.png" class="inline" link="https://johnmetro.herokuapp.com/" alt="TMODC">}}
 
 ### Microsoft Innovation Award 2011
 
