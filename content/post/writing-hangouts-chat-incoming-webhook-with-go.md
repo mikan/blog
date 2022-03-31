@@ -45,7 +45,7 @@ Web からアクセスする場合は [chat.google.com](https://chat.google.com/
 今の所、Windows, macOS, Android, iOS 版があります。
 Web アプリは今流行りのレスポンシブデザインですね (もしかして PWA?)。そしてアプリ版もいわゆる "ガワネイティブ" らしく、中身は Web 版となんら代わりありません。
 
-Hangouts Chat を開いたら、まず「チャットルーム」を作成します。Slack でいう Channel です。
+Hangouts Chat を開いたら、まず「チャットルーム」を作成します。Slack でいう Channel です。
 
 {{<figure src="/img/ss/hangouts-chat1.png" class="center" title="チャットルームの作成">}}
 
@@ -316,7 +316,7 @@ func main() {
 ### 活用例
 
 今回、この Webhook の仕組みを用いて社内で使っているシステムの通知を Hangouts Chat に連携する機能を導入してみました。
-こんなシステムです (赤字が今回の改修部分):
+こんなシステムです (赤字が今回の改修部分):
 
 {{<figure src="/img/diagram/gh-id-checker.png" class="center">}}
 

@@ -243,7 +243,7 @@ M0 が無料の Sandbox です！お値段の見積もりも表示されてい�
 
 {{<figure src="/img/ss/atlas20.png" class="center" width="80%">}}
 
-マイグレーション完了後、mLab アドオンは削除することになりますが、その際に `MONGODB_URI` config var (環境変数) も Heroku App から削除されてしまいます。
+マイグレーション完了後、mLab アドオンは削除することになりますが、その際に `MONGODB_URI` config var (環境変数) も Heroku App から削除されてしまいます。
 そのため、`MONGODB_URI` 以外の config var を別に作り、アプリが参照する環境変数をそちらに切り替える作業を行ってください。
 もちろん、複数アタッチされている場合は色の名前で区別されたそれぞれにおいて対応が必要です。
 

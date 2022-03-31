@@ -119,7 +119,7 @@ Linux libre-computer 4.19.64+ #60 SMP PREEMPT Mon Aug 5 14:22:48 EDT 2019 aarch6
 
 La Frite 用の eMMC は次の場所で購入することができます。8, 16, 32, 64, 128GB がラインナップされています。
 
-> Libre Computer Board eMMC 5.x Module &ndash; Love Our Pi - The Destination for Single Board Computers
+> Libre Computer Board eMMC 5.x Module &ndash; Love Our Pi - The Destination for Single Board Computers
 >
 > https://www.loverpi.com/products/libre-computer-board-emmc-5-x-module
 
