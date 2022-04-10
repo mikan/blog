@@ -14,7 +14,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-* 2021-present: CTO @ 日系AI・IoTベンチャー
+* 2021-present: 執行役員 CTO @ 日系AI・IoTベンチャー
 * 2018-2021: シニア IoT スペシャリスト @ 日系AI・IoTベンチャー
   * 農業向け IoT プラットフォーム開発
   * 各種 IoT プロダクト開発
@@ -42,18 +42,17 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
   * **Python** 2.x, 3.x (Django)
   * **TypeScript** 3.x (Vue.js, TypeScript, AWS CDK)
   * **JavaScript** ES5,6 (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
+  * **C/C++**
   * **C#** 5.0
   * **Apex/Visualforce** (Sales Cloud, Service Cloud, Community Cloud)
   * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, BugQuery, Salesforce SOQL/SOSL)
-* 社内ツール、コンテスト等の開発経験があるもの:
-  * **C/C++**
-* 趣味でぼちぼち触るもの:
+* 非プロダクションなツール制作や趣味でぼちぼち触るもの:
   * Elixir, Nim, Rust
 
 #### 好きな本3冊
 
 * モダンオペレーティングシステム (Andrew S. Tanenbaum)
-* Effective Java (Joshua Bloch)
+* データ指向アプリケーションデザイン (Martin Kleppmann)
 * ピープルウェア (Tom Demarco & Timothy Lister)
 
 [Bookshelf](/bookshelf)もご覧ください。
