@@ -39,10 +39,10 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
   * **Java** 1.3, 1.4, 6, 7, 8, 11, 17 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
   * **Kotlin** 1.x (Spring Framework/Boot, Android)
   * **Go** 1.x
-  * **Python** 2.x, 3.x (Django)
+  * **Python** 2.x, 3.x (Django, JupyterLab)
   * **TypeScript** 3.x (Vue.js, TypeScript, AWS CDK)
   * **JavaScript** ES5,6 (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
-  * **C/C++**
+  * **C/C++** (STM32, ESP32, mbed, Arduino)
   * **C#** 5.0
   * **Apex/Visualforce** (Sales Cloud, Service Cloud, Community Cloud)
   * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, BugQuery, Salesforce SOQL/SOSL)
