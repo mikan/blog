@@ -14,7 +14,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-* 2021-present: 執行役員 CTO @ 日系AI・IoTベンチャー
+* 2021-2022: 執行役員 CTO @ 日系AI・IoTベンチャー
 * 2018-2021: シニア IoT スペシャリスト @ 日系AI・IoTベンチャー
   * 農業向け IoT プラットフォーム開発
   * 各種 IoT プロダクト開発
@@ -40,7 +40,7 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
   * **Kotlin** 1.x (Spring Framework/Boot, Android)
   * **Go** 1.x
   * **Python** 2.x, 3.x (Django, JupyterLab)
-  * **TypeScript** 3.x (Vue.js, TypeScript, AWS CDK)
+  * **TypeScript** 3.x (Vue.js, Nuxt.js, AWS CDK)
   * **JavaScript** ES5,6 (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
   * **C/C++** (STM32, ESP32, mbed, Arduino)
   * **C#** 5.0
