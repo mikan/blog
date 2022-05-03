@@ -1,7 +1,7 @@
 ---
 title: "株式会社ウフルを退職します"
 date: 2018-09-15T06:13:13+09:00
-draft: false
+draft: true
 categories: ["life"]
 ---
 

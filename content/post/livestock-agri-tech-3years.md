@@ -1,7 +1,7 @@
 ---
 title: "3年間の畜産アグリテック業界への挑戦とこれから"
 date: 2021-12-14T05:13:00+09:00
-draft: false
+draft: true
 categories: ["life"]
 ---
 
