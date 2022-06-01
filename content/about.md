@@ -4,9 +4,9 @@ date: 2017-11-03T00:09:42+09:00
 draft: false
 ---
 
-![mikan](https://github.com/mikan.png?size=40 "mikan") Yutaka Kato / 加藤 裕 @ "IoT フルスタック" エンジニア (自称)
+![mikan](https://github.com/mikan.png?size=40 "mikan") Yutaka Kato / 加藤 裕
 
-GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.linkedin.com/in/yutakakato) / Email: mikan@aomikan.org
+GitHub: [mikan](https://github.com/mikan) / Email: mikan@aomikan.org
 
 ----------
 
@@ -14,8 +14,10 @@ GitHub: [mikan](https://github.com/mikan) / LinkedIn: [yutakakato](https://www.l
 
 ----------
 
-* 2021-2022: 執行役員 CTO @ 日系AI・IoTベンチャー
-* 2018-2021: シニア IoT スペシャリスト @ 日系AI・IoTベンチャー
+* 2022-present: CTO @ 日系SaaSスタートアップ
+* 2021-2022: 執行役員 CTO @ 日系AI・IoTスタートアップ
+  * 各種 IoT プロダクト開発
+* 2018-2021: シニア IoT スペシャリスト @ 日系AI・IoTスタートアップ
   * 農業向け IoT プラットフォーム開発
   * 各種 IoT プロダクト開発
 * 2017-2018: リードエンジニア @ 日系ITベンチャー
