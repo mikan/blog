@@ -40,7 +40,7 @@ GitHub: [mikan](https://github.com/mikan) / Email: mikan@aomikan.org
 * プロダクション開発経験があるもの:
   * **Java** 1.3, 1.4, 6, 7, 8, 11, 17 (Java EE, Java ME, Spring Framework/Boot, Apache Tomcat, Apache Spark, Vaadin, Android)
   * **Kotlin** 1.x (Spring Framework/Boot, Android)
-  * **Go** 1.x
+  * **Go** 1.x (gorilla/mux, Goa, Gin)
   * **Python** 2.x, 3.x (Django, JupyterLab)
   * **TypeScript** 3.x (Vue.js, Nuxt.js, AWS CDK)
   * **JavaScript** ES5,6 (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
