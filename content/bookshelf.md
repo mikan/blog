@@ -12,13 +12,16 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [エキスパートたちのGo言語](https://amzn.to/37PDqql)   | 2022/01/07 | Printed | :jp: | :waxing_crescent_moon: | |
+| [詳解Go言語Webアプリケーション開発](https://amzn.to/3PtSB9D)     | 2022/07/22 | Printed | :jp: | :waxing_crescent_moon: | |
+| [エンジニアのためのShopify開発バイブル](https://amzn.to/3vauZ1X) | 2022/05/24 | Printed | :jp: | :full_moon: | :star::star: |
+| [エキスパートたちのGo言語](https://amzn.to/37PDqql)             | 2022/01/07 | Printed | :jp: | :waxing_crescent_moon: | |
 
 ## 2021
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [みんなのVue.js](https://amzn.to/3coOYQ2)   | 2021/02/18 | Printed | :jp: | :waxing_crescent_moon: | |
+| [セキュア・バイ・デザイン](https://amzn.to/3ooMrMd) <sup>JRBOF</sup> | 2022/09/24 | Printed | :jp: | :waxing_crescent_moon: | |
+| [みんなのVue.js](https://amzn.to/3coOYQ2)                         | 2021/02/18 | Printed | :jp: | :waxing_crescent_moon: | |
 
 ## 2020
 
