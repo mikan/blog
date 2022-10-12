@@ -27,11 +27,9 @@ disqusShortname = "kagaorange"
 	topline = "Yutaka Kato の技術ブログです。"
 	footline = "Copyright&copy; <a href='/about/'>Yutaka Kato</a>"
 	showRightSidebar = true
-	googleAnalytics = "UA-68709286-1"
 	sumomeid = "7376c112ca70badebd8ee83050033a40afd51c35656127efca6d0e2f5b1f09c2"
 	highlight = "default"
 	twitter  = "kagaorange"
-	linkedin = "yutakakato"
 	github   = "mikan"
 	customCSS = ["/css/mikan.css"]
 	
