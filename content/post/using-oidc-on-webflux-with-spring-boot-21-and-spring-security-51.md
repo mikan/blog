@@ -191,9 +191,9 @@ Auth0 のイケメンなログイン画面が出ました。
 
 > デモアプリ URL
 >
-> https://webflux-auth0-demo.herokuapp.com/
+> https://webflux-auth0-demo.azurewebsites.net
 
-:warning: Heroku の Free Dyno を利用しているため、初回アクセス時はスリープから起き上がるまで待たされることがあります。
+:warning: Azure App Service を利用しているため、初回アクセス時はアイドル状態から起き上がるまで待たされることがあります。
 
 デモアプリの元になっている Gradle プロジェクトも公開していますので、開発の参考にしてみてください。
 
