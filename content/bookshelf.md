@@ -12,7 +12,9 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
+| [新規事業を成功させるPMFの教科書](https://amzn.to/3TtLQa4)       | 2022/10/11 | Printed | :jp: | :waxing_crescent_moon: | |
 | [詳解Go言語Webアプリケーション開発](https://amzn.to/3PtSB9D)     | 2022/07/22 | Printed | :jp: | :waxing_crescent_moon: | |
+| [リーダーの作法](https://amzn.to/3Dqf8R7)                      | 2022/06/21 | Printed | :jp: | :waxing_crescent_moon: | |
 | [エンジニアのためのShopify開発バイブル](https://amzn.to/3vauZ1X) | 2022/05/24 | Printed | :jp: | :full_moon: | :star::star: |
 | [エキスパートたちのGo言語](https://amzn.to/37PDqql)             | 2022/01/07 | Printed | :jp: | :waxing_crescent_moon: | |
 
@@ -20,7 +22,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [セキュア・バイ・デザイン](https://amzn.to/3ooMrMd) <sup>JRBOF</sup> | 2022/09/24 | Printed | :jp: | :waxing_crescent_moon: | |
+| [セキュア・バイ・デザイン](https://amzn.to/3ooMrMd) <sup>JRBOF</sup> | 2022/09/24 | Printed | :jp: | :first_quarter_moon: | |
 | [みんなのVue.js](https://amzn.to/3coOYQ2)                         | 2021/02/18 | Printed | :jp: | :waxing_crescent_moon: | |
 
 ## 2020
@@ -28,7 +30,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
 | [1on1ミーティング](https://amzn.to/3kTzcBZ)                        | 2020/11/25 | Kindle | :jp: | :waxing_crescent_moon: | |
-| [マイクロサービスパターン](https://amzn.to/2Wy2Gfz) <sup>JRBOF</sup> | 2020/03/26 | Printed | :jp: | :waxing_crescent_moon: | |
+| [マイクロサービスパターン](https://amzn.to/2Wy2Gfz) <sup>JRBOF</sup> | 2020/03/26 | Printed | :jp: | :full_moon: | |
 | [プログラミングTypeScript](https://amzn.to/3gmf5Yu)                | 2020/03/16 | Printed | :jp: | :waxing_crescent_moon: | |
 | [新世代Javaプログラミングガイド](https://amzn.to/2Wy6L3v)            | 2020/03/13 | Printed | :jp: | :waxing_crescent_moon: | |
 | [みずほ銀行システム統合、苦闘の19年史](https://amzn.to/2SS3PsD)        | 2020/02/14 | Printed | :jp: | :waxing_crescent_moon: | |
