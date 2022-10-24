@@ -30,7 +30,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
 | [1on1ミーティング](https://amzn.to/3kTzcBZ)                        | 2020/11/25 | Kindle | :jp: | :waxing_crescent_moon: | |
-| [マイクロサービスパターン](https://amzn.to/2Wy2Gfz) <sup>JRBOF</sup> | 2020/03/26 | Printed | :jp: | :full_moon: | |
+| [マイクロサービスパターン](https://amzn.to/2Wy2Gfz) <sup>JRBOF</sup> | 2020/03/26 | Printed | :jp: | :full_moon: | :star::star: |
 | [プログラミングTypeScript](https://amzn.to/3gmf5Yu)                | 2020/03/16 | Printed | :jp: | :waxing_crescent_moon: | |
 | [新世代Javaプログラミングガイド](https://amzn.to/2Wy6L3v)            | 2020/03/13 | Printed | :jp: | :waxing_crescent_moon: | |
 | [みずほ銀行システム統合、苦闘の19年史](https://amzn.to/2SS3PsD)        | 2020/02/14 | Printed | :jp: | :waxing_crescent_moon: | |
