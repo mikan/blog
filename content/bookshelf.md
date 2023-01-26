@@ -12,7 +12,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [新規事業を成功させるPMFの教科書](https://amzn.to/3TtLQa4)       | 2022/10/11 | Printed | :jp: | :waxing_crescent_moon: | |
+| [新規事業を成功させるPMFの教科書](https://amzn.to/3TtLQa4)       | 2022/10/11 | Printed | :jp: | :full_moon: | :star::star: |
 | [詳解Go言語Webアプリケーション開発](https://amzn.to/3PtSB9D)     | 2022/07/22 | Printed | :jp: | :waxing_crescent_moon: | |
 | [リーダーの作法](https://amzn.to/3Dqf8R7)                      | 2022/06/21 | Printed | :jp: | :waxing_crescent_moon: | |
 | [エンジニアのためのShopify開発バイブル](https://amzn.to/3vauZ1X) | 2022/05/24 | Printed | :jp: | :full_moon: | :star::star: |
