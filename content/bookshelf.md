@@ -45,6 +45,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | [ゼロトラストネットワーク](https://amzn.to/2CQGfF6)      | 2019/10/28 | Printed     | :jp: | :first_quarter_moon: | |
 | [Kaggleで勝つデータ分析の技術](https://amzn.to/2RwFfyw) | 2019/10/09 | Printed      | :jp: | :waxing_crescent_moon: | |
 | [データ志向アプリケーションデザイン](https://amzn.to/31aIHCT) <sup>JRBOF</sup> | 2019/07/18 | Printed  | :jp: | :full_moon: | :star::star::star: |
+| [Real World HTTP ミニ版](https://www.oreilly.co.jp/books/9784873118789/)            | 2019/03/01 | Printed | :jp: | :full_moon: | :star::star: |
 | [戦略的IoTマネジメント](https://amzn.to/3nzgHEw)            | 2019/02/16 | Printed | :jp: | :waxing_crescent_moon: | |
 | [入門 監視](https://amzn.to/2Xo132G)                  | 2019/01/17 | Printed     |  :jp: | :full_moon: | :star::star::star: |
 
