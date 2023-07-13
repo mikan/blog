@@ -22,7 +22,8 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
-| [セキュア・バイ・デザイン](https://amzn.to/3ooMrMd) <sup>JRBOF</sup> | 2022/09/24 | Printed | :jp: | :first_quarter_moon: | |
+| [セキュア・バイ・デザイン](https://amzn.to/3ooMrMd) <sup>JRBOF</sup> | 2021/09/24 | Printed | :jp: | :first_quarter_moon: | |
+| [UXデザインの法則](https://amzn.to/44G2JmY)                        | 2021/05/18 | Printed | :jp: | :full_moon: | :star::star: |
 | [みんなのVue.js](https://amzn.to/3coOYQ2)                         | 2021/02/18 | Printed | :jp: | :waxing_crescent_moon: | |
 
 ## 2020
