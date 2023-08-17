@@ -15,6 +15,9 @@ GitHub: [mikan](https://github.com/mikan) / Email: mikan@aomikan.org
 ----------
 
 * 2022-present: CTO @ 日系SaaSスタートアップ
+  * B2B SaaS プロダクト開発
+  * EC プラットフォーム向けアプリ開発
+  * B2C Web アプリ開発
 * 2021-2022: 執行役員 CTO @ 日系AI・IoTスタートアップ
   * 各種 IoT プロダクト開発
 * 2018-2021: シニア IoT スペシャリスト @ 日系AI・IoTスタートアップ
