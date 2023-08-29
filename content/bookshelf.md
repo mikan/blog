@@ -8,6 +8,12 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 
 上付き文字は読書会課題本を示します (<sup>AOSN</sup> [AOSN読書会](https://aosn.github.io), <sup>JRBOF</sup> [Java読書会BOF](http://javareading.com/bof), <sup>YGOBR</sup> [横浜Go読書会](https://yokohama-go-reading.connpass.com/))。
 
+## 2023
+
+| タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
+| ------ | ----- | ---- | --- | --- | ------ |
+| [Go言語 100Tips](https://amzn.to/3Pi7ApM)       | 2023/08/18 | Printed | :jp: | :waxing_crescent_moon: | |
+
 ## 2022
 
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
@@ -23,7 +29,7 @@ mikan の本棚にある本たち。技術書や自己啓発本に限ります�
 | タイトル | 発売日 | 形式 | 言語 | 進捗 | 推薦度 |
 | ------ | ----- | ---- | --- | --- | ------ |
 | [セキュア・バイ・デザイン](https://amzn.to/3ooMrMd) <sup>JRBOF</sup> | 2021/09/24 | Printed | :jp: | :first_quarter_moon: | |
-| [UXデザインの法則](https://amzn.to/44G2JmY)                        | 2021/05/18 | Printed | :jp: | :full_moon: | :star::star: |
+| [UXデザインの法則](https://amzn.to/44G2JmY)                        | 2021/05/18 | Printed | :jp: | :full_moon: | :star::star::star: |
 | [みんなのVue.js](https://amzn.to/3coOYQ2)                         | 2021/02/18 | Printed | :jp: | :waxing_crescent_moon: | |
 
 ## 2020
