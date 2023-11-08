@@ -50,7 +50,7 @@ GitHub: [mikan](https://github.com/mikan) / Email: mikan@aomikan.org
   * **C/C++** (STM32, ESP32, mbed, Arduino)
   * **C#** 5.0
   * **Apex/Visualforce** (Sales Cloud, Service Cloud, Community Cloud)
-  * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, BugQuery, Salesforce SOQL/SOSL)
+  * **SQL** (MySQL, MariaDB, PostgreSQL, MS SQL Server, SQLite, BigQuery, Salesforce SOQL/SOSL)
 * 非プロダクションなツール制作や趣味でぼちぼち触るもの:
   * Elixir, Nim, Rust
 
