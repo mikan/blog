@@ -45,7 +45,7 @@ GitHub: [mikan](https://github.com/mikan) / Email: mikan@aomikan.org
   * **Kotlin** 1.x (Spring Framework/Boot, Android)
   * **Go** 1.x (gorilla/mux, Goa, Gin)
   * **Python** 2.x, 3.x (Django, JupyterLab)
-  * **TypeScript** 3.x (Vue.js, Nuxt.js, AWS CDK)
+  * **TypeScript** 3.x, 4.x, 5.x (Vue.js, Nuxt.js, Svelte/SvelteKit, AWS CDK)
   * **JavaScript** ES5,6 (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
   * **C/C++** (STM32, ESP32, mbed, Arduino)
   * **C#** 5.0
