@@ -14,7 +14,9 @@ GitHub: [mikan](https://github.com/mikan) / Email: mikan@aomikan.org
 
 ----------
 
-* 2022-present: CTO @ 日系SaaSスタートアップ
+* 2024-present: VPoP @ 日系スタートアップ
+* 2024-present: エンジニア @ 日系スタートアップ
+* 2022-2023: CTO @ 日系SaaSスタートアップ
   * B2B SaaS プロダクト開発
   * EC プラットフォーム向けアプリ開発
   * B2C Web アプリ開発
@@ -46,7 +48,7 @@ GitHub: [mikan](https://github.com/mikan) / Email: mikan@aomikan.org
   * **Go** 1.x (gorilla/mux, Goa, Gin)
   * **Python** 2.x, 3.x (Django, JupyterLab)
   * **TypeScript** 3.x, 4.x, 5.x (Vue.js, Nuxt.js, Svelte/SvelteKit, AWS CDK)
-  * **JavaScript** ES5,6 (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
+  * **JavaScript** ES5 ~ (Vue.js, Nuxt.js, jQuery, jQuery UI, Node-RED)
   * **C/C++** (STM32, ESP32, mbed, Arduino)
   * **C#** 5.0
   * **Apex/Visualforce** (Sales Cloud, Service Cloud, Community Cloud)
