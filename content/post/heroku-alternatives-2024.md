@@ -65,9 +65,9 @@ Heroku からのマイグレーションガイドが以下の場所にありま�
 
 Heroku からのマイグレーションガイドが以下の場所にあります:
 
-> Migrate from Heroku to Render – Render Docs
+> Migrate from Heroku to Koyeb
 >
-> https://render.com/docs/migrate-from-heroku
+> https://www.koyeb.com/tutorials/migrate-from-heroku
 
 ### 3. Back4app Web Development Platform
 
